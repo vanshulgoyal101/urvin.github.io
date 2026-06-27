@@ -332,8 +332,8 @@ const GlobalStyles = createGlobalStyle`
 
       /* Fix sections not showing */
   section {
-    min-height: auto !important;
-    padding: var(--spacing-lg) 0 !important;
+    min-height: auto;
+    padding: var(--spacing-lg) 0;
   }
   
     /* Fix container padding */

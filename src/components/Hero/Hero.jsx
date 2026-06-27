@@ -41,8 +41,10 @@ const HeroContainer = styled.div`
   z-index: 2;
 
   @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
     text-align: center;
+    gap: var(--spacing-lg);
   }
 `;
 
@@ -54,7 +56,7 @@ const HeroContent = styled(motion.div)`
   }
 
   @media (max-width: 768px) {
-    margin-top: 40px;
+    margin-top: 0;
   }
 `;
 
@@ -278,8 +280,8 @@ const HeroImageWrapper = styled(motion.div)`
   }
 
   @media (max-width: 1024px) {
-    max-width: 280px;
-    margin-top: var(--spacing-md);
+    max-width: 220px;
+    margin-bottom: var(--spacing-md);
   }
 `;
 
