@@ -185,10 +185,9 @@ const FloatingRocket = ({ isMobileOnly = false, isDesktopOnly = false }) => {
       // Start tracking
       trackPosition();
 
-      // Takeoff! (Ascending/flying away diagonally)
+      // Takeoff! (Ascending straight up)
       await controls.start({
         y: -window.innerHeight - 200,
-        x: -window.innerWidth / 2, // Fly off diagonally like a plane takeoff
         transition: { 
           duration: 1.2,
           ease: [0.25, 0.46, 0.45, 0.94]
@@ -259,7 +258,7 @@ const FloatingRocket = ({ isMobileOnly = false, isDesktopOnly = false }) => {
       >
         <Rocket
           animate={{ 
-            rotate: hasLaunched ? -30 : -45, // -45 aligns with top-left vector, -30 pitches up slightly during climb
+            rotate: 0, // Face straight up for vertical takeoff
           }}
           transition={{ duration: 0.3 }}
         >
