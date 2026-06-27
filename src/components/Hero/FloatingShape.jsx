@@ -101,69 +101,118 @@ const FloatingShape = () => {
       {/* ── Float group ─────────────────────────────────────────────────── */}
       <Float
         speed={1.5}
-        rotationIntensity={0.3}
-        floatIntensity={1.2}
-        floatingRange={[-0.15, 0.15]}
+        rotationIntensity={0.4}
+        floatIntensity={1.3}
+        floatingRange={[-0.18, 0.18]}
       >
         <group>
-          {/* Central Torus Knot (Main Sculpture) */}
-          <mesh ref={knotRef} scale={1.25}>
-            <torusKnotGeometry args={[0.9, 0.26, 120, 16]} />
-            <meshStandardMaterial
-              map={gradientTexture}
-              color="#3b82f6"
-              emissive="#1e3a8a"
-              emissiveIntensity={0.25}
-              roughness={0.12}
-              metalness={0.9}
-            />
-          </mesh>
+          {/* Central 3D Procedural Airplane Model */}
+          <group ref={knotRef} scale={1.3}>
+            {/* Fuselage (Main Body) */}
+            <mesh position={[0, 0, 0]} rotation={[Math.PI / 2, 0, 0]}>
+              <cylinderGeometry args={[0.16, 0.16, 2.0, 18]} />
+              <meshStandardMaterial
+                color="#ffffff"
+                roughness={0.15}
+                metalness={0.9}
+              />
+            </mesh>
 
-          {/* Wireframe overlay for a high-tech/engineering look */}
-          <mesh ref={wireframeRef} scale={1.26}>
-            <torusKnotGeometry args={[0.9, 0.26, 120, 16]} />
-            <meshBasicMaterial
-              color="#60a5fa"
-              wireframe
-              transparent
-              opacity={0.15}
-            />
-          </mesh>
+            {/* Nose Cone */}
+            <mesh position={[0, 0, 1.0]} rotation={[Math.PI / 2, 0, 0]}>
+              <coneGeometry args={[0.16, 0.35, 18]} />
+              <meshStandardMaterial
+                color="#002244" // Deep Navy nose cone accent
+                roughness={0.15}
+                metalness={0.95}
+              />
+            </mesh>
 
-          {/* Gyroscopic Inner Ring */}
+            {/* Main Wings */}
+            <mesh position={[0, -0.02, 0.1]} rotation={[0, 0, 0]}>
+              <boxGeometry args={[3.2, 0.025, 0.48]} />
+              <meshStandardMaterial
+                color="#ffffff"
+                roughness={0.2}
+                metalness={0.8}
+              />
+            </mesh>
+
+            {/* Left Jet Engine (under wing) */}
+            <mesh position={[-0.65, -0.12, 0.12]} rotation={[Math.PI / 2, 0, 0]}>
+              <cylinderGeometry args={[0.08, 0.08, 0.4, 12]} />
+              <meshStandardMaterial
+                color="#005da6" // United Blue engine cowl
+                roughness={0.2}
+                metalness={0.9}
+              />
+            </mesh>
+
+            {/* Right Jet Engine (under wing) */}
+            <mesh position={[0.65, -0.12, 0.12]} rotation={[Math.PI / 2, 0, 0]}>
+              <cylinderGeometry args={[0.08, 0.08, 0.4, 12]} />
+              <meshStandardMaterial
+                color="#005da6"
+                roughness={0.2}
+                metalness={0.9}
+              />
+            </mesh>
+
+            {/* Horizontal Tail Stabilizers */}
+            <mesh position={[0, 0.02, -0.85]}>
+              <boxGeometry args={[1.0, 0.018, 0.22]} />
+              <meshStandardMaterial
+                color="#ffffff"
+                roughness={0.2}
+                metalness={0.8}
+              />
+            </mesh>
+
+            {/* Vertical Fin / Tail Stabilizer */}
+            <mesh position={[0, 0.2, -0.85]} rotation={[0.08, 0, 0]}>
+              <boxGeometry args={[0.025, 0.38, 0.22]} />
+              <meshStandardMaterial
+                color="#002244" // Navy tail section
+                roughness={0.15}
+                metalness={0.9}
+              />
+            </mesh>
+          </group>
+
+          {/* Gyroscopic Inner Tracker Ring */}
           <mesh ref={innerRingRef} scale={1.85}>
-            <torusGeometry args={[1, 0.015, 12, 64]} />
-            <meshStandardMaterial
-              color="#60a5fa"
-              emissive="#3b82f6"
-              emissiveIntensity={0.8}
-              transparent
-              opacity={0.6}
-            />
-          </mesh>
-
-          {/* Gyroscopic Outer Ring */}
-          <mesh ref={outerRingRef} scale={2.15}>
             <torusGeometry args={[1, 0.012, 12, 64]} />
             <meshStandardMaterial
-              color="#818cf8"
-              emissive="#6366f1"
-              emissiveIntensity={0.5}
+              color="#005da6"
+              emissive="#00b2ff"
+              emissiveIntensity={0.6}
               transparent
               opacity={0.4}
+            />
+          </mesh>
+
+          {/* Gyroscopic Outer Tracker Ring */}
+          <mesh ref={outerRingRef} scale={2.15}>
+            <torusGeometry args={[1, 0.01, 12, 64]} />
+            <meshStandardMaterial
+              color="#002244"
+              emissive="#005da6"
+              emissiveIntensity={0.4}
+              transparent
+              opacity={0.3}
             />
           </mesh>
         </group>
       </Float>
 
-      {/* Subtle background particles */}
+      {/* Subtle atmospheric particles */}
       <Sparkles
-        count={25}
+        count={20}
         scale={6}
-        size={1.2}
-        speed={0.15}
-        opacity={0.35}
-        color="#93c5fd"
+        size={1.0}
+        speed={0.12}
+        opacity={0.25}
+        color="#00b2ff"
       />
     </>
   );
