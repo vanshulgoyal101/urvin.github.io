@@ -61,49 +61,83 @@ const HeroContent = styled(motion.div)`
 `;
 
 const Greeting = styled(motion.span)`
-  display: inline-block;
-  font-size: var(--text-lg);
+  display: inline-flex;
+  align-items: center;
+  background: rgba(0, 93, 166, 0.06);
   color: var(--color-accent-primary);
-  font-weight: 500;
-  margin-bottom: var(--spacing-sm);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-family: var(--font-mono);
+  margin-bottom: var(--spacing-md);
 `;
 
 const Title = styled(motion.h1)`
   font-size: clamp(2.5rem, 8vw, 4.5rem);
-  font-weight: 700;
-  line-height: 1.1;
-  margin-bottom: var(--spacing-md);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin-bottom: var(--spacing-sm);
   background: linear-gradient(135deg, var(--color-text-primary) 0%, var(--color-accent-primary) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-
-  @media (max-width: 768px) {
-    margin-bottom: var(--spacing-xs);
-  }
 `;
 
 const Subtitle = styled(motion.p)`
-  font-size: var(--text-xl);
-  color: var(--color-text-secondary);
+  font-size: clamp(1.1rem, 3vw, 1.4rem);
+  font-weight: 500;
+  color: var(--color-text-primary);
   margin-bottom: var(--spacing-md);
-  line-height: 1.6;
+  line-height: 1.4;
+
+  a {
+    color: var(--color-accent-primary);
+    font-weight: 600;
+    position: relative;
+    display: inline-block;
+    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: var(--color-accent-secondary);
+      transform: scaleX(0);
+      transform-origin: right;
+      transition: transform 0.3s ease;
+    }
+    
+    &:hover::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
 
   @media (max-width: 768px) {
-    font-size: var(--text-base);
-    margin-bottom: var(--spacing-xs);
+    margin-bottom: var(--spacing-sm);
   }
 `;
 
 const Description = styled(motion.p)`
-  font-size: var(--text-base);
+  font-size: clamp(0.9rem, 2.5vw, 1.05rem);
   color: var(--color-text-secondary);
-  margin-bottom: var(--spacing-lg);
-  line-height: 1.8;
+  margin-bottom: var(--spacing-xl);
+  line-height: 1.7;
+  max-width: 540px;
+
+  @media (max-width: 1024px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 
   @media (max-width: 768px) {
-    font-size: var(--text-sm);
-    margin-bottom: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
   }
 `;
 
