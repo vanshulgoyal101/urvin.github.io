@@ -347,12 +347,7 @@ const Work = () => {
                 ))}
               </TechStack>
 
-              {exp.link && (
-                <CompanyLink href={exp.link} target="_blank" rel="noopener noreferrer">
-                  Visit Website
-                  <FaExternalLinkAlt size={11} />
-                </CompanyLink>
-              )}
+
             </ExperienceCard>
           ))}
         </ExperienceGrid>

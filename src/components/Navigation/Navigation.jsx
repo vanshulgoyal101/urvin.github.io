@@ -397,7 +397,7 @@ const Navigation = ({ scrollToSection }) => {
             whileTap={{ scale: 0.95 }}
           >
             <LogoBadge>
-              VG
+              UK
               <ProgressRingSvg viewBox="0 0 40 40">
                 <defs>
                   <linearGradient id="progress-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
