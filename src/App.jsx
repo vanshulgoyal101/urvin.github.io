@@ -122,7 +122,7 @@ import SmokeTransition from './components/FunElements/SmokeTransition';
 // Lazy load heavy components
 const FloatingRocket = lazy(() => import('./components/FunElements/FloatingRocket'));
 const RandomTelemetry = lazy(() => import('./components/FunElements/RandomTelemetry'));
-const InteractiveSpaceBackground = lazy(() => import('./components/FunElements/InteractiveSpaceBackground'));
+const WorldMap = lazy(() => import('./components/FlightMap/WorldMap'));
 
 // ScrollToHash: Handles scrolling to sections when returning from subroutes or on direct URL hits containing hashes
 import { useLocation } from 'react-router-dom';
@@ -153,7 +153,7 @@ const IdleBackground = () => {
     <Suspense fallback={null}>
       <FloatingRocket isDesktopOnly />
       <RandomTelemetry />
-      <InteractiveSpaceBackground />
+      <WorldMap />
     </Suspense>
   );
 };

@@ -2,7 +2,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import AboutEvolution2D from './AboutEvolution2D';
 import {
   FaGraduationCap, FaCode, FaRocket, FaTrophy,
   FaTools, FaPlane
@@ -24,6 +23,8 @@ const Container = styled.div`
   max-width: var(--container-xl);
   margin: 0 auto;
   padding: 0 var(--container-padding);
+  position: relative;
+  z-index: 2;
 `;
 
 const SectionHeader = styled.div`
@@ -268,10 +269,10 @@ const SkillTag = styled.li`
 // ─── Data ─────────────────────────────────────────────────────────────────────
 
 const statsData = [
-  { icon: <FaGraduationCap />, number: 'SJSU',   label: 'B.S. in Aviation Management & Operations' },
-  { icon: <FaRocket />,        number: '18+ Yrs', label: 'Career progression at United Airlines' },
-  { icon: <FaTrophy />,        number: 'NOC/SOC', label: 'Platform Governance & Network Operations Center Liaison' },
-  { icon: <FaCode />,          number: 'APIs',    label: 'Enterprise API management & predictive tools' },
+  { icon: <FaGraduationCap />, number: 'SJSU', label: 'B.S. in Aviation Management & Operations' },
+  { icon: <FaRocket />, number: '18+ Yrs', label: 'Career progression at United Airlines' },
+  { icon: <FaTrophy />, number: 'NOC/SOC', label: 'Platform Governance & Network Operations Center Liaison' },
+  { icon: <FaCode />, number: 'APIs', label: 'Enterprise API management & predictive tools' },
 ];
 
 const educationData = [
@@ -300,9 +301,9 @@ const educationData = [
 
 const skills = [
   { category: 'Strategic Leadership', icon: <FaRocket />, list: ['Product Strategy', 'Roadmapping', 'Operational Analytics', 'NOC Liaison'] },
-  { category: 'Airport Operations',   icon: <FaPlane />,   list: ['Performance & Execution', 'Gate Control', 'Zone Supervision', 'Ramp Operations'] },
-  { category: 'Technical & Data',     icon: <FaTools />,   list: ['Spotfire Analytics', 'Enterprise APIs', 'Predictive Modeling', 'System Scaling'] },
-  { category: 'Team & Governance',    icon: <FaGraduationCap />, list: ['Cross-functional Leadership', 'Vendor Management', 'Release Reliability', 'Executive Narratives'] },
+  { category: 'Airport Operations', icon: <FaPlane />, list: ['Performance & Execution', 'Gate Control', 'Zone Supervision', 'Ramp Operations'] },
+  { category: 'Technical & Data', icon: <FaTools />, list: ['Spotfire Analytics', 'Enterprise APIs', 'Predictive Modeling', 'System Scaling'] },
+  { category: 'Team & Governance', icon: <FaGraduationCap />, list: ['Cross-functional Leadership', 'Vendor Management', 'Release Reliability', 'Executive Narratives'] },
 ];
 
 // ─── Animation variants ───────────────────────────────────────────────────────
@@ -349,7 +350,11 @@ const About = () => {
           </AboutContent>
 
           <AboutImageContainer>
-            <AboutEvolution2D />
+            <img
+              src={`${import.meta.env.BASE_URL}images/urvin IKC team.jpg`}
+              alt="URVIN IKC Team"
+              style={{ maxWidth: '100%', borderRadius: '50px' }}
+            />
           </AboutImageContainer>
         </AboutGrid>
 

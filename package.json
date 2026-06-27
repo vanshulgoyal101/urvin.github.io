@@ -13,9 +13,12 @@
   },
   "homepage": "https://vanshulgoyal101.github.io/urvin.github.io",
   "dependencies": {
+    "@react-spring/web": "^10.1.2",
     "@react-three/drei": "^10.6.1",
     "@react-three/fiber": "^9.2.0",
     "@studio-freight/lenis": "^1.0.42",
+    "axios": "^1.18.1",
+    "d3-geo": "^3.1.1",
     "framer-motion": "^12.23.9",
     "gray-matter": "^4.0.3",
     "gsap": "^3.13.0",
@@ -26,7 +29,8 @@
     "react-markdown": "^10.1.0",
     "react-router-dom": "^7.9.6",
     "styled-components": "^6.1.19",
-    "three": "^0.178.0"
+    "three": "^0.178.0",
+    "topojson-client": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",

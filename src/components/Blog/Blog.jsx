@@ -69,24 +69,34 @@ const BlogGrid = styled.div`
 
 const EmptyState = styled.div`
   text-align: center;
-  padding: var(--spacing-2xl);
+  padding: var(--spacing-xl);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  max-width: 600px;
+  margin: 0 auto var(--spacing-xl) auto;
+  box-shadow: 0 10px 30px rgba(0, 93, 166, 0.02);
   
   svg {
-    font-size: 4rem;
+    font-size: 3rem;
     color: var(--color-accent-primary);
-    opacity: 0.3;
-    margin-bottom: var(--spacing-lg);
+    opacity: 0.4;
+    margin: 0 auto var(--spacing-md) auto;
+    display: block;
   }
   
   h3 {
-    font-size: var(--text-2xl);
-    margin-bottom: var(--spacing-md);
+    font-size: var(--text-xl);
+    margin-bottom: var(--spacing-sm);
     color: var(--color-text-primary);
+    font-weight: 600;
   }
   
   p {
     color: var(--color-text-secondary);
-    max-width: 400px;
+    font-size: var(--text-base);
+    line-height: 1.6;
+    max-width: 480px;
     margin: 0 auto;
   }
 `;
