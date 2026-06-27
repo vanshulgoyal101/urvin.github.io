@@ -1,5 +1,5 @@
 // src/components/About/About.jsx
-import { useState, Suspense, lazy } from 'react';
+import { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import AboutTurbineCanvas from './AboutTurbineCanvas';
@@ -14,7 +14,6 @@ const AboutSection = styled.section`
   padding: var(--spacing-2xl) 0;
   position: relative;
   background: transparent;
-  overflow: hidden;
 
   @media (max-width: 768px) {
     padding: var(--spacing-xl) 0;
@@ -30,10 +29,6 @@ const Container = styled.div`
 const SectionHeader = styled.div`
   text-align: center;
   margin-bottom: var(--spacing-xl);
-
-  @media (max-width: 768px) {
-    margin-bottom: var(--spacing-lg);
-  }
 `;
 
 const SectionTitle = styled.h2`
@@ -45,7 +40,7 @@ const SectionTitle = styled.h2`
   background-clip: text;
 
   @media (max-width: 768px) {
-    font-size: var(--text-2xl);
+    font-size: var(--text-3xl);
   }
 `;
 
@@ -54,7 +49,7 @@ const SectionSubtitle = styled.p`
   color: var(--color-text-secondary);
   max-width: 600px;
   margin: 0 auto;
-
+  
   @media (max-width: 768px) {
     font-size: var(--text-base);
   }
@@ -62,169 +57,78 @@ const SectionSubtitle = styled.p`
 
 const AboutGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--spacing-xl);
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--spacing-2xl);
   align-items: center;
   margin-bottom: var(--spacing-2xl);
 
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
-    gap: var(--spacing-lg);
-  }
-
-  @media (max-width: 768px) {
-    gap: var(--spacing-md);
-    margin-bottom: var(--spacing-lg);
+    gap: var(--spacing-xl);
   }
 `;
 
-const AboutContent = styled.div`
-  order: 1;
+const AboutContent = styled.div``;
 
-  @media (max-width: 1024px) {
-    order: 2;
+const Biography = styled.div`
+  color: var(--color-text-secondary);
+  font-size: var(--text-lg);
+  line-height: 1.8;
+  margin-bottom: var(--spacing-lg);
+
+  p {
+    margin-bottom: var(--spacing-md);
+  }
+
+  @media (max-width: 768px) {
+    font-size: var(--text-base);
   }
 `;
 
 const AboutImageContainer = styled.div`
-  order: 2;
   position: relative;
-
-  @media (max-width: 1024px) {
-    order: 1;
-    max-width: 500px;
-    margin: 0 auto;
-  }
-
-  @media (max-width: 768px) {
-    max-width: 300px;
-  }
-`;
-
-const ImageWrapper = styled.div`
-  position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  aspect-ratio: 4/5;
-  background: var(--color-gradient-1);
-  padding: 3px;
-
-  @media (max-width: 768px) {
-    aspect-ratio: 1/1;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: var(--color-gradient-1);
-    opacity: 0.5;
-    filter: blur(20px);
-    transform: scale(1.1);
-    z-index: -1;
-  }
-`;
-
-const ProfileImage = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 17px;
-  display: block;
-`;
-
-const ImagePlaceholder = styled.div`
-  width: 100%;
-  height: 100%;
-  background: var(--color-bg-card);
-  border-radius: 17px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  font-size: var(--text-6xl);
-  color: var(--color-accent-primary);
-`;
-
-const AboutText = styled.div`
-  h3 {
-    font-size: var(--text-2xl);
-    margin-bottom: var(--spacing-md);
-    color: var(--color-text-primary);
-  }
-
-  p {
-    font-size: var(--text-base);
-    line-height: 1.8;
-    color: var(--color-text-secondary);
-    margin-bottom: var(--spacing-md);
-  }
-
-  a {
-    color: var(--color-accent-primary);
-    text-decoration: none;
-    &:hover { text-decoration: underline; }
-  }
-`;
-
-const HighlightText = styled.span`
-  color: var(--color-accent-primary);
-  font-weight: 500;
+  align-items: center;
 `;
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
 
 const StatsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: var(--spacing-md);
-  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-2xl);
 
-  @media (max-width: 768px) {
-    gap: var(--spacing-sm);
-    margin-top: var(--spacing-lg);
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
   }
 `;
 
 const StatCard = styled(motion.div)`
   background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
   padding: var(--spacing-lg);
   border-radius: 16px;
-  border: 1px solid var(--color-border);
   text-align: center;
-  position: relative;
-  overflow: hidden;
-  cursor: default;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 
-  @media (max-width: 768px) {
-    padding: var(--spacing-md);
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: var(--color-gradient-1);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s ease;
-  }
-
-  &:hover::before {
-    transform: scaleX(1);
+  &:hover {
+    border-color: rgba(0, 93, 166, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 93, 166, 0.04);
   }
 `;
 
 const StatIcon = styled.div`
-  font-size: var(--text-3xl);
+  font-size: 2rem;
   color: var(--color-accent-primary);
-  margin-bottom: var(--spacing-sm);
+  margin-bottom: var(--spacing-xs);
+  display: flex;
+  justify-content: center;
 `;
 
-const StatNumber = styled.h4`
-  font-size: var(--text-3xl);
+const StatNumber = styled.h3`
+  font-size: var(--text-2xl);
   font-weight: 700;
   margin-bottom: var(--spacing-xs);
   color: var(--color-text-primary);
@@ -233,6 +137,70 @@ const StatNumber = styled.h4`
 const StatLabel = styled.p`
   font-size: var(--text-sm);
   color: var(--color-text-secondary);
+`;
+
+// ─── Education ────────────────────────────────────────────────────────────────
+
+const EducationContainer = styled.div`
+  margin-top: var(--spacing-2xl);
+  margin-bottom: var(--spacing-2xl);
+`;
+
+const EducationTitle = styled.h3`
+  font-size: var(--text-2xl);
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text-primary);
+`;
+
+const EducationGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-md);
+`;
+
+const EducationCard = styled(motion.div)`
+  background: var(--color-bg-card);
+  padding: var(--spacing-lg);
+  border-radius: 16px;
+  border: 1px solid var(--color-border);
+  position: relative;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    border-color: rgba(0, 93, 166, 0.3);
+    box-shadow: 0 10px 25px rgba(0, 93, 166, 0.04);
+  }
+`;
+
+const EduSchool = styled.h4`
+  font-size: var(--text-lg);
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-xs);
+`;
+
+const EduDegree = styled.p`
+  font-size: var(--text-sm);
+  color: var(--color-accent-primary);
+  font-weight: 500;
+  margin-bottom: var(--spacing-xs);
+`;
+
+const EduMeta = styled.p`
+  font-size: var(--text-xs);
+  color: var(--color-text-secondary);
+  margin-bottom: 2px;
+`;
+
+const EduGrade = styled.span`
+  display: inline-block;
+  background: rgba(0, 93, 166, 0.06);
+  color: var(--color-accent-primary);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: var(--text-xs);
+  font-weight: 600;
+  margin-top: var(--spacing-xs);
 `;
 
 // ─── Skills ───────────────────────────────────────────────────────────────────
@@ -245,6 +213,7 @@ const SkillsTitle = styled.h3`
   font-size: var(--text-2xl);
   text-align: center;
   margin-bottom: var(--spacing-lg);
+  color: var(--color-text-primary);
 `;
 
 const SkillsGrid = styled.div`
@@ -262,11 +231,6 @@ const SkillCategory = styled(motion.div)`
   padding: var(--spacing-lg);
   border-radius: 16px;
   border: 1px solid var(--color-border);
-  transition: border-color 0.3s ease;
-
-  &:hover {
-    border-color: var(--color-accent-primary);
-  }
 `;
 
 const SkillCategoryTitle = styled.h4`
@@ -286,16 +250,16 @@ const SkillsList = styled.ul`
 `;
 
 const SkillTag = styled.li`
-  background: rgba(99, 102, 241, 0.08);
+  background: rgba(0, 93, 166, 0.05);
   color: var(--color-text-primary);
   padding: 5px 14px;
   border-radius: 20px;
   font-size: var(--text-sm);
-  border: 1px solid rgba(99, 102, 241, 0.18);
+  border: 1px solid rgba(0, 93, 166, 0.1);
   transition: all 0.25s ease;
 
   &:hover {
-    background: rgba(99, 102, 241, 0.18);
+    background: rgba(0, 93, 166, 0.12);
     border-color: var(--color-accent-primary);
     transform: translateY(-2px);
   }
@@ -308,6 +272,30 @@ const statsData = [
   { icon: <FaRocket />,        number: '18+ Yrs', label: 'Career progression at United Airlines' },
   { icon: <FaTrophy />,        number: 'NOC/SOC', label: 'Platform Governance & Network Operations Center Liaison' },
   { icon: <FaCode />,          number: 'APIs',    label: 'Enterprise API management & predictive tools' },
+];
+
+const educationData = [
+  {
+    school: 'San Jose State University',
+    degree: "Bachelor's in Aviation Management, Aviation/Airway Management and Operations",
+    years: '2007 – 2009',
+    grade: 'Grade: 3.67',
+    location: 'San Jose, CA'
+  },
+  {
+    school: 'St. Petersburg Community College',
+    degree: "Associate's in Science (Pharmacy)",
+    years: '2004 – 2006',
+    grade: 'Grade: 3.76',
+    location: 'St. Petersburg, FL'
+  },
+  {
+    school: 'South Gujarat University',
+    degree: "Bachelor's in Mathematics",
+    years: '2001 – 2004',
+    grade: 'Grade: 3.79',
+    location: 'Surat, Gujarat, India'
+  }
 ];
 
 const skills = [
@@ -324,18 +312,13 @@ const cardVariants = {
   visible: (i) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.5, delay: i * 0.1, ease: 'easeOut' },
+    transition: { duration: 0.5, delay: i * 0.08, ease: 'easeOut' },
   }),
 };
 
 // ─── Component ────────────────────────────────────────────────────────────────
 
 const About = () => {
-
-  // Start false — set true only on successful load; show placeholder on error
-  const [imageLoaded, setImageLoaded] = useState(false);
-  const [imageError, setImageError]   = useState(false);
-
   return (
     <AboutSection id="about">
       <Container>
@@ -348,53 +331,25 @@ const About = () => {
           >
             <SectionTitle>About Me</SectionTitle>
             <SectionSubtitle>
-              Engineer and a passionate learner.
+              Over 18 years of airport performance, systems engineering, and technology strategy in airline operations.
             </SectionSubtitle>
           </motion.div>
         </SectionHeader>
 
         <AboutGrid>
-          {/* Text content */}
           <AboutContent>
-            <motion.div
-              initial={{ opacity: 0, x: -24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-            >
-               <AboutText>
-                <h3>Who I Am</h3>
-                <p>
-                  I'm <HighlightText>Urvin Kapadia</HighlightText>, a senior aviation operations leader 
-                  specializing in <HighlightText>Airport Operations Performance and Execution</HighlightText>.
-                </p>
-                <p>
-                  With over <HighlightText>18 years of tenure at United Airlines</HighlightText>, my career has progressed from 
-                  hands-on ramp operations to directing product strategies and analytical tool roadmaps at the corporate scale.
-                </p>
-                <p>
-                  I hold a Bachelor's degree in <HighlightText>Aviation Management</HighlightText> from 
-                  San Jose State University, which has grounded my analytical and operational expertise in safety-first protocols, 
-                  gate optimization, and system scalability.
-                </p>
-                <p>
-                  I thrive at the intersection of operational engineering, analytics, and business strategy—translating complex 
-                  NOC and airport operations data into clear, executable roadmaps that deliver measurable value.
-                </p>
-              </AboutText>
-            </motion.div>
+            <Biography>
+              <p>
+                My professional career spans over 18 years within airport hub operations at United Airlines, moving from front-line execution on the ramp to leading analytical performance product strategy at the corporate level.
+              </p>
+              <p>
+                I specialize in developing predictive decision‑support products, enterprise API backlogs, and real‑time operations data governance. Bridging the gap between frontline operations, data analytics, and digital technology platforms, I ensure every platform release drives network dependability and airport execution reliability.
+              </p>
+            </Biography>
           </AboutContent>
 
-          {/* Profile image */}
           <AboutImageContainer>
-            <motion.div
-              initial={{ opacity: 0, x: 24 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, amount: 0.15 }}
-              transition={{ duration: 0.6, delay: 0.25 }}
-            >
-              <AboutTurbineCanvas />
-            </motion.div>
+            <AboutTurbineCanvas />
           </AboutImageContainer>
         </AboutGrid>
 
@@ -418,6 +373,28 @@ const About = () => {
             ))}
           </StatsGrid>
         </div>
+
+        {/* Education History */}
+        <EducationContainer>
+          <EducationTitle>Education</EducationTitle>
+          <EducationGrid>
+            {educationData.map((edu, i) => (
+              <EducationCard
+                key={i}
+                custom={i}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.15 }}
+              >
+                <EduSchool>{edu.school}</EduSchool>
+                <EduDegree>{edu.degree}</EduDegree>
+                <EduMeta>{edu.years} • {edu.location}</EduMeta>
+                <EduGrade>{edu.grade}</EduGrade>
+              </EducationCard>
+            ))}
+          </EducationGrid>
+        </EducationContainer>
 
         {/* Skills */}
         <SkillsContainer>
