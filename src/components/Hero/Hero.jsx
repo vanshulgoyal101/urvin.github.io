@@ -455,7 +455,7 @@ const Hero = () => {
           transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
         >
           <HeroImage
-            src="/images/urvin_profile.jpeg"
+            src={`${import.meta.env.BASE_URL}images/urvin_profile.jpeg`}
             alt="Urvin Kapadia — Senior Manager, United Airlines"
           />
         </HeroImageWrapper>
