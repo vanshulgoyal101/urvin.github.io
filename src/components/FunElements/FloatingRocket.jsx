@@ -258,7 +258,7 @@ const FloatingRocket = ({ isMobileOnly = false, isDesktopOnly = false }) => {
       >
         <Rocket
           animate={{ 
-            rotate: 0, // Face straight up for vertical takeoff
+            rotate: -90, // Rotate by -90deg to turn horizontal plane vertically upward
           }}
           transition={{ duration: 0.3 }}
         >
