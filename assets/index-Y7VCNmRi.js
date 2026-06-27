@@ -1,5 +1,5 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/FloatingRocket-BQiG8dOO.js","assets/react-core-CPHnqsFW.js","assets/markdown-DNQhOqsY.js","assets/styled-CHfxRgpd.js","assets/icons-DNJk4BLK.js","assets/framer-DRpzP9-u.js","assets/RandomTelemetry-dWiU4ccu.js","assets/react-vendor-BakkmLcC.js","assets/WorldMap-CUoF2Kkz.js"])))=>i.map(i=>d[i]);
-import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as ge,b as Te,L as Ce,B as Ae,R as Ee,c as U,d as Oe}from"./react-vendor-BakkmLcC.js";import{f as Pe,d as t,m as G}from"./styled-CHfxRgpd.js";import{H as Fe,a as Me,F as Y,b as Re,M as Le,B as We,c as Be,d as X,e as He,f as $e,g as ue,h as _e,i as xe,j as O,k as De,l as qe,m as k,n as Ne,o as Ge,p as Ve,q as Ue,r as Ye,s as L,t as Xe,u as Je,v as Ke,w as Qe,x as Ze,y as et,z as tt}from"./icons-DNJk4BLK.js";import{m as l,u as it,a as at,A as j}from"./framer-DRpzP9-u.js";import{M as ot,g as rt}from"./markdown-DNQhOqsY.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))a(n);new MutationObserver(n=>{for(const s of n)if(s.type==="childList")for(const c of s.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&a(c)}).observe(document,{childList:!0,subtree:!0});function r(n){const s={};return n.integrity&&(s.integrity=n.integrity),n.referrerPolicy&&(s.referrerPolicy=n.referrerPolicy),n.crossOrigin==="use-credentials"?s.credentials="include":n.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function a(n){if(n.ep)return;n.ep=!0;const s=r(n);fetch(n.href,s)}})();const nt="modulepreload",st=function(i){return"/urvin.github.io/"+i},J={},P=function(o,r,a){let n=Promise.resolve();if(r&&r.length>0){let x=function(p){return Promise.all(p.map(h=>Promise.resolve(h).then(g=>({status:"fulfilled",value:g}),g=>({status:"rejected",reason:g}))))};document.getElementsByTagName("link");const c=document.querySelector("meta[property=csp-nonce]"),m=c?.nonce||c?.getAttribute("nonce");n=x(r.map(p=>{if(p=st(p),p in J)return;J[p]=!0;const h=p.endsWith(".css"),g=h?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${p}"]${g}`))return;const u=document.createElement("link");if(u.rel=h?"stylesheet":nt,h||(u.as="script"),u.crossOrigin="",u.href=p,m&&u.setAttribute("nonce",m),document.head.appendChild(u),h)return new Promise((f,b)=>{u.addEventListener("load",f),u.addEventListener("error",()=>b(new Error(`Unable to preload CSS for ${p}`)))})}))}function s(c){const m=new Event("vite:preloadError",{cancelable:!0});if(m.payload=c,window.dispatchEvent(m),!m.defaultPrevented)throw c}return n.then(c=>{for(const m of c||[])m.status==="rejected"&&s(m.reason);return o().catch(s)})},lt=Pe`
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/FloatingRocket-BQiG8dOO.js","assets/react-core-CPHnqsFW.js","assets/markdown-DNQhOqsY.js","assets/styled-CHfxRgpd.js","assets/icons-DNJk4BLK.js","assets/framer-DRpzP9-u.js","assets/RandomTelemetry-CJ8JPR5z.js","assets/react-vendor-BakkmLcC.js","assets/WorldMap-CUoF2Kkz.js"])))=>i.map(i=>d[i]);
+import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as ge,b as Te,L as Ce,B as Ae,R as Ee,c as U,d as Oe}from"./react-vendor-BakkmLcC.js";import{f as Pe,d as t,m as G}from"./styled-CHfxRgpd.js";import{H as Fe,a as Me,F as Y,b as Re,M as Le,B as We,c as Be,d as X,e as He,f as $e,g as ue,h as _e,i as xe,j as O,k as De,l as qe,m as k,n as Ne,o as Ge,p as Ve,q as Ue,r as Ye,s as L,t as Xe,u as Je,v as Ke,w as Qe,x as Ze,y as et,z as tt}from"./icons-DNJk4BLK.js";import{m as c,u as it,a as at,A as j}from"./framer-DRpzP9-u.js";import{M as rt,g as ot}from"./markdown-DNQhOqsY.js";(function(){const r=document.createElement("link").relList;if(r&&r.supports&&r.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))a(n);new MutationObserver(n=>{for(const l of n)if(l.type==="childList")for(const s of l.addedNodes)s.tagName==="LINK"&&s.rel==="modulepreload"&&a(s)}).observe(document,{childList:!0,subtree:!0});function o(n){const l={};return n.integrity&&(l.integrity=n.integrity),n.referrerPolicy&&(l.referrerPolicy=n.referrerPolicy),n.crossOrigin==="use-credentials"?l.credentials="include":n.crossOrigin==="anonymous"?l.credentials="omit":l.credentials="same-origin",l}function a(n){if(n.ep)return;n.ep=!0;const l=o(n);fetch(n.href,l)}})();const nt="modulepreload",st=function(i){return"/urvin.github.io/"+i},J={},P=function(r,o,a){let n=Promise.resolve();if(o&&o.length>0){let x=function(m){return Promise.all(m.map(h=>Promise.resolve(h).then(g=>({status:"fulfilled",value:g}),g=>({status:"rejected",reason:g}))))};document.getElementsByTagName("link");const s=document.querySelector("meta[property=csp-nonce]"),p=s?.nonce||s?.getAttribute("nonce");n=x(o.map(m=>{if(m=st(m),m in J)return;J[m]=!0;const h=m.endsWith(".css"),g=h?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${m}"]${g}`))return;const u=document.createElement("link");if(u.rel=h?"stylesheet":nt,h||(u.as="script"),u.crossOrigin="",u.href=m,p&&u.setAttribute("nonce",p),document.head.appendChild(u),h)return new Promise((f,b)=>{u.addEventListener("load",f),u.addEventListener("error",()=>b(new Error(`Unable to preload CSS for ${m}`)))})}))}function l(s){const p=new Event("vite:preloadError",{cancelable:!0});if(p.payload=s,window.dispatchEvent(p),!p.defaultPrevented)throw s}return n.then(s=>{for(const p of s||[])p.status==="rejected"&&l(p.reason);return r().catch(l)})},lt=Pe`
   :root {
     /* Color Palette - United Airlines Executive Theme (Navy, Slate, Sky Blue & Gold accents) */
     --color-bg-primary: #f4f6f9;
@@ -348,7 +348,7 @@ import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as 
         grid-template-columns: 1fr !important;
     }
   }
-`,ct=t(l.nav)`
+`,ct=t(c.nav)`
   position: fixed;
   top: 0;
   left: 0;
@@ -399,7 +399,7 @@ import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as 
   @media (max-width: 768px) {
     padding: ${({$scrolled:i})=>i?"0.6rem 1.2rem":"calc(1rem + env(safe-area-inset-top, 0px)) var(--container-padding) 1rem var(--container-padding)"};
   }
-`,pt=t(l.a)`
+`,pt=t(c.a)`
   display: flex;
   align-items: center;
   gap: 12px;
@@ -429,7 +429,7 @@ import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as 
   height: 100%;
   transform: rotate(-90deg);
   pointer-events: none;
-`,gt=t(l.ul)`
+`,gt=t(c.ul)`
   display: flex;
   align-items: center;
   gap: clamp(1.5rem, 3vw, 3rem);
@@ -459,7 +459,7 @@ import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as 
       transform: translateX(0);
     `}
   }
-`,ut=t(l.a)`
+`,ut=t(c.a)`
   color: var(--color-text-secondary);
   font-size: var(--text-sm);
   font-weight: 500;
@@ -517,7 +517,7 @@ import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as 
       color: var(--color-accent-primary);
     }
   }
-`,xt=t(l.button)`
+`,xt=t(c.button)`
   display: none;
   background: none;
   border: none;
@@ -539,7 +539,7 @@ import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as 
     align-items: center;
     justify-content: center;
   }
-`,ft=t(l.div)`
+`,ft=t(c.div)`
   display: none;
   
   @media (max-width: 768px) {
@@ -552,7 +552,7 @@ import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as 
     z-index: calc(var(--z-fixed) - 1);
     cursor: pointer;
   }
-`;t(l.div)`
+`;t(c.div)`
   position: fixed;
   top: 0;
   left: 0;
@@ -561,7 +561,7 @@ import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as 
   background: var(--color-gradient-1);
   transform-origin: 0%;
   z-index: var(--z-tooltip); /* Sit above everything, even fixed nav */
-`;const N=({scrollToSection:i})=>{const[o,r]=d.useState(!1),[a,n]=d.useState(!1),[s,c]=d.useState("home"),[m,x]=d.useState(!1),p=he(),h=ge();d.useEffect(()=>{const y=()=>x(window.innerWidth<=768);return y(),window.addEventListener("resize",y),()=>window.removeEventListener("resize",y)},[]);const{scrollYProgress:g}=it(),u=at(g,{stiffness:100,damping:30,restDelta:.001}),f=d.useMemo(()=>[{id:"home",label:"Home"},{id:"about",label:"About"},{id:"work",label:"Work"},{id:"projects",label:"Projects"},{id:"blog",label:"Blog"},{id:"contact",label:"Contact"}],[]),b=h.pathname.startsWith("/blog")?"blog":s;d.useEffect(()=>{const y=()=>{r(window.scrollY>50);const z=f.map(S=>document.getElementById(S.id)),C=window.scrollY+window.innerHeight/3;z.forEach((S,Ie)=>{if(S){const{offsetTop:V,offsetHeight:ze}=S;C>=V&&C<V+ze&&c(f[Ie].id)}})};return window.addEventListener("scroll",y),y(),()=>window.removeEventListener("scroll",y)},[f]),d.useEffect(()=>(a?document.body.style.overflow="hidden":document.body.style.overflow="",()=>{document.body.style.overflow=""}),[a]);const w=d.useCallback((y,z)=>{y.preventDefault(),n(!1),h.pathname==="/"?setTimeout(()=>{i(z)},300):(p("/"),setTimeout(()=>{const S=document.getElementById(z);S&&S.scrollIntoView({behavior:"smooth"})},500))},[i,p,h.pathname]),F={hidden:{y:-100},visible:{y:0,transition:{duration:.6,ease:"easeOut"}}},M={hidden:{opacity:0,y:-20},visible:y=>({opacity:1,y:0,transition:{delay:y*.1+.3,duration:.5,ease:"easeOut"}})},R={closed:{opacity:0,transition:{duration:.2,ease:"easeOut"}},open:{opacity:1,transition:{duration:.3,ease:"easeIn"}}};return e.jsxs(e.Fragment,{children:[e.jsx(ct,{variants:F,initial:"hidden",animate:"visible",$scrolled:o,children:e.jsxs(dt,{$scrolled:o,children:[e.jsx(pt,{onClick:y=>w(y,"home"),whileHover:{scale:1.03},whileTap:{scale:.95},children:e.jsxs(mt,{children:["UK",e.jsxs(ht,{viewBox:"0 0 40 40",children:[e.jsx("defs",{children:e.jsxs("linearGradient",{id:"progress-gradient",x1:"0%",y1:"0%",x2:"100%",y2:"100%",children:[e.jsx("stop",{offset:"0%",stopColor:"var(--color-accent-primary)"}),e.jsx("stop",{offset:"100%",stopColor:"var(--color-accent-secondary)"})]})}),e.jsx("circle",{cx:"20",cy:"20",r:"19",fill:"none",stroke:"rgba(30, 41, 59, 0.05)",strokeWidth:"1.2"}),e.jsx(l.circle,{cx:"20",cy:"20",r:"19",fill:"none",stroke:"url(#progress-gradient)",strokeWidth:"1.8",strokeLinecap:"round",pathLength:u})]})]})}),e.jsx(gt,{$isOpen:a,children:f.map((y,z)=>e.jsx(l.li,{variants:M,initial:"hidden",animate:"visible",custom:z,children:e.jsx(ut,{onClick:C=>w(C,y.id),className:b===y.id?"active":"",whileHover:{scale:1.05},whileTap:{scale:.92},children:y.label})},y.id))}),e.jsx(xt,{onClick:()=>n(!a),whileHover:{scale:1.1},whileTap:{scale:.9},"aria-label":"Toggle mobile menu",children:e.jsx(j,{mode:"wait",children:a?e.jsx(l.div,{initial:{rotate:-90,opacity:0},animate:{rotate:0,opacity:1},exit:{rotate:90,opacity:0},transition:{duration:.2},children:e.jsx(Fe,{})},"close"):e.jsx(l.div,{initial:{rotate:90,opacity:0},animate:{rotate:0,opacity:1},exit:{rotate:-90,opacity:0},transition:{duration:.2},children:e.jsx(Me,{})},"menu")})})]})}),e.jsx(j,{children:a&&e.jsx(ft,{variants:R,initial:"closed",animate:"open",exit:"closed",onClick:()=>n(!1)})})]})},vt=`---
+`;const N=({scrollToSection:i})=>{const[r,o]=d.useState(!1),[a,n]=d.useState(!1),[l,s]=d.useState("home"),[p,x]=d.useState(!1),m=he(),h=ge();d.useEffect(()=>{const y=()=>x(window.innerWidth<=768);return y(),window.addEventListener("resize",y),()=>window.removeEventListener("resize",y)},[]);const{scrollYProgress:g}=it(),u=at(g,{stiffness:100,damping:30,restDelta:.001}),f=d.useMemo(()=>[{id:"home",label:"Home"},{id:"about",label:"About"},{id:"work",label:"Work"},{id:"projects",label:"Projects"},{id:"blog",label:"Blog"},{id:"contact",label:"Contact"}],[]),b=h.pathname.startsWith("/blog")?"blog":l;d.useEffect(()=>{const y=()=>{o(window.scrollY>50);const z=f.map(S=>document.getElementById(S.id)),C=window.scrollY+window.innerHeight/3;z.forEach((S,Ie)=>{if(S){const{offsetTop:V,offsetHeight:ze}=S;C>=V&&C<V+ze&&s(f[Ie].id)}})};return window.addEventListener("scroll",y),y(),()=>window.removeEventListener("scroll",y)},[f]),d.useEffect(()=>(a?document.body.style.overflow="hidden":document.body.style.overflow="",()=>{document.body.style.overflow=""}),[a]);const w=d.useCallback((y,z)=>{y.preventDefault(),n(!1),h.pathname==="/"?setTimeout(()=>{i(z)},300):(m("/"),setTimeout(()=>{const S=document.getElementById(z);S&&S.scrollIntoView({behavior:"smooth"})},500))},[i,m,h.pathname]),F={hidden:{y:-100},visible:{y:0,transition:{duration:.6,ease:"easeOut"}}},M={hidden:{opacity:0,y:-20},visible:y=>({opacity:1,y:0,transition:{delay:y*.1+.3,duration:.5,ease:"easeOut"}})},R={closed:{opacity:0,transition:{duration:.2,ease:"easeOut"}},open:{opacity:1,transition:{duration:.3,ease:"easeIn"}}};return e.jsxs(e.Fragment,{children:[e.jsx(ct,{variants:F,initial:"hidden",animate:"visible",$scrolled:r,children:e.jsxs(dt,{$scrolled:r,children:[e.jsx(pt,{onClick:y=>w(y,"home"),whileHover:{scale:1.03},whileTap:{scale:.95},children:e.jsxs(mt,{children:["UK",e.jsxs(ht,{viewBox:"0 0 40 40",children:[e.jsx("defs",{children:e.jsxs("linearGradient",{id:"progress-gradient",x1:"0%",y1:"0%",x2:"100%",y2:"100%",children:[e.jsx("stop",{offset:"0%",stopColor:"var(--color-accent-primary)"}),e.jsx("stop",{offset:"100%",stopColor:"var(--color-accent-secondary)"})]})}),e.jsx("circle",{cx:"20",cy:"20",r:"19",fill:"none",stroke:"rgba(30, 41, 59, 0.05)",strokeWidth:"1.2"}),e.jsx(c.circle,{cx:"20",cy:"20",r:"19",fill:"none",stroke:"url(#progress-gradient)",strokeWidth:"1.8",strokeLinecap:"round",pathLength:u})]})]})}),e.jsx(gt,{$isOpen:a,children:f.map((y,z)=>e.jsx(c.li,{variants:M,initial:"hidden",animate:"visible",custom:z,children:e.jsx(ut,{onClick:C=>w(C,y.id),className:b===y.id?"active":"",whileHover:{scale:1.05},whileTap:{scale:.92},children:y.label})},y.id))}),e.jsx(xt,{onClick:()=>n(!a),whileHover:{scale:1.1},whileTap:{scale:.9},"aria-label":"Toggle mobile menu",children:e.jsx(j,{mode:"wait",children:a?e.jsx(c.div,{initial:{rotate:-90,opacity:0},animate:{rotate:0,opacity:1},exit:{rotate:90,opacity:0},transition:{duration:.2},children:e.jsx(Fe,{})},"close"):e.jsx(c.div,{initial:{rotate:90,opacity:0},animate:{rotate:0,opacity:1},exit:{rotate:-90,opacity:0},transition:{duration:.2},children:e.jsx(Me,{})},"menu")})})]})}),e.jsx(j,{children:a&&e.jsx(ft,{variants:R,initial:"closed",animate:"open",exit:"closed",onClick:()=>n(!1)})})]})},vt=`---
 id: 3
 title: "Health in a Post-AGI World"
 slug: "health-post-agi"
@@ -782,8 +782,8 @@ We are not on the same path. We are not even in the same race. One group is runn
 Understanding this is not about blame or pity. It's about seeing the world clearly. The challenges are different. The mindset is different. The definition of "progress" itself is different.
 
 Until the foundation is built everywhere, we will continue to live in these two separate worlds, operating on two completely different timelines. One looking at the ground, the other at the stars.
-`,K=Object.assign({"../blogs/health-post-agi.md":vt,"../blogs/meat-without-the-animal.md":bt,"../blogs/preserving-stories.md":yt,"../blogs/silicon-valley-india.md":wt,"../blogs/the-new-leverage.md":kt,"../blogs/the-two-worlds.md":jt}),St=i=>{const o=/^---\n([\s\S]*?)\n---\n([\s\S]*)$/,r=i.match(o);if(!r)return{data:{},content:i};const a=r[1],n=r[2],s={};return a.split(`
-`).forEach(m=>{const x=m.indexOf(":");if(x>0){const p=m.substring(0,x).trim();let h=m.substring(x+1).trim();(h.startsWith('"')&&h.endsWith('"')||h.startsWith("'")&&h.endsWith("'"))&&(h=h.slice(1,-1)),!isNaN(h)&&h!==""?s[p]=Number(h):s[p]=h}}),{data:s,content:n.trim()}},fe=()=>{const i=[];for(const o in K){const r=o.split("/").pop().replace(".md","");try{const a=K[o],{data:n,content:s}=St(a);i.push({...n,content:s,filename:r})}catch(a){console.error(`Error loading blog post ${r}:`,a)}}return i},It=i=>fe().find(r=>r.slug===i)||null,Q=t.div`
+`,K=Object.assign({"../blogs/health-post-agi.md":vt,"../blogs/meat-without-the-animal.md":bt,"../blogs/preserving-stories.md":yt,"../blogs/silicon-valley-india.md":wt,"../blogs/the-new-leverage.md":kt,"../blogs/the-two-worlds.md":jt}),St=i=>{const r=/^---\n([\s\S]*?)\n---\n([\s\S]*)$/,o=i.match(r);if(!o)return{data:{},content:i};const a=o[1],n=o[2],l={};return a.split(`
+`).forEach(p=>{const x=p.indexOf(":");if(x>0){const m=p.substring(0,x).trim();let h=p.substring(x+1).trim();(h.startsWith('"')&&h.endsWith('"')||h.startsWith("'")&&h.endsWith("'"))&&(h=h.slice(1,-1)),!isNaN(h)&&h!==""?l[m]=Number(h):l[m]=h}}),{data:l,content:n.trim()}},fe=()=>{const i=[];for(const r in K){const o=r.split("/").pop().replace(".md","");try{const a=K[r],{data:n,content:l}=St(a);i.push({...n,content:l,filename:o})}catch(a){console.error(`Error loading blog post ${o}:`,a)}}return i},It=i=>fe().find(o=>o.slug===i)||null,Q=t.div`
   min-height: 100vh;
   background: transparent;
   position: relative;
@@ -844,7 +844,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 768px) {
     margin-bottom: var(--spacing-sm);
   }
-`,ae=t(l.button)`
+`,ae=t(c.button)`
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
@@ -872,7 +872,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     min-height: 48px;
     padding: var(--spacing-sm) var(--spacing-lg);
   }
-`,zt=t(l.button)`
+`,zt=t(c.button)`
   display: inline-flex;
   align-items: center;
   gap: var(--spacing-sm);
@@ -899,7 +899,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     min-height: 48px;
     padding: var(--spacing-sm) var(--spacing-lg);
   }
-`,Tt=t(l.article)`
+`,Tt=t(c.article)`
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 24px;
@@ -1065,7 +1065,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     color: var(--color-text-secondary);
     margin-bottom: var(--spacing-xl);
   }
-`,Mt=()=>{const{slug:i}=Te(),o=he(),r=It(i);d.useEffect(()=>{window.scrollTo(0,0)},[i]);const a=()=>{o("/#blog")},n=async()=>{const c=window.location.href;if(navigator.share)try{await navigator.share({title:r?.title||"Blog Post",text:r?.summary||"",url:c})}catch(m){console.log("Error sharing:",m)}else navigator.clipboard.writeText(c),alert("Link copied to clipboard!")},s=c=>{o(`/#${c}`)};return r?e.jsxs(Q,{children:[e.jsx(Z,{}),e.jsx(N,{scrollToSection:s}),e.jsx(ee,{children:e.jsxs(te,{children:[e.jsxs(ie,{children:[e.jsxs(ae,{onClick:a,whileHover:{scale:1.05},children:[e.jsx(Y,{})," Back to Blog"]}),e.jsxs(zt,{onClick:n,whileHover:{scale:1.05},children:[e.jsx(Re,{})," Share"]})]}),e.jsxs(Tt,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.6,ease:"easeOut"},children:[e.jsxs(Ct,{children:[r.category&&e.jsx(At,{children:r.category}),e.jsx(Et,{children:r.title}),e.jsxs(Ot,{children:[e.jsxs("span",{children:[e.jsx(Le,{})," ",r.date]}),e.jsxs("span",{children:[e.jsx(We,{})," ",r.readTime]})]})]}),e.jsx(Pt,{children:e.jsx(ot,{components:{a:({node:c,...m})=>e.jsx("a",{...m,target:"_blank",rel:"noopener noreferrer"})},children:r.content})})]})]})})]}):e.jsxs(Q,{children:[e.jsx(Z,{}),e.jsx(N,{scrollToSection:s}),e.jsx(ee,{children:e.jsxs(te,{children:[e.jsx(ie,{children:e.jsxs(ae,{onClick:a,whileHover:{scale:1.05},children:[e.jsx(Y,{})," Back to Blog"]})}),e.jsxs(Ft,{children:[e.jsx("h2",{children:"Blog Post Not Found"}),e.jsx("p",{children:"The blog post you're looking for doesn't exist."})]})]})})]})};var W={exports:{}},B,oe;function Rt(){if(oe)return B;oe=1;var i="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";return B=i,B}var H,re;function Lt(){if(re)return H;re=1;var i=Rt();function o(){}function r(){}return r.resetWarningCache=o,H=function(){function a(c,m,x,p,h,g){if(g!==i){var u=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw u.name="Invariant Violation",u}}a.isRequired=a;function n(){return a}var s={array:a,bigint:a,bool:a,func:a,number:a,object:a,string:a,symbol:a,any:a,arrayOf:n,element:a,elementType:a,instanceOf:n,node:a,objectOf:n,oneOf:n,oneOfType:n,shape:n,exact:n,checkPropTypes:r,resetWarningCache:o};return s.PropTypes=s,s},H}var ne;function Wt(){return ne||(ne=1,W.exports=Lt()()),W.exports}var Bt=Wt();const v=rt(Bt),ve=d.createContext(),Ht=()=>{const i=d.useContext(ve);if(!i)throw new Error("useToast must be used within ToastProvider");return i},$t=G`
+`,Mt=()=>{const{slug:i}=Te(),r=he(),o=It(i);d.useEffect(()=>{window.scrollTo(0,0)},[i]);const a=()=>{r("/#blog")},n=async()=>{const s=window.location.href;if(navigator.share)try{await navigator.share({title:o?.title||"Blog Post",text:o?.summary||"",url:s})}catch(p){console.log("Error sharing:",p)}else navigator.clipboard.writeText(s),alert("Link copied to clipboard!")},l=s=>{r(`/#${s}`)};return o?e.jsxs(Q,{children:[e.jsx(Z,{}),e.jsx(N,{scrollToSection:l}),e.jsx(ee,{children:e.jsxs(te,{children:[e.jsxs(ie,{children:[e.jsxs(ae,{onClick:a,whileHover:{scale:1.05},children:[e.jsx(Y,{})," Back to Blog"]}),e.jsxs(zt,{onClick:n,whileHover:{scale:1.05},children:[e.jsx(Re,{})," Share"]})]}),e.jsxs(Tt,{initial:{opacity:0,y:30},animate:{opacity:1,y:0},transition:{duration:.6,ease:"easeOut"},children:[e.jsxs(Ct,{children:[o.category&&e.jsx(At,{children:o.category}),e.jsx(Et,{children:o.title}),e.jsxs(Ot,{children:[e.jsxs("span",{children:[e.jsx(Le,{})," ",o.date]}),e.jsxs("span",{children:[e.jsx(We,{})," ",o.readTime]})]})]}),e.jsx(Pt,{children:e.jsx(rt,{components:{a:({node:s,...p})=>e.jsx("a",{...p,target:"_blank",rel:"noopener noreferrer"})},children:o.content})})]})]})})]}):e.jsxs(Q,{children:[e.jsx(Z,{}),e.jsx(N,{scrollToSection:l}),e.jsx(ee,{children:e.jsxs(te,{children:[e.jsx(ie,{children:e.jsxs(ae,{onClick:a,whileHover:{scale:1.05},children:[e.jsx(Y,{})," Back to Blog"]})}),e.jsxs(Ft,{children:[e.jsx("h2",{children:"Blog Post Not Found"}),e.jsx("p",{children:"The blog post you're looking for doesn't exist."})]})]})})]})};var W={exports:{}},B,re;function Rt(){if(re)return B;re=1;var i="SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED";return B=i,B}var H,oe;function Lt(){if(oe)return H;oe=1;var i=Rt();function r(){}function o(){}return o.resetWarningCache=r,H=function(){function a(s,p,x,m,h,g){if(g!==i){var u=new Error("Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types");throw u.name="Invariant Violation",u}}a.isRequired=a;function n(){return a}var l={array:a,bigint:a,bool:a,func:a,number:a,object:a,string:a,symbol:a,any:a,arrayOf:n,element:a,elementType:a,instanceOf:n,node:a,objectOf:n,oneOf:n,oneOfType:n,shape:n,exact:n,checkPropTypes:o,resetWarningCache:r};return l.PropTypes=l,l},H}var ne;function Wt(){return ne||(ne=1,W.exports=Lt()()),W.exports}var Bt=Wt();const v=ot(Bt),ve=d.createContext(),Ht=()=>{const i=d.useContext(ve);if(!i)throw new Error("useToast must be used within ToastProvider");return i},$t=G`
   from {
     transform: translateX(400px);
     opacity: 0;
@@ -1090,7 +1090,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     left: 16px;
     max-width: none;
   }
-`,Dt=t(l.div)`
+`,Dt=t(c.div)`
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 12px;
@@ -1147,7 +1147,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     background: rgba(99, 102, 241, 0.1);
     color: var(--color-text-primary);
   }
-`,be=({id:i,type:o,title:r,message:a,onClose:n})=>{const s=()=>{switch(o){case"success":return e.jsx($e,{});case"error":return e.jsx(He,{});case"info":return e.jsx(X,{});default:return e.jsx(X,{})}};return e.jsxs(Dt,{$type:o,initial:{opacity:0,x:400},animate:{opacity:1,x:0},exit:{opacity:0,x:400},transition:{duration:.3},children:[e.jsx(qt,{$type:o,children:s()}),e.jsxs(Nt,{children:[r&&e.jsx(Gt,{children:r}),a&&e.jsx(Vt,{children:a})]}),e.jsx(Ut,{onClick:()=>n(i),"aria-label":"Close notification",children:e.jsx(Be,{})})]})};be.propTypes={id:v.string.isRequired,type:v.oneOf(["success","error","info"]).isRequired,title:v.string,message:v.string,onClose:v.func.isRequired};const ye=({children:i})=>{const[o,r]=d.useState([]),a=d.useCallback(p=>{r(h=>h.filter(g=>g.id!==p))},[]),n=d.useCallback(({type:p="info",title:h,message:g,duration:u=5e3})=>{const f=`toast-${Date.now()}-${Math.random()}`,b={id:f,type:p,title:h,message:g};return r(w=>[...w,b]),u>0&&setTimeout(()=>{a(f)},u),f},[a]),s=d.useCallback((p,h,g)=>n({type:"success",title:p,message:h,duration:g}),[n]),c=d.useCallback((p,h,g)=>n({type:"error",title:p,message:h,duration:g}),[n]),m=d.useCallback((p,h,g)=>n({type:"info",title:p,message:h,duration:g}),[n]),x={showSuccess:s,showError:c,showInfo:m,removeToast:a};return e.jsxs(ve.Provider,{value:x,children:[i,e.jsx(_t,{children:e.jsx(j,{children:o.map(p=>e.jsx(be,{...p,onClose:a},p.id))})})]})};ye.propTypes={children:v.node.isRequired};const Yt=t(l.div)`
+`,be=({id:i,type:r,title:o,message:a,onClose:n})=>{const l=()=>{switch(r){case"success":return e.jsx($e,{});case"error":return e.jsx(He,{});case"info":return e.jsx(X,{});default:return e.jsx(X,{})}};return e.jsxs(Dt,{$type:r,initial:{opacity:0,x:400},animate:{opacity:1,x:0},exit:{opacity:0,x:400},transition:{duration:.3},children:[e.jsx(qt,{$type:r,children:l()}),e.jsxs(Nt,{children:[o&&e.jsx(Gt,{children:o}),a&&e.jsx(Vt,{children:a})]}),e.jsx(Ut,{onClick:()=>n(i),"aria-label":"Close notification",children:e.jsx(Be,{})})]})};be.propTypes={id:v.string.isRequired,type:v.oneOf(["success","error","info"]).isRequired,title:v.string,message:v.string,onClose:v.func.isRequired};const ye=({children:i})=>{const[r,o]=d.useState([]),a=d.useCallback(m=>{o(h=>h.filter(g=>g.id!==m))},[]),n=d.useCallback(({type:m="info",title:h,message:g,duration:u=5e3})=>{const f=`toast-${Date.now()}-${Math.random()}`,b={id:f,type:m,title:h,message:g};return o(w=>[...w,b]),u>0&&setTimeout(()=>{a(f)},u),f},[a]),l=d.useCallback((m,h,g)=>n({type:"success",title:m,message:h,duration:g}),[n]),s=d.useCallback((m,h,g)=>n({type:"error",title:m,message:h,duration:g}),[n]),p=d.useCallback((m,h,g)=>n({type:"info",title:m,message:h,duration:g}),[n]),x={showSuccess:l,showError:s,showInfo:p,removeToast:a};return e.jsxs(ve.Provider,{value:x,children:[i,e.jsx(_t,{children:e.jsx(j,{children:r.map(m=>e.jsx(be,{...m,onClose:a},m.id))})})]})};ye.propTypes={children:v.node.isRequired};const Yt=t(c.div)`
   position: fixed;
   inset: 0;
   background-color: var(--color-bg-primary);
@@ -1169,7 +1169,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   text-align: center;
   /* Fixed height prevents layout shift as words change */
   height: 180px;
-`,Jt=t(l.h1)`
+`,Jt=t(c.h1)`
   font-family: var(--font-display);
   font-size: ${({$long:i})=>i?"clamp(1.8rem, 6vw, 3.5rem)":"clamp(3rem, 10vw, 6rem)"};
   font-weight: 800;
@@ -1180,7 +1180,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   margin: 0;
   text-align: center;
   padding: 0 20px;
-`,Kt=t(l.p)`
+`,Kt=t(c.p)`
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--color-text-muted);
@@ -1191,14 +1191,14 @@ Until the foundation is built everywhere, we will continue to live in these two 
   display: flex;
   align-items: center;
   gap: 10px;
-`,se=t(l.span)`
+`,se=t(c.span)`
   display: inline-block;
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background-color: var(--color-accent-secondary);
   flex-shrink: 0;
-`,Qt=[{word:"Hello",lang:"English"},{word:"Hola",lang:"Spanish"},{word:"Bonjour",lang:"French"},{word:"नमस्ते",lang:"Hindi"},{word:"こんにちは",lang:"Japanese"},{word:"Ciao",lang:"Italian"},{word:"你好",lang:"Chinese"},{word:"Hallo",lang:"German"},{word:"Olá",lang:"Portuguese"},{word:"안녕하세요",lang:"Korean"},{word:"Merhaba",lang:"Turkish"},{word:"Shalom",lang:"Hebrew"},{word:"Sawatdee",lang:"Thai"},{word:"Hej",lang:"Swedish"},{word:"Ahoj",lang:"Czech"},{word:"Привет",lang:"Russian"}],le=220,Zt=8,ei={word:"Welcome",lang:"English"},ti=i=>{const o=[...i];for(let r=o.length-1;r>0;r--){const a=Math.floor(Math.random()*(r+1));[o[r],o[a]]=[o[a],o[r]]}return o},ii=()=>[...ti(Qt).slice(0,Zt),ei],ai=({onComplete:i})=>{const o=d.useRef(ii()),[r,a]=d.useState(0),[n,s]=d.useState(!1),c=d.useRef(i);d.useEffect(()=>{c.current=i},[i]),d.useEffect(()=>{const x=o.current,h=setInterval(()=>{a(g=>{const u=g+1;return u>=x.length?(setTimeout(()=>s(!0),le),g):u})},le);return()=>clearInterval(h)},[]),d.useEffect(()=>{if(!n)return;const x=setTimeout(()=>c.current?.(),500);return()=>clearTimeout(x)},[n]);const m=o.current[r];return e.jsx(j,{children:!n&&e.jsx(Yt,{initial:{opacity:1},exit:{opacity:0,scale:.985},transition:{duration:.5,ease:"easeInOut"},children:e.jsx(Xt,{children:e.jsx(j,{mode:"wait",children:e.jsxs(l.div,{initial:{opacity:0,y:12},animate:{opacity:1,y:0},exit:{opacity:0,y:-12},transition:{duration:.13,ease:"easeOut"},style:{display:"flex",flexDirection:"column",alignItems:"center"},children:[e.jsx(Jt,{$long:m?.word?.length>8,children:m.word}),e.jsxs(Kt,{children:[e.jsx(se,{animate:{scale:[1,1.6,1],opacity:[.4,1,.4]},transition:{duration:1.1,repeat:1/0,ease:"easeInOut"}}),m.lang,e.jsx(se,{animate:{scale:[1,1.6,1],opacity:[.4,1,.4]},transition:{duration:1.1,repeat:1/0,ease:"easeInOut",delay:.55}})]})]},m?m.word:r)})})},"bootloader")})},oi=t.div`
+`,Qt=[{word:"Hello",lang:"English"},{word:"Hola",lang:"Spanish"},{word:"Bonjour",lang:"French"},{word:"नमस्ते",lang:"Hindi"},{word:"こんにちは",lang:"Japanese"},{word:"Ciao",lang:"Italian"},{word:"你好",lang:"Chinese"},{word:"Hallo",lang:"German"},{word:"Olá",lang:"Portuguese"},{word:"안녕하세요",lang:"Korean"},{word:"Merhaba",lang:"Turkish"},{word:"Shalom",lang:"Hebrew"},{word:"Sawatdee",lang:"Thai"},{word:"Hej",lang:"Swedish"},{word:"Ahoj",lang:"Czech"},{word:"Привет",lang:"Russian"}],le=220,Zt=8,ei={word:"Welcome",lang:"English"},ti=i=>{const r=[...i];for(let o=r.length-1;o>0;o--){const a=Math.floor(Math.random()*(o+1));[r[o],r[a]]=[r[a],r[o]]}return r},ii=()=>[...ti(Qt).slice(0,Zt),ei],ai=({onComplete:i})=>{const r=d.useRef(ii()),[o,a]=d.useState(0),[n,l]=d.useState(!1),s=d.useRef(i);d.useEffect(()=>{s.current=i},[i]),d.useEffect(()=>{const x=r.current,h=setInterval(()=>{a(g=>{const u=g+1;return u>=x.length?(setTimeout(()=>l(!0),le),g):u})},le);return()=>clearInterval(h)},[]),d.useEffect(()=>{if(!n)return;const x=setTimeout(()=>s.current?.(),500);return()=>clearTimeout(x)},[n]);const p=r.current[o];return e.jsx(j,{children:!n&&e.jsx(Yt,{initial:{opacity:1},exit:{opacity:0,scale:.985},transition:{duration:.5,ease:"easeInOut"},children:e.jsx(Xt,{children:e.jsx(j,{mode:"wait",children:e.jsxs(c.div,{initial:{opacity:0,y:12},animate:{opacity:1,y:0},exit:{opacity:0,y:-12},transition:{duration:.13,ease:"easeOut"},style:{display:"flex",flexDirection:"column",alignItems:"center"},children:[e.jsx(Jt,{$long:p?.word?.length>8,children:p.word}),e.jsxs(Kt,{children:[e.jsx(se,{animate:{scale:[1,1.6,1],opacity:[.4,1,.4]},transition:{duration:1.1,repeat:1/0,ease:"easeInOut"}}),p.lang,e.jsx(se,{animate:{scale:[1,1.6,1],opacity:[.4,1,.4]},transition:{duration:1.1,repeat:1/0,ease:"easeInOut",delay:.55}})]})]},p?p.word:o)})})},"bootloader")})},ri=t.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1210,7 +1210,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   border-radius: 16px;
   margin: var(--spacing-lg) auto;
   max-width: 600px;
-`,ri=t.h3`
+`,oi=t.h3`
   font-size: var(--text-lg);
   color: var(--color-text-primary);
   margin-bottom: var(--spacing-sm);
@@ -1231,7 +1231,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   &:hover {
     opacity: 0.9;
   }
-`;class I extends me.Component{constructor(o){super(o),this.state={hasError:!1}}static getDerivedStateFromError(){return{hasError:!0}}componentDidCatch(o,r){console.error("ErrorBoundary caught an error:",o,r)}handleRetry=()=>{this.setState({hasError:!1}),window.location.reload()};render(){return this.state.hasError?e.jsxs(oi,{children:[e.jsx(ri,{children:"Something went wrong here"}),e.jsx(ni,{children:"This section failed to load. Please try reloading the page."}),e.jsx(si,{onClick:this.handleRetry,children:"Reload Page"})]}):this.props.children}}I.propTypes={children:v.node.isRequired};const li=()=>null,A=({children:i,range:o=60})=>{const r=d.useRef(null),[a,n]=d.useState({x:0,y:0}),[s,c]=d.useState(!1);d.useEffect(()=>{const p=window.matchMedia("(hover: hover) and (pointer: fine)");c(p.matches)},[]);const m=p=>{if(!s||!r.current)return;const{clientX:h,clientY:g}=p,{left:u,top:f,width:b,height:w}=r.current.getBoundingClientRect(),F=u+b/2,M=f+w/2,R=h-F,y=g-M;n({x:R*.35,y:y*.35})},x=()=>{n({x:0,y:0})};return s?e.jsx(l.div,{ref:r,onMouseMove:m,onMouseLeave:x,animate:{x:a.x,y:a.y},transition:{type:"spring",stiffness:150,damping:15,mass:.1},style:{display:"inline-block"},children:i}):e.jsx(e.Fragment,{children:i})};A.propTypes={children:v.node.isRequired,range:v.number};const ci=d.lazy(()=>P(()=>import("./FloatingRocket-BQiG8dOO.js"),__vite__mapDeps([0,1,2,3,4,5]))),di=t.section`
+`;class I extends me.Component{constructor(r){super(r),this.state={hasError:!1}}static getDerivedStateFromError(){return{hasError:!0}}componentDidCatch(r,o){console.error("ErrorBoundary caught an error:",r,o)}handleRetry=()=>{this.setState({hasError:!1}),window.location.reload()};render(){return this.state.hasError?e.jsxs(ri,{children:[e.jsx(oi,{children:"Something went wrong here"}),e.jsx(ni,{children:"This section failed to load. Please try reloading the page."}),e.jsx(si,{onClick:this.handleRetry,children:"Reload Page"})]}):this.props.children}}I.propTypes={children:v.node.isRequired};const li=()=>null,A=({children:i,range:r=60})=>{const o=d.useRef(null),[a,n]=d.useState({x:0,y:0}),[l,s]=d.useState(!1);d.useEffect(()=>{const m=window.matchMedia("(hover: hover) and (pointer: fine)");s(m.matches)},[]);const p=m=>{if(!l||!o.current)return;const{clientX:h,clientY:g}=m,{left:u,top:f,width:b,height:w}=o.current.getBoundingClientRect(),F=u+b/2,M=f+w/2,R=h-F,y=g-M;n({x:R*.35,y:y*.35})},x=()=>{n({x:0,y:0})};return l?e.jsx(c.div,{ref:o,onMouseMove:p,onMouseLeave:x,animate:{x:a.x,y:a.y},transition:{type:"spring",stiffness:150,damping:15,mass:.1},style:{display:"inline-block"},children:i}):e.jsx(e.Fragment,{children:i})};A.propTypes={children:v.node.isRequired,range:v.number};const ci=d.lazy(()=>P(()=>import("./FloatingRocket-BQiG8dOO.js"),__vite__mapDeps([0,1,2,3,4,5]))),di=t.section`
   min-height: 100vh;
   display: flex;
   align-items: center;
@@ -1263,7 +1263,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     text-align: center;
     gap: var(--spacing-lg);
   }
-`,mi=t(l.div)`
+`,mi=t(c.div)`
   max-width: 600px;
 
   @media (max-width: 1024px) {
@@ -1273,7 +1273,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 768px) {
     margin-top: 0;
   }
-`,hi=t(l.span)`
+`,hi=t(c.span)`
   display: inline-flex;
   align-items: center;
   background: rgba(0, 93, 166, 0.06);
@@ -1286,7 +1286,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   text-transform: uppercase;
   font-family: var(--font-mono);
   margin-bottom: var(--spacing-md);
-`,gi=t(l.h1)`
+`,gi=t(c.h1)`
   font-size: clamp(2.5rem, 8vw, 4.5rem);
   font-weight: 800;
   letter-spacing: -0.03em;
@@ -1296,7 +1296,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-`,ui=t(l.p)`
+`,ui=t(c.p)`
   font-size: clamp(1.1rem, 3vw, 1.4rem);
   font-weight: 500;
   color: var(--color-text-primary);
@@ -1331,7 +1331,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 768px) {
     margin-bottom: var(--spacing-sm);
   }
-`,xi=t(l.p)`
+`,xi=t(c.p)`
   font-size: clamp(0.9rem, 2.5vw, 1.05rem);
   color: var(--color-text-secondary);
   margin-bottom: var(--spacing-xl);
@@ -1346,7 +1346,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 768px) {
     margin-bottom: var(--spacing-lg);
   }
-`,fi=t(l.div)`
+`,fi=t(c.div)`
   display: flex;
   gap: var(--spacing-md);
   align-items: center;
@@ -1369,7 +1369,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
       max-width: 100%;
     }
   }
-`,vi=t(l.a)`
+`,vi=t(c.a)`
   padding: clamp(0.875rem, 2vw, 1rem) clamp(1.75rem, 4vw, 2.5rem);
   background: var(--color-gradient-1);
   color: var(--color-bg-primary);
@@ -1408,7 +1408,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     padding: 0.75rem 1.5rem;
     font-size: var(--text-sm);
   }
-`,bi=t(l.a)`
+`,bi=t(c.a)`
   padding: clamp(0.875rem, 2vw, 1rem) clamp(1.75rem, 4vw, 2.5rem);
   border: 2px solid var(--color-border);
   color: var(--color-text-primary);
@@ -1436,14 +1436,14 @@ Until the foundation is built everywhere, we will continue to live in these two 
     border-color: var(--color-accent-primary);
     color: var(--color-accent-primary);
   }
-`,yi=t(l.div)`
+`,yi=t(c.div)`
   display: flex;
   gap: var(--spacing-md);
 
   @media (max-width: 1024px) {
     justify-content: center;
   }
-`,wi=t(l.a)`
+`,wi=t(c.a)`
   width: 48px;
   height: 48px;
   border: 1px solid var(--color-border);
@@ -1482,7 +1482,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     opacity: 0.3;
     z-index: -1;
   }
-`;const ki=t(l.div)`
+`;const ki=t(c.div)`
   width: 100%;
   max-width: 380px;
   margin: 0 auto;
@@ -1526,7 +1526,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   align-items: center;
   justify-content: center;
   pointer-events: none;
-`;const Si=t(l.button)`
+`;const Si=t(c.button)`
   position: absolute;
   bottom: 2rem;
   left: 50%;
@@ -1554,7 +1554,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-family: var(--font-mono);
-`,zi=()=>{const i={hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.2,delayChildren:.3}}},o={hidden:{opacity:0,y:20},visible:{opacity:1,y:0,transition:{duration:.6,ease:"easeOut"}}};return e.jsxs(di,{children:[e.jsxs(pi,{children:[e.jsxs(mi,{variants:i,initial:"hidden",animate:"visible",children:[e.jsx(hi,{variants:o,children:"Hello, I'm"}),e.jsx(gi,{variants:o,children:"Urvin Kapadia"}),e.jsxs(ui,{variants:o,children:["Senior Manager - Airport Operations Performance & Execution at ",e.jsx("a",{href:"https://www.united.com",target:"_blank",rel:"noopener noreferrer",children:"United Airlines"})]}),e.jsx(xi,{variants:o,children:"Over 18 years of dedicated leadership in aviation operations, deploying advanced analytics, predictive decision-support models, and strategic backlogs to optimize airport execution and customer recovery."}),e.jsxs(fi,{variants:o,children:[e.jsx(A,{range:80,children:e.jsx(vi,{href:"#work",whileHover:{scale:1.05},whileTap:{scale:.95},children:"Experience Timeline"})}),e.jsx(A,{range:80,children:e.jsx(bi,{href:"#contact",whileHover:{scale:1.05},whileTap:{scale:.95},children:"Get In Touch"})})]}),e.jsx(yi,{variants:o,children:e.jsx(A,{range:35,children:e.jsx(wi,{href:"https://www.linkedin.com/in/kapadia-urvin-848a97a1/",target:"_blank",rel:"noopener noreferrer",whileHover:{scale:1.1},whileTap:{scale:.9},"aria-label":"LinkedIn",children:e.jsx(ue,{})})})}),e.jsx(d.Suspense,{fallback:null,children:e.jsx(ci,{isMobileOnly:!0})})]}),e.jsx(ki,{initial:{opacity:0,scale:.85},animate:{opacity:1,scale:1},transition:{duration:.8,ease:"easeOut",delay:.4},children:e.jsx(ji,{src:"/urvin.github.io/images/urvin_profile.jpeg",alt:"Urvin Kapadia — Senior Manager, United Airlines"})})]}),e.jsxs(Si,{onClick:()=>{const r=document.getElementById("about");r&&r.scrollIntoView({behavior:"smooth"})},initial:{opacity:0,y:-10},animate:{opacity:1,y:0},transition:{delay:1.2,duration:.5},whileHover:{scale:1.1},"aria-label":"Scroll to About",children:[e.jsx(Ii,{children:"Scroll"}),e.jsx(l.div,{animate:{y:[0,6,0]},transition:{duration:1.4,repeat:1/0,ease:"easeInOut"},children:e.jsx(_e,{size:20})})]})]})},Ti=t.section`
+`,zi=()=>{const i={hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.2,delayChildren:.3}}},r={hidden:{opacity:0,y:20},visible:{opacity:1,y:0,transition:{duration:.6,ease:"easeOut"}}};return e.jsxs(di,{children:[e.jsxs(pi,{children:[e.jsxs(mi,{variants:i,initial:"hidden",animate:"visible",children:[e.jsx(hi,{variants:r,children:"Hello, I'm"}),e.jsx(gi,{variants:r,children:"Urvin Kapadia"}),e.jsxs(ui,{variants:r,children:["Senior Manager - Airport Operations Performance & Execution at ",e.jsx("a",{href:"https://www.united.com",target:"_blank",rel:"noopener noreferrer",children:"United Airlines"})]}),e.jsx(xi,{variants:r,children:"Over 18 years of dedicated leadership in aviation operations, deploying advanced analytics, predictive decision-support models, and strategic backlogs to optimize airport execution and customer recovery."}),e.jsxs(fi,{variants:r,children:[e.jsx(A,{range:80,children:e.jsx(vi,{href:"#work",whileHover:{scale:1.05},whileTap:{scale:.95},children:"Experience Timeline"})}),e.jsx(A,{range:80,children:e.jsx(bi,{href:"#contact",whileHover:{scale:1.05},whileTap:{scale:.95},children:"Get In Touch"})})]}),e.jsx(yi,{variants:r,children:e.jsx(A,{range:35,children:e.jsx(wi,{href:"https://www.linkedin.com/in/kapadia-urvin-848a97a1/",target:"_blank",rel:"noopener noreferrer",whileHover:{scale:1.1},whileTap:{scale:.9},"aria-label":"LinkedIn",children:e.jsx(ue,{})})})}),e.jsx(d.Suspense,{fallback:null,children:e.jsx(ci,{isMobileOnly:!0})})]}),e.jsx(ki,{initial:{opacity:0,scale:.85},animate:{opacity:1,scale:1},transition:{duration:.8,ease:"easeOut",delay:.4},children:e.jsx(ji,{src:"/urvin.github.io/images/urvin_profile.jpeg",alt:"Urvin Kapadia — Senior Manager, United Airlines"})})]}),e.jsxs(Si,{onClick:()=>{const o=document.getElementById("about");o&&o.scrollIntoView({behavior:"smooth"})},initial:{opacity:0,y:-10},animate:{opacity:1,y:0},transition:{delay:1.2,duration:.5},whileHover:{scale:1.1},"aria-label":"Scroll to About",children:[e.jsx(Ii,{children:"Scroll"}),e.jsx(c.div,{animate:{y:[0,6,0]},transition:{duration:1.4,repeat:1/0,ease:"easeInOut"},children:e.jsx(_e,{size:20})})]})]})},Ti=t.section`
   padding: var(--spacing-2xl) 0;
   position: relative;
   background: transparent;
@@ -1629,7 +1629,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 480px) {
     grid-template-columns: 1fr;
   }
-`,Wi=t(l.div)`
+`,Wi=t(c.div)`
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   padding: var(--spacing-lg);
@@ -1667,7 +1667,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: var(--spacing-md);
-`,Ni=t(l.div)`
+`,Ni=t(c.div)`
   background: var(--color-bg-card);
   padding: var(--spacing-lg);
   border-radius: 16px;
@@ -1716,7 +1716,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
   }
-`,Qi=t(l.div)`
+`,Qi=t(c.div)`
   background: var(--color-bg-card);
   padding: var(--spacing-lg);
   border-radius: 16px;
@@ -1747,7 +1747,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     border-color: var(--color-accent-primary);
     transform: translateY(-2px);
   }
-`,ia=[{icon:e.jsx(xe,{}),number:"SJSU",label:"B.S. in Aviation Management & Operations"},{icon:e.jsx(O,{}),number:"18+ Yrs",label:"Career progression at United Airlines"},{icon:e.jsx(De,{}),number:"NOC/SOC",label:"Platform Governance & Network Operations Center Liaison"},{icon:e.jsx(qe,{}),number:"APIs",label:"Enterprise API management & predictive tools"}],aa=[{school:"San Jose State University",degree:"Bachelor's in Aviation Management, Aviation/Airway Management and Operations",years:"2007 – 2009",grade:"Grade: 3.67",location:"San Jose, CA"},{school:"St. Petersburg Community College",degree:"Associate's in Science (Pharmacy)",years:"2004 – 2006",grade:"Grade: 3.76",location:"St. Petersburg, FL"},{school:"South Gujarat University",degree:"Bachelor's in Mathematics",years:"2001 – 2004",grade:"Grade: 3.79",location:"Surat, Gujarat, India"}],oa=[{category:"Strategic Leadership",icon:e.jsx(O,{}),list:["Product Strategy","Roadmapping","Operational Analytics","NOC Liaison"]},{category:"Airport Operations",icon:e.jsx(k,{}),list:["Performance & Execution","Gate Control","Zone Supervision","Ramp Operations"]},{category:"Technical & Data",icon:e.jsx(Ne,{}),list:["Spotfire Analytics","Enterprise APIs","Predictive Modeling","System Scaling"]},{category:"Team & Governance",icon:e.jsx(xe,{}),list:["Cross-functional Leadership","Vendor Management","Release Reliability","Executive Narratives"]}],$={hidden:{opacity:0,y:24},visible:i=>({opacity:1,y:0,transition:{duration:.5,delay:i*.08,ease:"easeOut"}})},ra=()=>e.jsx(Ti,{id:"about",children:e.jsxs(Ci,{children:[e.jsx(Ai,{children:e.jsxs(l.div,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.15},transition:{duration:.6},children:[e.jsx(Ei,{children:"About Me"}),e.jsx(Oi,{children:"Over 18 years of airport performance, systems engineering, and technology strategy in airline operations."})]})}),e.jsxs(Pi,{children:[e.jsx(Fi,{children:e.jsxs(Mi,{children:[e.jsx("p",{children:"My professional career spans over 18 years within airport hub operations at United Airlines, moving from front-line execution on the ramp to leading analytical performance product strategy at the corporate level."}),e.jsx("p",{children:"I specialize in developing predictive decision‑support products, enterprise API backlogs, and real‑time operations data governance. Bridging the gap between frontline operations, data analytics, and digital technology platforms, I ensure every platform release drives network dependability and airport execution reliability."})]})}),e.jsx(Ri,{children:e.jsx("img",{src:"/urvin.github.io/images/urvin IKC team.jpg",alt:"URVIN IKC Team",style:{maxWidth:"100%",borderRadius:"50px"}})})]}),e.jsx("div",{children:e.jsx(Li,{children:ia.map((i,o)=>e.jsxs(Wi,{custom:o,variants:$,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},whileHover:{y:-4},children:[e.jsx(Bi,{children:i.icon}),e.jsx(Hi,{children:i.number}),e.jsx($i,{children:i.label})]},o))})}),e.jsxs(_i,{children:[e.jsx(Di,{children:"Education"}),e.jsx(qi,{children:aa.map((i,o)=>e.jsxs(Ni,{custom:o,variants:$,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.15},children:[e.jsx(Gi,{children:i.school}),e.jsx(Vi,{children:i.degree}),e.jsxs(Ui,{children:[i.years," • ",i.location]}),e.jsx(Yi,{children:i.grade})]},o))})]}),e.jsxs(Xi,{children:[e.jsx(Ji,{children:"Technical Skills"}),e.jsx(Ki,{children:oa.map(({category:i,icon:o,list:r},a)=>e.jsxs(Qi,{custom:a,variants:$,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:[e.jsxs(Zi,{children:[o,i]}),e.jsx(ea,{children:r.map(n=>e.jsx(ta,{children:n},n))})]},i))})]})]})}),na=t.section`
+`,ia=[{icon:e.jsx(xe,{}),number:"SJSU",label:"B.S. in Aviation Management & Operations"},{icon:e.jsx(O,{}),number:"18+ Yrs",label:"Career progression at United Airlines"},{icon:e.jsx(De,{}),number:"NOC/SOC",label:"Platform Governance & Network Operations Center Liaison"},{icon:e.jsx(qe,{}),number:"APIs",label:"Enterprise API management & predictive tools"}],aa=[{school:"San Jose State University",degree:"Bachelor's in Aviation Management, Aviation/Airway Management and Operations",years:"2007 – 2009",grade:"Grade: 3.67",location:"San Jose, CA"},{school:"St. Petersburg Community College",degree:"Associate's in Science (Pharmacy)",years:"2004 – 2006",grade:"Grade: 3.76",location:"St. Petersburg, FL"},{school:"South Gujarat University",degree:"Bachelor's in Mathematics",years:"2001 – 2004",grade:"Grade: 3.79",location:"Surat, Gujarat, India"}],ra=[{category:"Strategic Leadership",icon:e.jsx(O,{}),list:["Product Strategy","Roadmapping","Operational Analytics","NOC Liaison"]},{category:"Airport Operations",icon:e.jsx(k,{}),list:["Performance & Execution","Gate Control","Zone Supervision","Ramp Operations"]},{category:"Technical & Data",icon:e.jsx(Ne,{}),list:["Spotfire Analytics","Enterprise APIs","Predictive Modeling","System Scaling"]},{category:"Team & Governance",icon:e.jsx(xe,{}),list:["Cross-functional Leadership","Vendor Management","Release Reliability","Executive Narratives"]}],$={hidden:{opacity:0,y:24},visible:i=>({opacity:1,y:0,transition:{duration:.5,delay:i*.08,ease:"easeOut"}})},oa=()=>e.jsx(Ti,{id:"about",children:e.jsxs(Ci,{children:[e.jsx(Ai,{children:e.jsxs(c.div,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.15},transition:{duration:.6},children:[e.jsx(Ei,{children:"About Me"}),e.jsx(Oi,{children:"Over 18 years of airport performance, systems engineering, and technology strategy in airline operations."})]})}),e.jsxs(Pi,{children:[e.jsx(Fi,{children:e.jsxs(Mi,{children:[e.jsx("p",{children:"My professional career spans over 18 years within airport hub operations at United Airlines, moving from front-line execution on the ramp to leading analytical performance product strategy at the corporate level."}),e.jsx("p",{children:"I specialize in developing predictive decision‑support products, enterprise API backlogs, and real‑time operations data governance. Bridging the gap between frontline operations, data analytics, and digital technology platforms, I ensure every platform release drives network dependability and airport execution reliability."})]})}),e.jsx(Ri,{children:e.jsx("img",{src:"/urvin.github.io/images/urvin IKC team.jpg",alt:"URVIN IKC Team",style:{maxWidth:"100%",borderRadius:"50px"}})})]}),e.jsx("div",{children:e.jsx(Li,{children:ia.map((i,r)=>e.jsxs(Wi,{custom:r,variants:$,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},whileHover:{y:-4},children:[e.jsx(Bi,{children:i.icon}),e.jsx(Hi,{children:i.number}),e.jsx($i,{children:i.label})]},r))})}),e.jsxs(_i,{children:[e.jsx(Di,{children:"Education"}),e.jsx(qi,{children:aa.map((i,r)=>e.jsxs(Ni,{custom:r,variants:$,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.15},children:[e.jsx(Gi,{children:i.school}),e.jsx(Vi,{children:i.degree}),e.jsxs(Ui,{children:[i.years," • ",i.location]}),e.jsx(Yi,{children:i.grade})]},r))})]}),e.jsxs(Xi,{children:[e.jsx(Ji,{children:"Technical Skills"}),e.jsx(Ki,{children:ra.map(({category:i,icon:r,list:o},a)=>e.jsxs(Qi,{custom:a,variants:$,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:[e.jsxs(Zi,{children:[r,i]}),e.jsx(ea,{children:o.map(n=>e.jsx(ta,{children:n},n))})]},i))})]})]})}),na=t.section`
   padding: var(--spacing-2xl) 0;
   position: relative;
   background: transparent;
@@ -1759,7 +1759,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   max-width: var(--container-xl);
   margin: 0 auto;
   padding: 0 var(--container-padding);
-`,la=t(l.div)`
+`,la=t(c.div)`
   text-align: center;
   margin-bottom: var(--spacing-md);
 `,ca=t.h2`
@@ -1784,7 +1784,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   gap: var(--spacing-md);
   max-width: 900px;
   margin: 0 auto;
-`,we=t(l.div)`
+`,we=t(c.div)`
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-left: 3px solid transparent;
@@ -1884,7 +1884,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   svg {
     font-size: 0.8rem;
   }
-`,ka=t(l.div)`
+`,ka=t(c.div)`
   overflow: hidden;
   margin-top: var(--spacing-md);
 `,ja=t.ul`
@@ -1898,7 +1898,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   line-height: 1.7;
 `,Sa=t.li`
   color: var(--color-text-secondary);
-`,Ia=[{id:1,icon:e.jsx(k,{}),title:"Senior Manager - Airport Operations Performance and Execution",company:"United Airlines",department:"Airport Operations",duration:"May 2023 – Present",location:"Chicago, IL (Hybrid)",description:"Owns strategy, roadmap, and requirements for operational analytics products supporting airport and network operations at United Airlines.",tech:["Product Strategy","Roadmapping","Operational Analytics","Executive Communication"],bullets:["Own strategy, roadmap, and requirements for operational analytics products supporting airport and network operations, ensuring every capability delivers measurable operational value.","Direct product direction for the integrated operational data foundation: set availability, quality, and governance standards; prioritize data integration across airline systems; and drive adoption via embedded tools and interfaces.","Partner with Digital Technology to scope, build, test, and launch capabilities; define performance SLAs, quality gates, and ongoing measurement for continuous improvement.","Lead decision‑support and optimization strategy for NOC/SOC—embedding rules engines, optimization logic, and recommendation frameworks into operational workflows while maintaining ownership of business logic.","Develop and coach a high‑performing analytics team (on‑shore/off‑shore) to be product‑minded, technically fluent, and delivery‑oriented.","Modernized operational visibility by designing intuitive reliability, staffing, and real time tools used by Senior Hub Leadership, SOC, and frontline supervisors.","Led cross functional initiatives with Inflight, AO, SOC, NOC, Crew, and IT to ensure performance insights drive customer reliability and efficient service delivery.","Developed multi year analytics and application development strategy aligned with corporate customer experience and dependability goals.","Established governance for tool deployment, change control, pressure testing, and end user training to ensure consistent experience across hubs."]},{id:2,icon:e.jsx(k,{}),title:"Operations Manager - Performance & Execution",company:"United Airlines",department:"Airport Operations",duration:"Aug 2021 – May 2023",location:"Chicago, IL",description:"Developed and prioritized product backlogs and multi-year roadmaps for integration platforms and predictive tools that align with operational goals.",tech:["Spotfire Analytics","Predictive Modeling","API Integration","Platform Engineering"],bullets:["Developed and prioritized product backlogs and multi-year roadmaps for integration platforms and predictive tools that effectively align with and support operational goals.","Established clear success criteria and validation protocols for models, collaborating with platform engineering, architecture, and security teams to enhance the scalability of data and analytics capabilities.","Created robust deployment and post-deployment support practices, while actively identifying automation opportunities across various environments to enhance release reliability.","Designed multiple predictive models that serve as essential decision-support tools for stations, the Network Operations Center (NOC), and cross-functional stakeholders, leading to significant improvements in on-time performance, customer recovery, and service reliability.","Formulated and managed strategic roadmaps for enterprise API management and messaging platforms, ensuring that technology capabilities meet and respond to the evolving operational business needs.","Facilitated product backlog management and prioritized system enhancements based on feedback from frontline users and executive leadership to enhance usability and overall user experience.","Engaged and influenced MD, VP, and SVP-level leaders by translating complex technical and operational information into accessible narratives that clearly connect to customer impacts.","Oversaw enterprise-level deployments, automation strategies, and post-launch support, ensuring continuity and minimal disruption to frontline operations.","Provided governance for Spotfire analytics platforms, expanding their utilization to enhance operational transparency and insight."]},{id:3,icon:e.jsx(k,{}),title:"Airport Operations Manager - Analytical Performance",company:"United Airlines",department:"Analytical Performance",duration:"Dec 2017 – Aug 2021",location:"Chicago, IL",description:"Facilitated station performance reviews and predictive analyses, enhancing operational tools as the SOC IT liaison to drive improvements.",tech:["Data Analysis","SOC Liaison","Performance Optimization"],bullets:["Facilitated station performance reviews and predictive analyses, enhancing operational tools as the SOC IT liaison to drive improvements.","Spearheaded tactical planning for irregular operations and collaborated across departments (Flight Ops, Inflight, Maintenance, Airport Authorities) to boost reliability and achieve better D0/A14 outcomes.","Managed gate expansion and re-banking initiatives at ORD, focusing on financial optimization and strategic workforce planning within SOC.","Acted as the station operational champion for On-Time performance, MBR, Customer Satisfaction, Dependability, and service consistency, fostering close partnerships with Inflight, AO, and customer-recovery teams.","Developed customer-reliability dashboards to support misconnect recovery, advance booking analysis, and informed real-time customer support decision-making.","Led emergency planning and business continuity initiatives, ensuring full adherence to airport, government, and WHQ requirements.","Promoted cross-divisional collaboration with Flight Ops, Inflight, Maintenance, Government Agencies, Airport Authorities, and UAX partners to enhance customer experience and operational dependability.","Directed Gate Expansion and aligned Future Flight Schedules for ORD, focusing on optimizing customer flow and ensuring minimum connection time protection.","Supervised SOC staffing, annual bids, scheduling, and budget optimization to enhance productivity and service reliability."]},{id:4,icon:e.jsx(k,{}),title:"Airport Operations Manager - Gate Control",company:"United Airlines",department:"Gate Control",duration:"Dec 2015 – Dec 2017",location:"San Francisco, CA",description:"Managed station flight schedules, gate allocations, and flight departures, ensuring seamless daily operations and coordinating with SOC teams.",tech:["Gate Management","Operations Coordination","Flight Scheduling"],bullets:["Facilitated station performance reviews and predictive analyses, enhancing operational tools as the SOC IT liaison to drive improvements.","Spearheaded tactical planning for irregular operations and collaborated across departments (Flight Ops, Inflight, Maintenance, Airport Authorities) to boost reliability and achieve better D0/A14 outcomes.","Managed gate expansion and re-banking initiatives at ORD, focusing on financial optimization and strategic workforce planning within SOC.","Acted as the station operational champion for On-Time performance, MBR, Customer Satisfaction, Dependability, and service consistency, fostering close partnerships with Inflight, AO, and customer-recovery teams.","Developed customer-reliability dashboards to support misconnect recovery, advance booking analysis, and informed real-time customer support decision-making.","Led emergency planning and business continuity initiatives, ensuring full adherence to airport, government, and WHQ requirements.","Promoted cross-divisional collaboration with Flight Ops, Inflight, Maintenance, Government Agencies, Airport Authorities, and UAX partners to enhance customer experience and operational dependability.","Directed Gate Expansion and aligned Future Flight Schedules for ORD, focusing on optimizing customer flow and ensuring minimum connection time protection.","Supervised SOC staffing, annual bids, scheduling, and budget optimization to enhance productivity and service reliability."]},{id:5,icon:e.jsx(k,{}),title:"Zone Control Supervisor",company:"United Airlines",department:"Zone Control",duration:"Mar 2013 – Dec 2015",location:"San Francisco, CA",description:"Supervised real-time zone operations, aircraft ground handling, and turnaround performance to minimize ground delays.",tech:["Turnaround Optimization","Ramp Operations","Zone Supervision"],bullets:["Supervised real-time zone operations, aircraft ground handling, and turnaround performance under tight scheduling constraints.","Coordinated ramp movements, baggage handling flows, and fueling operations to minimize ground delays.","Managed immediate recovery protocols during irregular operations (IROPS) at the hub."]},{id:6,icon:e.jsx(k,{}),title:"Customer Service Supervisor",company:"United Airlines",department:"Customer Service",duration:"Feb 2011 – Mar 2013",location:"San Francisco Bay Area",description:"Led passenger service teams, resolved customer recovery challenges, and supervised ticketing lobbies and gates.",tech:["Customer Recovery","Lobby Operations","Team Leadership"],bullets:["Led passenger service representatives across ticketing lobbies, gate areas, and baggage service counters.","Resolved passenger disruptions, facilitated flight connections, and implemented customer recovery initiatives.","Ensured compliance with corporate customer experience standards and airport safety regulations."]},{id:7,icon:e.jsx(k,{}),title:"Ramp Agent",company:"United Airlines",department:"Ramp Operations",duration:"Nov 2007 – Feb 2011",location:"San Francisco Bay Area",description:"Gained foundational hands-on operational experience executing aircraft loading and ground operations.",tech:["Ramp Management","Aircraft Loading","Safety Operations"],bullets:["Executed safe and efficient aircraft loading, unloading, and baggage routing operations on the ramp.","Operated heavy ground support equipment in accordance with safety standards.","Collaborated with flight crews and gate agents to protect on-time departure metrics."]},{id:8,icon:e.jsx(k,{}),title:"Airport Operations Personnel",company:"Sacramento International Airport",department:"Airport Operations",duration:"Jun 2011 – Jul 2012",location:"Greater Sacramento Area",description:"Assisted in managing airport landside and airside activities, ensuring safety and compliance.",tech:["Airport Operations","Security Compliance","Passenger Coordination"],bullets:["Monitored airside and landside security compliance at Sacramento International Airport.","Facilitated passenger coordination and queue management during peak traffic flows.","Collaborated with airport authorities to maintain regulatory compliance."]}],za={hidden:{opacity:0,x:-24},visible:i=>({opacity:1,x:0,transition:{duration:.5,delay:i*.08,ease:"easeOut"}})},Ta=()=>{const[i,o]=d.useState({}),r=(a,n)=>{n.stopPropagation(),o(s=>({...s,[a]:!s[a]}))};return e.jsx(na,{id:"work",children:e.jsxs(sa,{children:[e.jsxs(la,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.2},transition:{duration:.6},children:[e.jsx(ca,{children:"Work Experience"}),e.jsx(da,{children:"Building high-performance airport operations and analytical decision tools at scale"})]}),e.jsx(pa,{children:Ia.map((a,n)=>{const s=!!i[a.id];return e.jsxs(we,{custom:n,variants:za,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.1},onClick:c=>r(a.id,c),whileHover:{x:4},children:[e.jsxs(ma,{children:[e.jsx(ha,{children:a.icon}),e.jsxs(ga,{children:[e.jsx(ua,{children:a.title}),e.jsxs(xa,{children:[a.company,a.department&&` • ${a.department}`]}),e.jsxs(fa,{children:[e.jsx(ce,{children:a.duration}),e.jsxs(ce,{children:[e.jsx(Ge,{}),a.location]})]})]})]}),e.jsx(va,{children:a.description}),e.jsx(ba,{children:a.tech.map(c=>e.jsx(ya,{children:c},c))}),e.jsx(wa,{children:s?e.jsxs(e.Fragment,{children:[e.jsx("span",{children:"Hide Details"}),e.jsx(Ve,{})]}):e.jsxs(e.Fragment,{children:[e.jsx("span",{children:"View Details"}),e.jsx(Ue,{})]})}),e.jsx(j,{initial:!1,children:s&&e.jsx(ka,{initial:{height:0,opacity:0},animate:{height:"auto",opacity:1},exit:{height:0,opacity:0},transition:{duration:.3,ease:"easeInOut"},children:e.jsx(ja,{children:a.bullets.map((c,m)=>e.jsx(Sa,{children:c},m))})})})]},a.id)})})]})})},Ca=t.section`
+`,Ia=[{id:1,icon:e.jsx(k,{}),title:"Senior Manager - Airport Operations Performance and Execution",company:"United Airlines",department:"Airport Operations",duration:"May 2023 – Present",location:"Chicago, IL (Hybrid)",description:"Owns strategy, roadmap, and requirements for operational analytics products supporting airport and network operations at United Airlines.",tech:["Product Strategy","Roadmapping","Operational Analytics","Executive Communication"],bullets:["Own strategy, roadmap, and requirements for operational analytics products supporting airport and network operations, ensuring every capability delivers measurable operational value.","Direct product direction for the integrated operational data foundation: set availability, quality, and governance standards; prioritize data integration across airline systems; and drive adoption via embedded tools and interfaces.","Partner with Digital Technology to scope, build, test, and launch capabilities; define performance SLAs, quality gates, and ongoing measurement for continuous improvement.","Lead decision‑support and optimization strategy for NOC/SOC—embedding rules engines, optimization logic, and recommendation frameworks into operational workflows while maintaining ownership of business logic.","Develop and coach a high‑performing analytics team (on‑shore/off‑shore) to be product‑minded, technically fluent, and delivery‑oriented.","Modernized operational visibility by designing intuitive reliability, staffing, and real time tools used by Senior Hub Leadership, SOC, and frontline supervisors.","Led cross functional initiatives with Inflight, AO, SOC, NOC, Crew, and IT to ensure performance insights drive customer reliability and efficient service delivery.","Developed multi year analytics and application development strategy aligned with corporate customer experience and dependability goals.","Established governance for tool deployment, change control, pressure testing, and end user training to ensure consistent experience across hubs."]},{id:2,icon:e.jsx(k,{}),title:"Operations Manager - Performance & Execution",company:"United Airlines",department:"Airport Operations",duration:"Aug 2021 – May 2023",location:"Chicago, IL",description:"Developed and prioritized product backlogs and multi-year roadmaps for integration platforms and predictive tools that align with operational goals.",tech:["Spotfire Analytics","Predictive Modeling","API Integration","Platform Engineering"],bullets:["Developed and prioritized product backlogs and multi-year roadmaps for integration platforms and predictive tools that effectively align with and support operational goals.","Established clear success criteria and validation protocols for models, collaborating with platform engineering, architecture, and security teams to enhance the scalability of data and analytics capabilities.","Created robust deployment and post-deployment support practices, while actively identifying automation opportunities across various environments to enhance release reliability.","Designed multiple predictive models that serve as essential decision-support tools for stations, the Network Operations Center (NOC), and cross-functional stakeholders, leading to significant improvements in on-time performance, customer recovery, and service reliability.","Formulated and managed strategic roadmaps for enterprise API management and messaging platforms, ensuring that technology capabilities meet and respond to the evolving operational business needs.","Facilitated product backlog management and prioritized system enhancements based on feedback from frontline users and executive leadership to enhance usability and overall user experience.","Engaged and influenced MD, VP, and SVP-level leaders by translating complex technical and operational information into accessible narratives that clearly connect to customer impacts.","Oversaw enterprise-level deployments, automation strategies, and post-launch support, ensuring continuity and minimal disruption to frontline operations.","Provided governance for Spotfire analytics platforms, expanding their utilization to enhance operational transparency and insight."]},{id:3,icon:e.jsx(k,{}),title:"Airport Operations Manager - Analytical Performance",company:"United Airlines",department:"Analytical Performance",duration:"Dec 2017 – Aug 2021",location:"Chicago, IL",description:"Facilitated station performance reviews and predictive analyses, enhancing operational tools as the SOC IT liaison to drive improvements.",tech:["Data Analysis","SOC Liaison","Performance Optimization"],bullets:["Facilitated station performance reviews and predictive analyses, enhancing operational tools as the SOC IT liaison to drive improvements.","Spearheaded tactical planning for irregular operations and collaborated across departments (Flight Ops, Inflight, Maintenance, Airport Authorities) to boost reliability and achieve better D0/A14 outcomes.","Managed gate expansion and re-banking initiatives at ORD, focusing on financial optimization and strategic workforce planning within SOC.","Acted as the station operational champion for On-Time performance, MBR, Customer Satisfaction, Dependability, and service consistency, fostering close partnerships with Inflight, AO, and customer-recovery teams.","Developed customer-reliability dashboards to support misconnect recovery, advance booking analysis, and informed real-time customer support decision-making.","Led emergency planning and business continuity initiatives, ensuring full adherence to airport, government, and WHQ requirements.","Promoted cross-divisional collaboration with Flight Ops, Inflight, Maintenance, Government Agencies, Airport Authorities, and UAX partners to enhance customer experience and operational dependability.","Directed Gate Expansion and aligned Future Flight Schedules for ORD, focusing on optimizing customer flow and ensuring minimum connection time protection.","Supervised SOC staffing, annual bids, scheduling, and budget optimization to enhance productivity and service reliability."]},{id:4,icon:e.jsx(k,{}),title:"Airport Operations Manager - Gate Control",company:"United Airlines",department:"Gate Control",duration:"Dec 2015 – Dec 2017",location:"San Francisco, CA",description:"Managed station flight schedules, gate allocations, and flight departures, ensuring seamless daily operations and coordinating with SOC teams.",tech:["Gate Management","Operations Coordination","Flight Scheduling"],bullets:["Facilitated station performance reviews and predictive analyses, enhancing operational tools as the SOC IT liaison to drive improvements.","Spearheaded tactical planning for irregular operations and collaborated across departments (Flight Ops, Inflight, Maintenance, Airport Authorities) to boost reliability and achieve better D0/A14 outcomes.","Managed gate expansion and re-banking initiatives at ORD, focusing on financial optimization and strategic workforce planning within SOC.","Acted as the station operational champion for On-Time performance, MBR, Customer Satisfaction, Dependability, and service consistency, fostering close partnerships with Inflight, AO, and customer-recovery teams.","Developed customer-reliability dashboards to support misconnect recovery, advance booking analysis, and informed real-time customer support decision-making.","Led emergency planning and business continuity initiatives, ensuring full adherence to airport, government, and WHQ requirements.","Promoted cross-divisional collaboration with Flight Ops, Inflight, Maintenance, Government Agencies, Airport Authorities, and UAX partners to enhance customer experience and operational dependability.","Directed Gate Expansion and aligned Future Flight Schedules for ORD, focusing on optimizing customer flow and ensuring minimum connection time protection.","Supervised SOC staffing, annual bids, scheduling, and budget optimization to enhance productivity and service reliability."]},{id:5,icon:e.jsx(k,{}),title:"Zone Control Supervisor",company:"United Airlines",department:"Zone Control",duration:"Mar 2013 – Dec 2015",location:"San Francisco, CA",description:"Supervised real-time zone operations, aircraft ground handling, and turnaround performance to minimize ground delays.",tech:["Turnaround Optimization","Ramp Operations","Zone Supervision"],bullets:["Supervised real-time zone operations, aircraft ground handling, and turnaround performance under tight scheduling constraints.","Coordinated ramp movements, baggage handling flows, and fueling operations to minimize ground delays.","Managed immediate recovery protocols during irregular operations (IROPS) at the hub."]},{id:6,icon:e.jsx(k,{}),title:"Customer Service Supervisor",company:"United Airlines",department:"Customer Service",duration:"Feb 2011 – Mar 2013",location:"San Francisco Bay Area",description:"Led passenger service teams, resolved customer recovery challenges, and supervised ticketing lobbies and gates.",tech:["Customer Recovery","Lobby Operations","Team Leadership"],bullets:["Led passenger service representatives across ticketing lobbies, gate areas, and baggage service counters.","Resolved passenger disruptions, facilitated flight connections, and implemented customer recovery initiatives.","Ensured compliance with corporate customer experience standards and airport safety regulations."]},{id:7,icon:e.jsx(k,{}),title:"Ramp Agent",company:"United Airlines",department:"Ramp Operations",duration:"Nov 2007 – Feb 2011",location:"San Francisco Bay Area",description:"Gained foundational hands-on operational experience executing aircraft loading and ground operations.",tech:["Ramp Management","Aircraft Loading","Safety Operations"],bullets:["Executed safe and efficient aircraft loading, unloading, and baggage routing operations on the ramp.","Operated heavy ground support equipment in accordance with safety standards.","Collaborated with flight crews and gate agents to protect on-time departure metrics."]},{id:8,icon:e.jsx(k,{}),title:"Airport Operations Personnel",company:"Sacramento International Airport",department:"Airport Operations",duration:"Jun 2011 – Jul 2012",location:"Greater Sacramento Area",description:"Assisted in managing airport landside and airside activities, ensuring safety and compliance.",tech:["Airport Operations","Security Compliance","Passenger Coordination"],bullets:["Monitored airside and landside security compliance at Sacramento International Airport.","Facilitated passenger coordination and queue management during peak traffic flows.","Collaborated with airport authorities to maintain regulatory compliance."]}],za={hidden:{opacity:0,x:-24},visible:i=>({opacity:1,x:0,transition:{duration:.5,delay:i*.08,ease:"easeOut"}})},Ta=()=>{const[i,r]=d.useState({}),o=(a,n)=>{n.stopPropagation(),r(l=>({...l,[a]:!l[a]}))};return e.jsx(na,{id:"work",children:e.jsxs(sa,{children:[e.jsxs(la,{initial:{opacity:0,y:20},whileInView:{opacity:1,y:0},viewport:{once:!0,amount:.2},transition:{duration:.6},children:[e.jsx(ca,{children:"Work Experience"}),e.jsx(da,{children:"Building high-performance airport operations and analytical decision tools at scale"})]}),e.jsx(pa,{children:Ia.map((a,n)=>{const l=!!i[a.id];return e.jsxs(we,{custom:n,variants:za,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.1},onClick:s=>o(a.id,s),whileHover:{x:4},children:[e.jsxs(ma,{children:[e.jsx(ha,{children:a.icon}),e.jsxs(ga,{children:[e.jsx(ua,{children:a.title}),e.jsxs(xa,{children:[a.company,a.department&&` • ${a.department}`]}),e.jsxs(fa,{children:[e.jsx(ce,{children:a.duration}),e.jsxs(ce,{children:[e.jsx(Ge,{}),a.location]})]})]})]}),e.jsx(va,{children:a.description}),e.jsx(ba,{children:a.tech.map(s=>e.jsx(ya,{children:s},s))}),e.jsx(wa,{children:l?e.jsxs(e.Fragment,{children:[e.jsx("span",{children:"Hide Details"}),e.jsx(Ve,{})]}):e.jsxs(e.Fragment,{children:[e.jsx("span",{children:"View Details"}),e.jsx(Ue,{})]})}),e.jsx(j,{initial:!1,children:l&&e.jsx(ka,{initial:{height:0,opacity:0},animate:{height:"auto",opacity:1},exit:{height:0,opacity:0},transition:{duration:.3,ease:"easeInOut"},children:e.jsx(ja,{children:a.bullets.map((s,p)=>e.jsx(Sa,{children:s},p))})})})]},a.id)})})]})})},Ca=t.section`
   position: relative;
   background: transparent;
   padding: var(--spacing-2xl) 0;
@@ -1910,7 +1910,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   max-width: var(--container-xl);
   margin: 0 auto;
   padding: 0 var(--container-padding);
-`,Ea=t(l.div)`
+`,Ea=t(c.div)`
   text-align: center;
   margin-bottom: var(--spacing-lg);
 
@@ -1949,7 +1949,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     grid-template-columns: 1fr;
     gap: var(--spacing-sm);
   }
-`,ke=t(l.div)`
+`,ke=t(c.div)`
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 16px;
@@ -2075,7 +2075,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 768px) {
     min-height: 48px;
   }
-`,Na=[{id:1,title:"Predictive Decision-Support Models",role:"Product Lead",description:"Designed multiple predictive models serving as essential decision-support tools for airport stations, the Network Operations Center (NOC), and stakeholders. Led to significant improvements in on-time performance and service reliability.",image:"/images/projects/predictive.webp",fallbackIcon:"📊",stats:[{icon:e.jsx(L,{}),text:"NOC & stations alignment"},{icon:e.jsx(O,{}),text:"Real-time predictive forecasting"}],link:"https://www.united.com"},{id:2,title:"Enterprise API & Messaging Platform Integration",role:"Operations Platform Manager",description:"Formulated and managed multi-year strategic roadmaps for enterprise API management and messaging platforms. Ensured tech capabilities scale dynamically with evolving airline operations and high-volume data streams.",image:"/images/projects/api-platform.webp",fallbackIcon:"🌐",stats:[{icon:e.jsx(L,{}),text:"Cross-functional engineering alignment"},{icon:e.jsx(O,{}),text:"Enterprise scale API scaling"}],link:"https://www.united.com"},{id:3,title:"Spotfire Analytics Platform Governance",role:"Analytics Governance Lead",description:"Provided governance for Spotfire analytics platforms across airports. Expanded utilization to enhance operational transparency, providing dashboards for executive decision support.",image:"/images/projects/spotfire.webp",fallbackIcon:"📈",stats:[{icon:e.jsx(L,{}),text:"Used by MD, VP, and SVP-level leaders"},{icon:e.jsx(Xe,{}),text:"Substantial resource & cost optimization"}],link:"https://www.united.com"}],Ga={hidden:{opacity:0,y:20},visible:{opacity:1,y:0,transition:{duration:.6,ease:"easeOut"}}},Va={hidden:{opacity:0,y:30},visible:i=>({opacity:1,y:0,transition:{duration:.55,delay:i*.12,ease:"easeOut"}})},Ua=({src:i,alt:o,fallback:r})=>{const[a,n]=d.useState(!1);return e.jsx(Ma,{children:a?e.jsx(La,{children:r}):e.jsx(Ra,{src:i,alt:o,loading:"lazy",onError:()=>n(!0)})})},Ya=()=>e.jsx(Ca,{id:"projects",children:e.jsxs(Aa,{children:[e.jsxs(Ea,{variants:Ga,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.15},children:[e.jsx(Oa,{children:"Featured Projects"}),e.jsx(Pa,{children:"Key initiatives in airport automation, operational analytics, and system scaling"})]}),e.jsx(Fa,{children:Na.map((i,o)=>e.jsxs(ke,{custom:o,variants:Va,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.15},whileHover:{y:-5},children:[e.jsx(Ua,{src:i.image,alt:i.title,fallback:i.fallbackIcon}),e.jsxs(Wa,{children:[e.jsx(Ba,{children:i.title}),e.jsx(Ha,{children:i.role}),e.jsx($a,{children:i.description}),e.jsx(_a,{children:i.stats.map((r,a)=>e.jsxs(Da,{children:[r.icon,e.jsx("span",{children:r.text})]},a))}),i.link&&i.link!=="#"&&e.jsxs(qa,{href:i.link,target:"_blank",rel:"noopener noreferrer",children:["Visit Website",e.jsx(Ye,{size:12})]})]})]},i.id))})]})}),je=t(l.article)`
+`,Na=[{id:1,title:"Predictive Decision-Support Models",role:"Product Lead",description:"Designed multiple predictive models serving as essential decision-support tools for airport stations, the Network Operations Center (NOC), and stakeholders. Led to significant improvements in on-time performance and service reliability.",image:"/images/projects/predictive.webp",fallbackIcon:"📊",stats:[{icon:e.jsx(L,{}),text:"NOC & stations alignment"},{icon:e.jsx(O,{}),text:"Real-time predictive forecasting"}],link:"https://www.united.com"},{id:2,title:"Enterprise API & Messaging Platform Integration",role:"Operations Platform Manager",description:"Formulated and managed multi-year strategic roadmaps for enterprise API management and messaging platforms. Ensured tech capabilities scale dynamically with evolving airline operations and high-volume data streams.",image:"/images/projects/api-platform.webp",fallbackIcon:"🌐",stats:[{icon:e.jsx(L,{}),text:"Cross-functional engineering alignment"},{icon:e.jsx(O,{}),text:"Enterprise scale API scaling"}],link:"https://www.united.com"},{id:3,title:"Spotfire Analytics Platform Governance",role:"Analytics Governance Lead",description:"Provided governance for Spotfire analytics platforms across airports. Expanded utilization to enhance operational transparency, providing dashboards for executive decision support.",image:"/images/projects/spotfire.webp",fallbackIcon:"📈",stats:[{icon:e.jsx(L,{}),text:"Used by MD, VP, and SVP-level leaders"},{icon:e.jsx(Xe,{}),text:"Substantial resource & cost optimization"}],link:"https://www.united.com"}],Ga={hidden:{opacity:0,y:20},visible:{opacity:1,y:0,transition:{duration:.6,ease:"easeOut"}}},Va={hidden:{opacity:0,y:30},visible:i=>({opacity:1,y:0,transition:{duration:.55,delay:i*.12,ease:"easeOut"}})},Ua=({src:i,alt:r,fallback:o})=>{const[a,n]=d.useState(!1);return e.jsx(Ma,{children:a?e.jsx(La,{children:o}):e.jsx(Ra,{src:i,alt:r,loading:"lazy",onError:()=>n(!0)})})},Ya=()=>e.jsx(Ca,{id:"projects",children:e.jsxs(Aa,{children:[e.jsxs(Ea,{variants:Ga,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.15},children:[e.jsx(Oa,{children:"Featured Projects"}),e.jsx(Pa,{children:"Key initiatives in airport automation, operational analytics, and system scaling"})]}),e.jsx(Fa,{children:Na.map((i,r)=>e.jsxs(ke,{custom:r,variants:Va,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.15},whileHover:{y:-5},children:[e.jsx(Ua,{src:i.image,alt:i.title,fallback:i.fallbackIcon}),e.jsxs(Wa,{children:[e.jsx(Ba,{children:i.title}),e.jsx(Ha,{children:i.role}),e.jsx($a,{children:i.description}),e.jsx(_a,{children:i.stats.map((o,a)=>e.jsxs(Da,{children:[o.icon,e.jsx("span",{children:o.text})]},a))}),i.link&&i.link!=="#"&&e.jsxs(qa,{href:i.link,target:"_blank",rel:"noopener noreferrer",children:["Visit Website",e.jsx(Ye,{size:12})]})]})]},i.id))})]})}),je=t(c.article)`
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 16px;
@@ -2219,7 +2219,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   margin-top: auto;
   padding-top: var(--spacing-md);
   border-top: 1px solid var(--color-border);
-`;v.string,v.string,v.node;const Ja=i=>Array.isArray(i)?[...i].sort((o,r)=>{const a=new Date(o.date);return new Date(r.date)-a}):[],_={container:{hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.2,delayChildren:.3}}},item:{hidden:{opacity:0,y:30},visible:{opacity:1,y:0,transition:{duration:.6,ease:"easeOut"}}}},E={sectionTitle:"Writings",sectionSubtitle:"A collection of thoughts and insights",quote:{text:"As for the future, your task is not to foresee it, but to enable it.",author:"Antoine de Saint-Exupéry"}},Ka=t.section`
+`;v.string,v.string,v.node;const Ja=i=>Array.isArray(i)?[...i].sort((r,o)=>{const a=new Date(r.date);return new Date(o.date)-a}):[],_={container:{hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.2,delayChildren:.3}}},item:{hidden:{opacity:0,y:30},visible:{opacity:1,y:0,transition:{duration:.6,ease:"easeOut"}}}},E={sectionTitle:"Writings",sectionSubtitle:"A collection of thoughts and insights",quote:{text:"As for the future, your task is not to foresee it, but to enable it.",author:"Antoine de Saint-Exupéry"}},Ka=t.section`
   padding: var(--spacing-2xl) 0;
   position: relative;
   background: transparent;
@@ -2228,10 +2228,10 @@ Until the foundation is built everywhere, we will continue to live in these two 
   max-width: var(--container-xl);
   margin: 0 auto;
   padding: 0 var(--container-padding);
-`,Za=t(l.div)`
+`,Za=t(c.div)`
   text-align: center;
   margin-bottom: var(--spacing-xl);
-`,eo=t.h2`
+`,er=t.h2`
   font-size: var(--text-5xl);
   margin-bottom: var(--spacing-md);
   background: var(--color-gradient-1);
@@ -2242,7 +2242,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 768px) {
     font-size: var(--text-2xl);
   }
-`,to=t.p`
+`,tr=t.p`
   font-size: var(--text-lg);
   color: var(--color-text-secondary);
   max-width: 600px;
@@ -2261,7 +2261,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
   }
-`;const io=t.div`
+`;const ir=t.div`
   text-align: center;
   padding: var(--spacing-xl);
   background: var(--color-bg-card);
@@ -2293,7 +2293,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     max-width: 480px;
     margin: 0 auto;
   }
-`,ao=t(l.div)`
+`,ar=t(c.div)`
   max-width: 700px;
   margin: var(--spacing-2xl) auto;
   text-align: center;
@@ -2302,18 +2302,18 @@ Until the foundation is built everywhere, we will continue to live in these two 
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 20px;
-`,oo=t.div`
+`,rr=t.div`
   font-size: 3rem;
   color: var(--color-accent-primary);
   opacity: 0.2;
   margin-bottom: var(--spacing-md);
-`,ro=t.blockquote`
+`,or=t.blockquote`
   font-size: var(--text-xl);
   color: var(--color-text-secondary);
   font-style: italic;
   line-height: 1.8;
   margin-bottom: var(--spacing-md);
-`,no=t.cite`
+`,nr=t.cite`
   font-size: var(--text-base);
   color: var(--color-accent-primary);
   font-style: normal;
@@ -2321,20 +2321,20 @@ Until the foundation is built everywhere, we will continue to live in these two 
   &::before {
     content: '— ';
   }
-`,so=()=>{const i=d.useMemo(()=>{try{return fe()}catch(r){return console.error("Error loading blog posts:",r),[]}},[]);d.useMemo(()=>Ja(i),[i]);const[o]=d.useState(!1);return e.jsx(Ka,{id:"blog",children:e.jsxs(Qa,{children:[e.jsx(Za,{variants:_.container,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:e.jsxs(l.div,{variants:_.item,children:[e.jsx(eo,{children:E.sectionTitle}),e.jsx(to,{children:E.sectionSubtitle})]})}),e.jsxs(io,{children:[e.jsx(Je,{}),e.jsx("h3",{children:"Aviation Insights & Leadership Thoughts"}),e.jsx("p",{children:"Coming Soon. A collection of operational analyses, platform integration strategies, and leadership articles will be published here shortly."})]}),e.jsxs(ao,{variants:_.item,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:[e.jsx(oo,{children:e.jsx(Ke,{})}),e.jsx(ro,{children:E.quote.text}),e.jsx(no,{children:E.quote.author})]})]})})},lo=(i={name:"",email:"",message:""})=>{const{showSuccess:o,showError:r}=Ht(),[a,n]=d.useState(i),[s,c]=d.useState(!1),[m,x]=d.useState("");return{formState:a,isSubmitting:s,emailError:m,handleChange:g=>{const{name:u,value:f}=g.target;if(n(b=>({...b,[u]:f})),u==="email"){const b=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f);x(f&&!b?"Please enter a valid email address.":"")}},handleSubmit:async g=>{if(g.preventDefault(),!m){c(!0);try{(await fetch("https://formspree.io/f/xgvzkqob",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({...a,_replyto:a.email,_subject:`Portfolio Contact: ${a.name}`})})).ok?(o("Message Sent!","Thank you for reaching out. I'll get back to you soon!"),n(i)):r("Oops! Something went wrong","Failed to send your message. Please try again or email me directly.")}catch{r("Network Error","Unable to send message. Please check your connection and try again.")}finally{c(!1)}}}}},co=t.section`
+`,sr=()=>{const i=d.useMemo(()=>{try{return fe()}catch(o){return console.error("Error loading blog posts:",o),[]}},[]);d.useMemo(()=>Ja(i),[i]);const[r]=d.useState(!1);return e.jsx(Ka,{id:"blog",children:e.jsxs(Qa,{children:[e.jsx(Za,{variants:_.container,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:e.jsxs(c.div,{variants:_.item,children:[e.jsx(er,{children:E.sectionTitle}),e.jsx(tr,{children:E.sectionSubtitle})]})}),e.jsxs(ir,{children:[e.jsx(Je,{}),e.jsx("h3",{children:"Aviation Insights & Leadership Thoughts"}),e.jsx("p",{children:"Coming Soon. A collection of operational analyses, platform integration strategies, and leadership articles will be published here shortly."})]}),e.jsxs(ar,{variants:_.item,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:[e.jsx(rr,{children:e.jsx(Ke,{})}),e.jsx(or,{children:E.quote.text}),e.jsx(nr,{children:E.quote.author})]})]})})},lr=(i={name:"",email:"",message:""})=>{const{showSuccess:r,showError:o}=Ht(),[a,n]=d.useState(i),[l,s]=d.useState(!1),[p,x]=d.useState("");return{formState:a,isSubmitting:l,emailError:p,handleChange:g=>{const{name:u,value:f}=g.target;if(n(b=>({...b,[u]:f})),u==="email"){const b=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f);x(f&&!b?"Please enter a valid email address.":"")}},handleSubmit:async g=>{if(g.preventDefault(),!p){s(!0);try{(await fetch("https://formspree.io/f/xgvzkqob",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({...a,_replyto:a.email,_subject:`Portfolio Contact: ${a.name}`})})).ok?(r("Message Sent!","Thank you for reaching out. I'll get back to you soon!"),n(i)):o("Oops! Something went wrong","Failed to send your message. Please try again or email me directly.")}catch{o("Network Error","Unable to send message. Please check your connection and try again.")}finally{s(!1)}}}}},cr=t.section`
   padding: var(--spacing-2xl) 0;
   position: relative;
   background: transparent;
   overflow: hidden;
   min-height: 80vh;
-`,po=t.div`
+`,dr=t.div`
   max-width: var(--container-xl);
   margin: 0 auto;
   padding: 0 var(--container-padding);
-`,mo=t(l.div)`
+`,pr=t(c.div)`
   text-align: center;
   margin-bottom: var(--spacing-xl);
-`,ho=t.h2`
+`,mr=t.h2`
   font-size: var(--text-5xl);
   margin-bottom: var(--spacing-md);
   background: var(--color-gradient-1);
@@ -2345,12 +2345,12 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 768px) {
     font-size: var(--text-2xl);
   }
-`,go=t.p`
+`,hr=t.p`
   font-size: var(--text-lg);
   color: var(--color-text-secondary);
   max-width: 600px;
   margin: 0 auto;
-`,uo=t.div`
+`,gr=t.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--spacing-xl);
@@ -2359,9 +2359,9 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 1024px) {
     grid-template-columns: 1fr;
   }
-`,xo=t(l.div)`
+`,ur=t(c.div)`
   padding: var(--spacing-lg);
-`,fo=t.h3`
+`,xr=t.h3`
   font-size: var(--text-2xl);
   margin-bottom: var(--spacing-md);
   color: var(--color-text-primary);
@@ -2370,7 +2370,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   color: var(--color-text-secondary);
   line-height: 1.8;
   margin-bottom: var(--spacing-lg);
-`,vo=t(l.div)`
+`,fr=t(c.div)`
   display: flex;
   align-items: center;
   gap: var(--spacing-md);
@@ -2385,7 +2385,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     border-color: var(--color-accent-primary);
     transform: translateX(10px);
   }
-`,bo=t.div`
+`,vr=t.div`
   width: 48px;
   height: 48px;
   background: rgba(99, 102, 241, 0.1);
@@ -2395,21 +2395,21 @@ Until the foundation is built everywhere, we will continue to live in these two 
   justify-content: center;
   color: var(--color-accent-primary);
   font-size: 1.25rem;
-`,yo=t.div`
+`,br=t.div`
   flex: 1;
-`,wo=t.p`
+`,yr=t.p`
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   margin-bottom: 2px;
-`,ko=t.p`
+`,wr=t.p`
   font-size: var(--text-base);
   color: var(--color-text-primary);
   font-weight: 500;
-`,jo=t(l.div)`
+`,kr=t(c.div)`
   display: flex;
   gap: var(--spacing-md);
   margin-top: var(--spacing-lg);
-`,So=t(l.a)`
+`,jr=t(c.a)`
   width: 48px;
   height: 48px;
   background: var(--color-bg-card);
@@ -2435,21 +2435,21 @@ Until the foundation is built everywhere, we will continue to live in these two 
     color: var(--color-accent-primary);
     border-color: var(--color-accent-primary);
   }
-`,Io=G`
+`,Sr=G`
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
-`,zo=t.div`
+`,Ir=t.div`
   width: 20px;
   height: 20px;
   border: 3px solid rgba(255, 255, 255, 0.3);
   border-top-color: white;
   border-radius: 50%;
-  animation: ${Io} 0.8s linear infinite;
-`,To=t(l.div)`
+  animation: ${Sr} 0.8s linear infinite;
+`,zr=t(c.div)`
   background: var(--color-bg-card);
   padding: var(--spacing-xl);
   border-radius: 20px;
@@ -2469,7 +2469,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     border-radius: 50%;
     transform: translate(50%, -50%);
   }
-`,Co=t.form`
+`,Tr=t.form`
   position: relative;
   z-index: 2;
 `,D=t.div`
@@ -2505,7 +2505,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     cursor: not-allowed;
     background: var(--color-bg-primary);
   }
-`,Ao=t.textarea`
+`,Cr=t.textarea`
   width: 100%;
   padding: 12px 20px;
   background: var(--color-bg-secondary);
@@ -2532,7 +2532,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
     cursor: not-allowed;
     background: var(--color-bg-primary);
   }
-`,Eo=t(l.button)`
+`,Ar=t(c.button)`
   width: 100%;
   padding: 14px 28px;
   background: var(--color-gradient-1);
@@ -2564,25 +2564,25 @@ Until the foundation is built everywhere, we will continue to live in these two 
   @media (max-width: 768px) {
     min-height: 52px;
   }
-`,Oo=t.p`
+`,Er=t.p`
   font-size: var(--text-xs);
   color: #ef4444;
   margin-top: 4px;
-`,Po=()=>{const{formState:i,isSubmitting:o,emailError:r,handleChange:a,handleSubmit:n}=lo(),s={hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.2,delayChildren:.3}}},c={hidden:{opacity:0,y:30},visible:{opacity:1,y:0,transition:{duration:.6,ease:"easeOut"}}},m=[{icon:e.jsx(Ze,{}),label:"Location",value:"Cary, Illinois, USA"},{icon:e.jsx(et,{}),label:"Current Position",value:"Senior Manager, United Airlines"},{icon:e.jsx(tt,{}),label:"Languages",value:"English"}],x=[{icon:e.jsx(ue,{}),url:"https://www.linkedin.com/in/kapadia-urvin-848a97a1/",label:"LinkedIn"}];return e.jsx(co,{children:e.jsxs(po,{children:[e.jsx(mo,{variants:s,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:e.jsxs(l.div,{variants:c,children:[e.jsx(ho,{children:"Get In Touch"}),e.jsx(go,{children:"Let's connect and build something amazing together"})]})}),e.jsxs(uo,{children:[e.jsxs(xo,{variants:s,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:[e.jsxs(l.div,{variants:c,children:[e.jsx(fo,{children:"Let's Connect"}),e.jsx(de,{children:"Whether you want to discuss technology, engineering, or just say hello, I'd love to hear from you. Feel free to reach out through the form or connect on social media."})]}),m.map((p,h)=>e.jsxs(vo,{variants:c,whileHover:{scale:1.02},children:[e.jsx(bo,{children:p.icon}),e.jsxs(yo,{children:[e.jsx(wo,{children:p.label}),e.jsx(ko,{children:p.value})]})]},h)),e.jsxs(l.div,{variants:c,children:[e.jsx(de,{children:"Connect with me on social media:"}),e.jsx(jo,{children:x.map((p,h)=>e.jsx(A,{range:35,children:e.jsx(So,{href:p.url,target:"_blank",rel:"noopener noreferrer","aria-label":p.label,whileHover:{scale:1.1},whileTap:{scale:.9},children:p.icon})},h))})]})]}),e.jsx(To,{variants:c,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:e.jsxs(Co,{onSubmit:n,children:[e.jsxs(D,{children:[e.jsx(q,{htmlFor:"name",children:"Your Name"}),e.jsx(pe,{type:"text",id:"name",name:"name",value:i.name,onChange:a,placeholder:"John Doe",required:!0,disabled:o})]}),e.jsxs(D,{children:[e.jsx(q,{htmlFor:"email",children:"Email Address"}),e.jsx(pe,{type:"email",id:"email",name:"email",value:i.email,onChange:a,placeholder:"john@example.com",required:!0,disabled:o,style:r?{borderColor:"#ef4444"}:{}}),r&&e.jsx(Oo,{children:r})]}),e.jsxs(D,{children:[e.jsx(q,{htmlFor:"message",children:"Message"}),e.jsx(Ao,{id:"message",name:"message",value:i.message,onChange:a,placeholder:"Tell me about yourself or just say hi!",rows:"5",required:!0,disabled:o})]}),e.jsx(Eo,{type:"submit",disabled:o,whileHover:o?{}:{scale:1.02},whileTap:o?{}:{scale:.98},children:o?e.jsxs(e.Fragment,{children:[e.jsx(zo,{}),"Sending..."]}):e.jsxs(e.Fragment,{children:[e.jsx(Qe,{}),"Send Message"]})})]})})]})]})})},Fo=t.canvas`
+`,Or=()=>{const{formState:i,isSubmitting:r,emailError:o,handleChange:a,handleSubmit:n}=lr(),l={hidden:{opacity:0},visible:{opacity:1,transition:{staggerChildren:.2,delayChildren:.3}}},s={hidden:{opacity:0,y:30},visible:{opacity:1,y:0,transition:{duration:.6,ease:"easeOut"}}},p=[{icon:e.jsx(Ze,{}),label:"Location",value:"Cary, Illinois, USA"},{icon:e.jsx(et,{}),label:"Current Position",value:"Senior Manager, United Airlines"},{icon:e.jsx(tt,{}),label:"Languages",value:"English"}],x=[{icon:e.jsx(ue,{}),url:"https://www.linkedin.com/in/kapadia-urvin-848a97a1/",label:"LinkedIn"}];return e.jsx(cr,{children:e.jsxs(dr,{children:[e.jsx(pr,{variants:l,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:e.jsxs(c.div,{variants:s,children:[e.jsx(mr,{children:"Get In Touch"}),e.jsx(hr,{children:"Let's connect and build something amazing together"})]})}),e.jsxs(gr,{children:[e.jsxs(ur,{variants:l,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:[e.jsxs(c.div,{variants:s,children:[e.jsx(xr,{children:"Let's Connect"}),e.jsx(de,{children:"Whether you want to discuss technology, engineering, or just say hello, I'd love to hear from you. Feel free to reach out through the form or connect on social media."})]}),p.map((m,h)=>e.jsxs(fr,{variants:s,whileHover:{scale:1.02},children:[e.jsx(vr,{children:m.icon}),e.jsxs(br,{children:[e.jsx(yr,{children:m.label}),e.jsx(wr,{children:m.value})]})]},h)),e.jsxs(c.div,{variants:s,children:[e.jsx(de,{children:"Connect with me on social media:"}),e.jsx(kr,{children:x.map((m,h)=>e.jsx(A,{range:35,children:e.jsx(jr,{href:m.url,target:"_blank",rel:"noopener noreferrer","aria-label":m.label,whileHover:{scale:1.1},whileTap:{scale:.9},children:m.icon})},h))})]})]}),e.jsx(zr,{variants:s,initial:"hidden",whileInView:"visible",viewport:{once:!0,amount:.2},children:e.jsxs(Tr,{onSubmit:n,children:[e.jsxs(D,{children:[e.jsx(q,{htmlFor:"name",children:"Your Name"}),e.jsx(pe,{type:"text",id:"name",name:"name",value:i.name,onChange:a,placeholder:"John Doe",required:!0,disabled:r})]}),e.jsxs(D,{children:[e.jsx(q,{htmlFor:"email",children:"Email Address"}),e.jsx(pe,{type:"email",id:"email",name:"email",value:i.email,onChange:a,placeholder:"john@example.com",required:!0,disabled:r,style:o?{borderColor:"#ef4444"}:{}}),o&&e.jsx(Er,{children:o})]}),e.jsxs(D,{children:[e.jsx(q,{htmlFor:"message",children:"Message"}),e.jsx(Cr,{id:"message",name:"message",value:i.message,onChange:a,placeholder:"Tell me about yourself or just say hi!",rows:"5",required:!0,disabled:r})]}),e.jsx(Ar,{type:"submit",disabled:r,whileHover:r?{}:{scale:1.02},whileTap:r?{}:{scale:.98},children:r?e.jsxs(e.Fragment,{children:[e.jsx(Ir,{}),"Sending..."]}):e.jsxs(e.Fragment,{children:[e.jsx(Qe,{}),"Send Message"]})})]})})]})]})})},Pr=t.canvas`
   position: fixed;
   inset: 0;
   width: 100vw;
   height: 100vh;
   z-index: 9999;
   pointer-events: none;
-`;class Mo{constructor(){this.pool=[],this.active=[]}obtain(o,r){let a;return this.pool.length>0?(a=this.pool.pop(),a.reset(o,r)):a=new Bo(o,r),this.active.push(a),a}recycle(o){const r=this.active[o];this.active.splice(o,1),this.pool.push(r)}clear(){this.active=[]}}const Se=(i,o,r)=>{const n=document.createElement("canvas");n.width=128,n.height=128;const s=n.getContext("2d"),c=128/2,m=s.createRadialGradient(c,c,1,c,c,c);return m.addColorStop(0,`rgba(${i}, ${o}, ${r}, 1)`),m.addColorStop(.25,`rgba(${i}, ${o}, ${r}, 0.4)`),m.addColorStop(1,`rgba(${i}, ${o}, ${r}, 0)`),s.fillStyle=m,s.beginPath(),s.arc(c,c,c,0,Math.PI*2),s.fill(),n},Ro=[{r:6,g:182,b:212},{r:236,g:72,b:153},{r:139,g:92,b:246},{r:148,g:163,b:184}],Lo=Ro.map(i=>Se(i.r,i.g,i.b)),Wo=Se(244,246,249);class Bo{constructor(o,r){this.reset(o,r),this.maxSize=Math.max(window.innerWidth,window.innerHeight)*.95}reset(o,r){this.x=o,this.y=r,this.size=Math.random()*6+3,this.speedX=(Math.random()-.5)*6,this.speedY=Math.random()*3+1.5,this.opacity=.95,this.growth=Math.random()*5+4;const a=Math.random();a<.25?this.colorIndex=0:a<.5?this.colorIndex=1:a<.75?this.colorIndex=2:this.colorIndex=3}update(){this.x+=this.speedX,this.y+=this.speedY,this.size+=this.growth,this.speedX*=.96,this.speedY*=.96,this.opacity-=.015}draw(o){if(this.opacity<=0)return;o.save();const r=Math.min(1,(.95-this.opacity)/.7),a=Lo[this.colorIndex];o.globalAlpha=this.opacity*(1-r*.65),o.drawImage(a,this.x-this.size,this.y-this.size,this.size*2,this.size*2),o.globalAlpha=this.opacity*r*.65,o.drawImage(Wo,this.x-this.size,this.y-this.size,this.size*2,this.size*2),o.restore()}}const Ho=()=>{const i=d.useRef(null),[o,r]=d.useState(!1),a=d.useRef(new Mo);return d.useEffect(()=>{const n=()=>{r(!0),a.current.clear()};return window.addEventListener("rocket-launch",n),()=>{window.removeEventListener("rocket-launch",n)}},[]),d.useEffect(()=>{if(!o)return;const n=i.current;if(!n)return;const s=n.getContext("2d",{alpha:!0});if(!s)return;(()=>{n.width=window.innerWidth,n.height=window.innerHeight})();const m=u=>{const{x:f,y:b}=u.detail;for(let w=0;w<2;w++)a.current.obtain(f+(Math.random()-.5)*10,b+(Math.random()-.5)*6)};window.addEventListener("rocket-emit-smoke",m);let x,p=Date.now(),h=!1;const g=()=>{s.clearRect(0,0,n.width,n.height);const u=Date.now()-p,f=a.current;for(let b=f.active.length-1;b>=0;b--){const w=f.active[b];w.update(),w.draw(s),(w.opacity<=0||w.size>w.maxSize)&&f.recycle(b)}if(u>550&&!h){h=!0;const b=document.getElementById("about");b&&b.scrollIntoView({behavior:"smooth"})}u>800&&f.active.length===0?(r(!1),s.clearRect(0,0,n.width,n.height)):x=requestAnimationFrame(g)};return x=requestAnimationFrame(g),()=>{cancelAnimationFrame(x),window.removeEventListener("rocket-emit-smoke",m)}},[o]),e.jsx(Fo,{ref:i})},$o=(i=1500)=>{const[o,r]=d.useState(!1);return d.useEffect(()=>{let a;return"requestIdleCallback"in window?a=requestIdleCallback(()=>r(!0),{timeout:i}):a=setTimeout(()=>r(!0),i),()=>{"cancelIdleCallback"in window?cancelIdleCallback(a):clearTimeout(a)}},[i]),o},_o=t.div`
+`;class Fr{constructor(){this.pool=[],this.active=[]}obtain(r,o){let a;return this.pool.length>0?(a=this.pool.pop(),a.reset(r,o)):a=new Wr(r,o),this.active.push(a),a}recycle(r){const o=this.active[r];this.active.splice(r,1),this.pool.push(o)}clear(){this.active=[]}}const Se=(i,r,o)=>{const n=document.createElement("canvas");n.width=128,n.height=128;const l=n.getContext("2d"),s=128/2,p=l.createRadialGradient(s,s,1,s,s,s);return p.addColorStop(0,`rgba(${i}, ${r}, ${o}, 1)`),p.addColorStop(.25,`rgba(${i}, ${r}, ${o}, 0.4)`),p.addColorStop(1,`rgba(${i}, ${r}, ${o}, 0)`),l.fillStyle=p,l.beginPath(),l.arc(s,s,s,0,Math.PI*2),l.fill(),n},Mr=[{r:6,g:182,b:212},{r:236,g:72,b:153},{r:139,g:92,b:246},{r:148,g:163,b:184}],Rr=Mr.map(i=>Se(i.r,i.g,i.b)),Lr=Se(244,246,249);class Wr{constructor(r,o){this.reset(r,o),this.maxSize=Math.max(window.innerWidth,window.innerHeight)*.95}reset(r,o){this.x=r,this.y=o,this.size=Math.random()*6+3,this.speedX=(Math.random()-.5)*6,this.speedY=Math.random()*3+1.5,this.opacity=.95,this.growth=Math.random()*5+4;const a=Math.random();a<.25?this.colorIndex=0:a<.5?this.colorIndex=1:a<.75?this.colorIndex=2:this.colorIndex=3}update(){this.x+=this.speedX,this.y+=this.speedY,this.size+=this.growth,this.speedX*=.96,this.speedY*=.96,this.opacity-=.015}draw(r){if(this.opacity<=0)return;r.save();const o=Math.min(1,(.95-this.opacity)/.7),a=Rr[this.colorIndex];r.globalAlpha=this.opacity*(1-o*.65),r.drawImage(a,this.x-this.size,this.y-this.size,this.size*2,this.size*2),r.globalAlpha=this.opacity*o*.65,r.drawImage(Lr,this.x-this.size,this.y-this.size,this.size*2,this.size*2),r.restore()}}const Br=()=>{const i=d.useRef(null),r=d.useRef(new Fr),o=d.useRef(null),a=d.useRef(0),n=d.useRef(!1),l=d.useRef(!1);return d.useEffect(()=>{const s=i.current;if(!s)return;const p=s.getContext("2d",{alpha:!0});if(!p)return;const x=()=>{s.width=window.innerWidth,s.height=window.innerHeight};x(),window.addEventListener("resize",x);const m=u=>{if(!n.current)return;const{x:f,y:b}=u.detail;for(let w=0;w<2;w++)r.current.obtain(f+(Math.random()-.5)*10,b+(Math.random()-.5)*6)};window.addEventListener("rocket-emit-smoke",m);const h=()=>{if(!n.current)return;p.clearRect(0,0,s.width,s.height);const u=Date.now()-a.current,f=r.current;for(let b=f.active.length-1;b>=0;b--){const w=f.active[b];w.update(),w.draw(p),(w.opacity<=0||w.size>w.maxSize)&&f.recycle(b)}if(u>550&&!l.current){l.current=!0;const b=document.getElementById("about");b&&b.scrollIntoView({behavior:"smooth"})}u>800&&f.active.length===0?(n.current=!1,p.clearRect(0,0,s.width,s.height)):o.current=requestAnimationFrame(h)},g=()=>{r.current.clear(),p.clearRect(0,0,s.width,s.height),a.current=Date.now(),l.current=!1,n.current||(n.current=!0,o.current&&cancelAnimationFrame(o.current),o.current=requestAnimationFrame(h))};return window.addEventListener("rocket-launch",g),()=>{window.removeEventListener("resize",x),window.removeEventListener("rocket-emit-smoke",m),window.removeEventListener("rocket-launch",g),o.current&&cancelAnimationFrame(o.current)}},[]),e.jsx(Pr,{ref:i})},Hr=(i=1500)=>{const[r,o]=d.useState(!1);return d.useEffect(()=>{let a;return"requestIdleCallback"in window?a=requestIdleCallback(()=>o(!0),{timeout:i}):a=setTimeout(()=>o(!0),i),()=>{"cancelIdleCallback"in window?cancelIdleCallback(a):clearTimeout(a)}},[i]),r},$r=t.div`
   position: relative;
   min-height: 100vh;
   overflow: hidden;
-`,Do=t.main`
+`,_r=t.main`
   position: relative;
   z-index: 2;
-`,qo=t.div`
+`,Dr=t.div`
   position: fixed;
   inset: 0;
   pointer-events: none;
@@ -2627,9 +2627,9 @@ Until the foundation is built everywhere, we will continue to live in these two 
       opacity: 0.015;
     }
   }
-`,T=t(l.section)`
+`,T=t(c.section)`
   width: 100%;
   position: relative;
 `;t.div`
   min-height: 200px;
-`;const No=d.lazy(()=>P(()=>import("./FloatingRocket-BQiG8dOO.js"),__vite__mapDeps([0,1,2,3,4,5]))),Go=d.lazy(()=>P(()=>import("./RandomTelemetry-dWiU4ccu.js"),__vite__mapDeps([6,1,2,3,5,7,4]))),Vo=d.lazy(()=>P(()=>import("./WorldMap-CUoF2Kkz.js"),__vite__mapDeps([8,1,2,3]))),Uo=({isBooting:i})=>{const o=ge();return d.useEffect(()=>{if(!i&&o.hash){const r=o.hash.replace("#",""),a=document.getElementById(r);if(a){const n=setTimeout(()=>{a.scrollIntoView({behavior:"smooth"})},100);return()=>clearTimeout(n)}}},[o,i]),null},Yo=()=>$o(1200)?e.jsxs(d.Suspense,{fallback:null,children:[e.jsx(No,{isDesktopOnly:!0}),e.jsx(Go,{}),e.jsx(Vo,{})]}):null;function Xo(){const[i,o]=d.useState(!0),r=n=>{const s=document.getElementById(n);s&&s.scrollIntoView({behavior:"smooth"})},a={initial:{opacity:0},animate:{opacity:1,transition:{duration:.6,ease:"easeOut"}},exit:{opacity:0,transition:{duration:.3}}};return e.jsxs(Ae,{basename:"/urvin.github.io/",children:[e.jsx(Uo,{isBooting:i}),e.jsxs(ye,{children:[e.jsx(lt,{}),e.jsx(j,{mode:"wait",children:i&&e.jsx(ai,{onComplete:()=>o(!1)})}),e.jsxs(_o,{children:[e.jsx(li,{}),e.jsx(qo,{}),e.jsx(Yo,{}),e.jsx(Ho,{}),e.jsxs(Ee,{children:[e.jsx(U,{path:"/",element:e.jsxs(e.Fragment,{children:[e.jsx(N,{scrollToSection:r}),e.jsx(j,{mode:"wait",children:e.jsxs(Do,{children:[e.jsx(I,{children:e.jsx(T,{id:"home",children:e.jsx(zi,{})})}),e.jsx(I,{children:e.jsx(T,{id:"about",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(ra,{})})}),e.jsx(I,{children:e.jsx(T,{id:"work",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Ta,{})})}),e.jsx(I,{children:e.jsx(T,{id:"projects",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Ya,{})})}),e.jsx(I,{children:e.jsx(T,{id:"blog",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(so,{})})}),e.jsx(I,{children:e.jsx(T,{id:"contact",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Po,{})})})]})})]})}),e.jsx(U,{path:"/blog/:slug",element:e.jsx(Mt,{})})]})]})]})]})}Oe.createRoot(document.getElementById("root")).render(e.jsx(me.StrictMode,{children:e.jsx(Xo,{})}));export{v as P};
+`;const qr=d.lazy(()=>P(()=>import("./FloatingRocket-BQiG8dOO.js"),__vite__mapDeps([0,1,2,3,4,5]))),Nr=d.lazy(()=>P(()=>import("./RandomTelemetry-CJ8JPR5z.js"),__vite__mapDeps([6,1,2,3,5,7,4]))),Gr=d.lazy(()=>P(()=>import("./WorldMap-CUoF2Kkz.js"),__vite__mapDeps([8,1,2,3]))),Vr=({isBooting:i})=>{const r=ge();return d.useEffect(()=>{if(!i&&r.hash){const o=r.hash.replace("#",""),a=document.getElementById(o);if(a){const n=setTimeout(()=>{a.scrollIntoView({behavior:"smooth"})},100);return()=>clearTimeout(n)}}},[r,i]),null},Ur=()=>Hr(1200)?e.jsxs(d.Suspense,{fallback:null,children:[e.jsx(qr,{isDesktopOnly:!0}),e.jsx(Nr,{}),e.jsx(Gr,{})]}):null;function Yr(){const[i,r]=d.useState(!0),o=n=>{const l=document.getElementById(n);l&&l.scrollIntoView({behavior:"smooth"})},a={initial:{opacity:0},animate:{opacity:1,transition:{duration:.6,ease:"easeOut"}},exit:{opacity:0,transition:{duration:.3}}};return e.jsxs(Ae,{basename:"/urvin.github.io/",children:[e.jsx(Vr,{isBooting:i}),e.jsxs(ye,{children:[e.jsx(lt,{}),e.jsx(j,{mode:"wait",children:i&&e.jsx(ai,{onComplete:()=>r(!1)})}),e.jsxs($r,{children:[e.jsx(li,{}),e.jsx(Dr,{}),e.jsx(Ur,{}),e.jsx(Br,{}),e.jsxs(Ee,{children:[e.jsx(U,{path:"/",element:e.jsxs(e.Fragment,{children:[e.jsx(N,{scrollToSection:o}),e.jsx(j,{mode:"wait",children:e.jsxs(_r,{children:[e.jsx(I,{children:e.jsx(T,{id:"home",children:e.jsx(zi,{})})}),e.jsx(I,{children:e.jsx(T,{id:"about",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(oa,{})})}),e.jsx(I,{children:e.jsx(T,{id:"work",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Ta,{})})}),e.jsx(I,{children:e.jsx(T,{id:"projects",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Ya,{})})}),e.jsx(I,{children:e.jsx(T,{id:"blog",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(sr,{})})}),e.jsx(I,{children:e.jsx(T,{id:"contact",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Or,{})})})]})})]})}),e.jsx(U,{path:"/blog/:slug",element:e.jsx(Mt,{})})]})]})]})]})}Oe.createRoot(document.getElementById("root")).render(e.jsx(me.StrictMode,{children:e.jsx(Yr,{})}));export{v as P};
