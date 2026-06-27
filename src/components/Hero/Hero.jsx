@@ -2,9 +2,8 @@
 import { Suspense, lazy } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { Canvas } from '@react-three/fiber';
-
-import FloatingShape from './FloatingShape';
+// import { Canvas } from '@react-three/fiber';
+// import FloatingShape from './FloatingShape';
 import { FaLinkedin, FaInstagram, FaGithub } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 import { HiChevronDown } from 'react-icons/hi';
@@ -254,6 +253,44 @@ const CanvasContainer = styled.div`
   }
 `;
 
+const HeroImageWrapper = styled(motion.div)`
+  width: 100%;
+  max-width: 380px;
+  margin: 0 auto;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 4px solid var(--color-bg-card);
+  box-shadow: 0 20px 45px rgba(0, 34, 68, 0.15);
+  background: var(--color-gradient-1);
+  padding: 3px;
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--color-gradient-1);
+    opacity: 0.35;
+    filter: blur(15px);
+    transform: scale(1.05);
+    z-index: -1;
+  }
+
+  @media (max-width: 1024px) {
+    max-width: 280px;
+    margin-top: var(--spacing-md);
+  }
+`;
+
+const HeroImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+`;
+
 const LoadingContainer = styled.div`
   position: absolute;
   top: 0;
@@ -389,6 +426,7 @@ const Hero = () => {
           </Suspense>
         </HeroContent>
 
+        {/* Commeting out the 3D plane as requested by user
         <CanvasContainer>
           <Suspense fallback={
             <LoadingContainer>
@@ -408,6 +446,19 @@ const Hero = () => {
             </Canvas>
           </Suspense>
         </CanvasContainer>
+        */}
+
+        {/* Keeping Urvin's profile photo in Hero section */}
+        <HeroImageWrapper
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8, ease: 'easeOut', delay: 0.4 }}
+        >
+          <HeroImage
+            src="/images/urvin_profile.jpeg"
+            alt="Urvin Kapadia — Senior Manager, United Airlines"
+          />
+        </HeroImageWrapper>
       </HeroContainer>
 
       <ScrollIndicator

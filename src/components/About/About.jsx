@@ -1,7 +1,8 @@
 // src/components/About/About.jsx
-import { useState } from 'react';
+import { useState, Suspense, lazy } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import AboutTurbineCanvas from './AboutTurbineCanvas';
 import {
   FaGraduationCap, FaCode, FaRocket, FaTrophy,
   FaTools, FaPlane
@@ -392,23 +393,7 @@ const About = () => {
               viewport={{ once: true, amount: 0.15 }}
               transition={{ duration: 0.6, delay: 0.25 }}
             >
-              <ImageWrapper>
-                {!imageError && (
-                  <ProfileImage
-                    src="/images/projects/profile2.webp"
-                    alt="Urvin Kapadia — Senior Manager"
-                    loading="lazy"
-                    onLoad={() => setImageLoaded(true)}
-                    onError={() => setImageError(true)}
-                    style={{ opacity: imageLoaded ? 1 : 0, transition: 'opacity 0.4s ease' }}
-                  />
-                )}
-                {(imageError || !imageLoaded) && (
-                  <ImagePlaceholder style={{ position: imageLoaded ? 'absolute' : 'relative', opacity: imageLoaded ? 0 : 1 }}>
-                    <FaPlane />
-                  </ImagePlaceholder>
-                )}
-              </ImageWrapper>
+              <AboutTurbineCanvas />
             </motion.div>
           </AboutImageContainer>
         </AboutGrid>
