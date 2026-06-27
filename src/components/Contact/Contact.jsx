@@ -353,7 +353,7 @@ const Contact = () => {
   ];
 
 const socialLinks = [
-  { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/kapadiaurvin/', label: 'LinkedIn' },
+  { icon: <FaLinkedin />, url: 'https://www.linkedin.com/in/kapadia-urvin-848a97a1/', label: 'LinkedIn' },
 ];
 
 

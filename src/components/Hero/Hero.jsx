@@ -373,7 +373,7 @@ const Hero = () => {
           <SocialLinks variants={itemVariants}>
             <Magnetic range={35}>
               <SocialLink
-                href="https://www.linkedin.com/in/kapadiaurvin/"
+                href="https://www.linkedin.com/in/kapadia-urvin-848a97a1/"
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.1 }}
