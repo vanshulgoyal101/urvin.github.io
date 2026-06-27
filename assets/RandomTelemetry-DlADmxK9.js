@@ -1,4 +1,4 @@
-import{r as d,j as e}from"./react-core-CPHnqsFW.js";import{d as k}from"./styled-CHfxRgpd.js";import{P as c}from"./index-DWkzlXdZ.js";import{A as w,m as W}from"./framer-DRpzP9-u.js";import"./markdown-DNQhOqsY.js";import"./react-vendor-BakkmLcC.js";import"./icons-DNJk4BLK.js";const b=k.div`
+import{r as d,j as e}from"./react-core-CPHnqsFW.js";import{d as k}from"./styled-CHfxRgpd.js";import{P as c}from"./index-BTrFmmPi.js";import{A as w,m as W}from"./framer-DRpzP9-u.js";import"./markdown-DNQhOqsY.js";import"./react-vendor-BakkmLcC.js";import"./icons-DNJk4BLK.js";const b=k.div`
   position: fixed;
   inset: 0;
   pointer-events: none;
