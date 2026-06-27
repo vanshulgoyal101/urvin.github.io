@@ -469,7 +469,7 @@ const socialLinks = [
                   name="message"
                   value={formState.message}
                   onChange={handleChange}
-                  placeholder="Tell me about your project or just say hi!"
+                  placeholder="Tell me about yourself or just say hi!"
                   rows="5"
                   required
                   disabled={isSubmitting}
