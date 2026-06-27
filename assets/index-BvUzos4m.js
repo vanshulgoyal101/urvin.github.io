@@ -1,4 +1,4 @@
-const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/FloatingRocket-BQiG8dOO.js","assets/react-core-CPHnqsFW.js","assets/markdown-DNQhOqsY.js","assets/styled-CHfxRgpd.js","assets/icons-DNJk4BLK.js","assets/framer-DRpzP9-u.js","assets/RandomTelemetry-D2D5KArp.js","assets/react-vendor-BakkmLcC.js","assets/WorldMap-CUoF2Kkz.js"])))=>i.map(i=>d[i]);
+const __vite__mapDeps=(i,m=__vite__mapDeps,d=(m.f||(m.f=["assets/FloatingRocket-BQiG8dOO.js","assets/react-core-CPHnqsFW.js","assets/markdown-DNQhOqsY.js","assets/styled-CHfxRgpd.js","assets/icons-DNJk4BLK.js","assets/framer-DRpzP9-u.js","assets/RandomTelemetry-J-igGiKI.js","assets/react-vendor-BakkmLcC.js","assets/WorldMap-CUoF2Kkz.js"])))=>i.map(i=>d[i]);
 import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as ge,b as Te,L as Ce,B as Ae,R as Ee,c as U,d as Oe}from"./react-vendor-BakkmLcC.js";import{f as Pe,d as t,m as G}from"./styled-CHfxRgpd.js";import{H as Fe,a as Me,F as Y,b as Re,M as Le,B as We,c as Be,d as X,e as He,f as $e,g as ue,h as _e,i as xe,j as O,k as De,l as qe,m as k,n as Ne,o as Ge,p as Ve,q as Ue,r as Ye,s as L,t as Xe,u as Je,v as Ke,w as Qe,x as Ze,y as et,z as tt}from"./icons-DNJk4BLK.js";import{m as l,u as it,a as at,A as j}from"./framer-DRpzP9-u.js";import{M as ot,g as rt}from"./markdown-DNQhOqsY.js";(function(){const o=document.createElement("link").relList;if(o&&o.supports&&o.supports("modulepreload"))return;for(const n of document.querySelectorAll('link[rel="modulepreload"]'))a(n);new MutationObserver(n=>{for(const s of n)if(s.type==="childList")for(const c of s.addedNodes)c.tagName==="LINK"&&c.rel==="modulepreload"&&a(c)}).observe(document,{childList:!0,subtree:!0});function r(n){const s={};return n.integrity&&(s.integrity=n.integrity),n.referrerPolicy&&(s.referrerPolicy=n.referrerPolicy),n.crossOrigin==="use-credentials"?s.credentials="include":n.crossOrigin==="anonymous"?s.credentials="omit":s.credentials="same-origin",s}function a(n){if(n.ep)return;n.ep=!0;const s=r(n);fetch(n.href,s)}})();const nt="modulepreload",st=function(i){return"/urvin.github.io/"+i},J={},P=function(o,r,a){let n=Promise.resolve();if(r&&r.length>0){let x=function(p){return Promise.all(p.map(m=>Promise.resolve(m).then(g=>({status:"fulfilled",value:g}),g=>({status:"rejected",reason:g}))))};document.getElementsByTagName("link");const c=document.querySelector("meta[property=csp-nonce]"),h=c?.nonce||c?.getAttribute("nonce");n=x(r.map(p=>{if(p=st(p),p in J)return;J[p]=!0;const m=p.endsWith(".css"),g=m?'[rel="stylesheet"]':"";if(document.querySelector(`link[href="${p}"]${g}`))return;const u=document.createElement("link");if(u.rel=m?"stylesheet":nt,m||(u.as="script"),u.crossOrigin="",u.href=p,h&&u.setAttribute("nonce",h),document.head.appendChild(u),m)return new Promise((f,b)=>{u.addEventListener("load",f),u.addEventListener("error",()=>b(new Error(`Unable to preload CSS for ${p}`)))})}))}function s(c){const h=new Event("vite:preloadError",{cancelable:!0});if(h.payload=c,window.dispatchEvent(h),!h.defaultPrevented)throw c}return n.then(c=>{for(const h of c||[])h.status==="rejected"&&s(h.reason);return o().catch(s)})},lt=Pe`
   :root {
     /* Color Palette - United Airlines Executive Theme (Navy, Slate, Sky Blue & Gold accents) */
@@ -330,8 +330,8 @@ import{r as d,j as e,R as me}from"./react-core-CPHnqsFW.js";import{u as he,a as 
 
       /* Fix sections not showing */
   section {
-    min-height: auto !important;
-    padding: var(--spacing-lg) 0 !important;
+    min-height: auto;
+    padding: var(--spacing-lg) 0;
   }
   
     /* Fix container padding */
@@ -1256,8 +1256,10 @@ Until the foundation is built everywhere, we will continue to live in these two 
   z-index: 2;
 
   @media (max-width: 1024px) {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
     text-align: center;
+    gap: var(--spacing-lg);
   }
 `,mi=t(l.div)`
   max-width: 600px;
@@ -1267,7 +1269,7 @@ Until the foundation is built everywhere, we will continue to live in these two 
   }
 
   @media (max-width: 768px) {
-    margin-top: 40px;
+    margin-top: 0;
   }
 `,hi=t(l.span)`
   display: inline-block;
@@ -1469,8 +1471,8 @@ Until the foundation is built everywhere, we will continue to live in these two 
   }
 
   @media (max-width: 1024px) {
-    max-width: 280px;
-    margin-top: var(--spacing-md);
+    max-width: 220px;
+    margin-bottom: var(--spacing-md);
   }
 `,ji=t.img`
   width: 100%;
@@ -2594,4 +2596,4 @@ Until the foundation is built everywhere, we will continue to live in these two 
   position: relative;
 `;t.div`
   min-height: 200px;
-`;const No=d.lazy(()=>P(()=>import("./FloatingRocket-BQiG8dOO.js"),__vite__mapDeps([0,1,2,3,4,5]))),Go=d.lazy(()=>P(()=>import("./RandomTelemetry-D2D5KArp.js"),__vite__mapDeps([6,1,2,3,5,7,4]))),Vo=d.lazy(()=>P(()=>import("./WorldMap-CUoF2Kkz.js"),__vite__mapDeps([8,1,2,3]))),Uo=({isBooting:i})=>{const o=ge();return d.useEffect(()=>{if(!i&&o.hash){const r=o.hash.replace("#",""),a=document.getElementById(r);if(a){const n=setTimeout(()=>{a.scrollIntoView({behavior:"smooth"})},100);return()=>clearTimeout(n)}}},[o,i]),null},Yo=()=>$o(1200)?e.jsxs(d.Suspense,{fallback:null,children:[e.jsx(No,{isDesktopOnly:!0}),e.jsx(Go,{}),e.jsx(Vo,{})]}):null;function Xo(){const[i,o]=d.useState(!0),r=n=>{const s=document.getElementById(n);s&&s.scrollIntoView({behavior:"smooth"})},a={initial:{opacity:0},animate:{opacity:1,transition:{duration:.6,ease:"easeOut"}},exit:{opacity:0,transition:{duration:.3}}};return e.jsxs(Ae,{basename:"/urvin.github.io/",children:[e.jsx(Uo,{isBooting:i}),e.jsxs(ye,{children:[e.jsx(lt,{}),e.jsx(j,{mode:"wait",children:i&&e.jsx(ai,{onComplete:()=>o(!1)})}),e.jsxs(_o,{children:[e.jsx(li,{}),e.jsx(qo,{}),e.jsx(Yo,{}),e.jsx(Ho,{}),e.jsxs(Ee,{children:[e.jsx(U,{path:"/",element:e.jsxs(e.Fragment,{children:[e.jsx(N,{scrollToSection:r}),e.jsx(j,{mode:"wait",children:e.jsxs(Do,{children:[e.jsx(I,{children:e.jsx(T,{id:"home",children:e.jsx(zi,{})})}),e.jsx(I,{children:e.jsx(T,{id:"about",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(ra,{})})}),e.jsx(I,{children:e.jsx(T,{id:"work",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Ta,{})})}),e.jsx(I,{children:e.jsx(T,{id:"projects",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Ya,{})})}),e.jsx(I,{children:e.jsx(T,{id:"blog",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(so,{})})}),e.jsx(I,{children:e.jsx(T,{id:"contact",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Po,{})})})]})})]})}),e.jsx(U,{path:"/blog/:slug",element:e.jsx(Mt,{})})]})]})]})]})}Oe.createRoot(document.getElementById("root")).render(e.jsx(me.StrictMode,{children:e.jsx(Xo,{})}));export{v as P};
+`;const No=d.lazy(()=>P(()=>import("./FloatingRocket-BQiG8dOO.js"),__vite__mapDeps([0,1,2,3,4,5]))),Go=d.lazy(()=>P(()=>import("./RandomTelemetry-J-igGiKI.js"),__vite__mapDeps([6,1,2,3,5,7,4]))),Vo=d.lazy(()=>P(()=>import("./WorldMap-CUoF2Kkz.js"),__vite__mapDeps([8,1,2,3]))),Uo=({isBooting:i})=>{const o=ge();return d.useEffect(()=>{if(!i&&o.hash){const r=o.hash.replace("#",""),a=document.getElementById(r);if(a){const n=setTimeout(()=>{a.scrollIntoView({behavior:"smooth"})},100);return()=>clearTimeout(n)}}},[o,i]),null},Yo=()=>$o(1200)?e.jsxs(d.Suspense,{fallback:null,children:[e.jsx(No,{isDesktopOnly:!0}),e.jsx(Go,{}),e.jsx(Vo,{})]}):null;function Xo(){const[i,o]=d.useState(!0),r=n=>{const s=document.getElementById(n);s&&s.scrollIntoView({behavior:"smooth"})},a={initial:{opacity:0},animate:{opacity:1,transition:{duration:.6,ease:"easeOut"}},exit:{opacity:0,transition:{duration:.3}}};return e.jsxs(Ae,{basename:"/urvin.github.io/",children:[e.jsx(Uo,{isBooting:i}),e.jsxs(ye,{children:[e.jsx(lt,{}),e.jsx(j,{mode:"wait",children:i&&e.jsx(ai,{onComplete:()=>o(!1)})}),e.jsxs(_o,{children:[e.jsx(li,{}),e.jsx(qo,{}),e.jsx(Yo,{}),e.jsx(Ho,{}),e.jsxs(Ee,{children:[e.jsx(U,{path:"/",element:e.jsxs(e.Fragment,{children:[e.jsx(N,{scrollToSection:r}),e.jsx(j,{mode:"wait",children:e.jsxs(Do,{children:[e.jsx(I,{children:e.jsx(T,{id:"home",children:e.jsx(zi,{})})}),e.jsx(I,{children:e.jsx(T,{id:"about",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(ra,{})})}),e.jsx(I,{children:e.jsx(T,{id:"work",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Ta,{})})}),e.jsx(I,{children:e.jsx(T,{id:"projects",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Ya,{})})}),e.jsx(I,{children:e.jsx(T,{id:"blog",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(so,{})})}),e.jsx(I,{children:e.jsx(T,{id:"contact",variants:a,initial:"initial",whileInView:"animate",viewport:{once:!0,amount:.1},children:e.jsx(Po,{})})})]})})]})}),e.jsx(U,{path:"/blog/:slug",element:e.jsx(Mt,{})})]})]})]})]})}Oe.createRoot(document.getElementById("root")).render(e.jsx(me.StrictMode,{children:e.jsx(Xo,{})}));export{v as P};
