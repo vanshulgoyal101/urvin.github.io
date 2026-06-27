@@ -74,8 +74,8 @@ const colorDefs = [
 // Cache the canvases statically outside render loop
 const cachedCanvases = colorDefs.map(c => createOffscreenSmokeCanvas(c.r, c.g, c.b));
 
-// Background color canvas for blending (246, 243, 235)
-const bgCanvas = createOffscreenSmokeCanvas(246, 243, 235);
+// Background color canvas for blending (244, 246, 249)
+const bgCanvas = createOffscreenSmokeCanvas(244, 246, 249);
 
 // Particle class representing a pooled smoke puff
 class SmokeParticle {

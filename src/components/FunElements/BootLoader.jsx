@@ -33,13 +33,15 @@ const GreetingContainer = styled.div`
 
 const GreetingWord = styled(motion.h1)`
   font-family: var(--font-display);
-  font-size: clamp(3rem, 10vw, 6rem);
+  font-size: ${({ $long }) => $long ? 'clamp(1.8rem, 6vw, 3.5rem)' : 'clamp(3rem, 10vw, 6rem)'};
   font-weight: 800;
   color: var(--color-accent-primary);
   letter-spacing: -0.03em;
-  line-height: 1;
+  line-height: 1.1;
   /* Reserve space so height never jumps */
   margin: 0;
+  text-align: center;
+  padding: 0 20px;
 `;
 
 const LangLabel = styled(motion.p)`
@@ -67,30 +69,24 @@ const Dot = styled(motion.span)`
 // ─── Greeting data ────────────────────────────────────────────────────────────
 
 const ALL_GREETINGS = [
-  { word: 'Hello',      lang: 'English'    },
-  { word: 'Hola',       lang: 'Spanish'    },
-  { word: 'Bonjour',    lang: 'French'     },
-  { word: 'नमस्ते',      lang: 'Hindi'      },
-  { word: 'こんにちは',  lang: 'Japanese'   },
-  { word: 'Ciao',       lang: 'Italian'    },
-  { word: '你好',        lang: 'Chinese'    },
-  { word: 'Hallo',      lang: 'German'     },
-  { word: 'Olá',        lang: 'Portuguese' },
-  { word: '안녕하세요',  lang: 'Korean'     },
-  { word: 'Merhaba',    lang: 'Turkish'    },
-  { word: 'Shalom',     lang: 'Hebrew'     },
-  { word: 'Sawatdee',   lang: 'Thai'       },
-  { word: 'Hej',        lang: 'Swedish'    },
-  { word: 'Ahoj',       lang: 'Czech'      },
-  { word: 'Привет',     lang: 'Russian'    },
+  { word: 'ORD', lang: 'Hub • Chicago' },
+  { word: 'SFO', lang: 'Hub • San Francisco' },
+  { word: 'EWR', lang: 'Hub • New York / Newark' },
+  { word: 'IAH', lang: 'Hub • Houston' },
+  { word: 'DEN', lang: 'Hub • Denver' },
+  { word: 'LAX', lang: 'Hub • Los Angeles' },
+  { word: 'IAD', lang: 'Hub • Washington D.C.' },
+  { word: 'LHR', lang: 'Destination • London' },
+  { word: 'NRT', lang: 'Destination • Tokyo' },
+  { word: 'GUM', lang: 'Hub • Guam' },
 ];
 
 // How long each greeting is visible (word-switch interval in ms)
-const STEP_MS = 220;
+const STEP_MS = 240;
 // Number of random greetings to show before the final "Welcome"
-const SHOW_COUNT = 8;
+const SHOW_COUNT = 7;
 // The mandatory closing greeting
-const FINAL = { word: 'Welcome', lang: 'English' };
+const FINAL = { word: 'Cleared for Takeoff', lang: 'Welcome — Urvin Kapadia' };
 
 // Fisher-Yates shuffle (pure, no mutation of original)
 const shuffle = (arr) => {
@@ -182,7 +178,7 @@ const BootLoader = ({ onComplete }) => {
                 transition={{ duration: 0.13, ease: 'easeOut' }}
                 style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
               >
-                <GreetingWord>{current.word}</GreetingWord>
+                <GreetingWord $long={current?.word?.length > 8}>{current.word}</GreetingWord>
 
                 <LangLabel>
                   <Dot
