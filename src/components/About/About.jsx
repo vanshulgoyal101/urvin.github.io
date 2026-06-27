@@ -2,7 +2,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import AboutTurbineCanvas from './AboutTurbineCanvas';
+import AboutEvolution2D from './AboutEvolution2D';
 import {
   FaGraduationCap, FaCode, FaRocket, FaTrophy,
   FaTools, FaPlane
@@ -349,7 +349,7 @@ const About = () => {
           </AboutContent>
 
           <AboutImageContainer>
-            <AboutTurbineCanvas />
+            <AboutEvolution2D />
           </AboutImageContainer>
         </AboutGrid>
 
