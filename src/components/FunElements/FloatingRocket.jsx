@@ -259,11 +259,11 @@ const FloatingRocket = ({ isMobileOnly = false, isDesktopOnly = false }) => {
       >
         <Rocket
           animate={{ 
-            rotate: hasLaunched ? -35 : -45, // Angled slightly upward like an airplane climbing
+            rotate: hasLaunched ? -70 : -90, // Face top-left at rest, pitch up during climb
           }}
           transition={{ duration: 0.3 }}
         >
-          <FaPlane style={{ transform: 'rotate(-45deg)' }} /> {/* Align plane standard flight path angle */}
+          <FaPlane />
         </Rocket>
         
         {hasLaunched && (
