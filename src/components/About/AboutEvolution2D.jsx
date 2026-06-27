@@ -1,31 +1,31 @@
 // src/components/About/AboutEvolution2D.jsx
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // ─── Styled Components ────────────────────────────────────────────────────────
 
-const GraphicPanel = styled.div`
+const PanelWrapper = styled.div`
   width: 100%;
-  aspect-ratio: 1.1 / 1;
+  aspect-ratio: 1.15 / 1;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 24px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0, 34, 68, 0.05);
+  box-shadow: 0 20px 45px rgba(0, 34, 68, 0.08);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   padding: var(--spacing-lg);
-  
+
   @media (max-width: 768px) {
-    aspect-ratio: 1.2 / 1;
+    aspect-ratio: 1.25 / 1;
   }
 `;
 
-const CanvasArea = styled.div`
+const CanvasContainer = styled.div`
   flex: 1;
   width: 100%;
   position: relative;
@@ -34,27 +34,16 @@ const CanvasArea = styled.div`
   justify-content: center;
 `;
 
-const BackgroundScenery = styled(motion.div)`
-  position: absolute;
-  bottom: 0;
-  left: 0;
+const EvolvingCanvas = styled.canvas`
   width: 100%;
-  height: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   pointer-events: none;
-  z-index: 1;
 `;
 
-const ModelWrapper = styled(motion.div)`
-  position: relative;
-  z-index: 2;
-  width: 140px;
-  height: 140px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`;
-
-const FooterControls = styled.div`
+const LabelArea = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -63,288 +52,199 @@ const FooterControls = styled.div`
   z-index: 3;
 `;
 
-const StageLabel = styled(motion.div)`
-  font-size: var(--text-base);
-  font-weight: 600;
+const StageTitle = styled(motion.h4)`
+  font-size: var(--text-lg);
+  font-weight: 700;
   color: var(--color-text-primary);
   text-align: center;
-  min-height: 24px;
+  min-height: 28px;
+  margin: 0;
 `;
 
 const NavigationDots = styled.div`
   display: flex;
-  gap: 8px;
+  gap: 10px;
   justify-content: center;
 `;
 
 const Dot = styled.button`
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   background: ${({ $active }) => $active ? 'var(--color-accent-primary)' : 'var(--color-border)'};
   border: none;
   cursor: pointer;
   padding: 0;
   transition: all 0.3s ease;
-  
+
   &:hover {
     background: var(--color-accent-primary);
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
 `;
 
-// ─── Stage SVG Components ──────────────────────────────────────────────────────
+// ─── Mathematical Particle Path Generators ────────────────────────────────────
 
-// 1. Hatching Egg
-const EggSvg = () => (
-  <svg viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="var(--color-accent-primary)" strokeWidth="2.5" strokeLinecap="round">
-    {/* Nest */}
-    <path d="M20 75 C 30 85, 70 85, 80 75" stroke="var(--color-text-secondary)" strokeWidth="2" />
-    <path d="M15 78 C 35 88, 65 88, 85 78" stroke="var(--color-text-secondary)" strokeWidth="1.5" />
-    
-    {/* Egg Base */}
-    <motion.path 
-      d="M30 65 C 30 40, 70 40, 70 65 C 70 78, 30 78, 30 65 Z" 
-      animate={{ rotate: [0, -3, 3, -3, 0] }}
-      transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-    />
-    {/* Crack Lines */}
-    <path d="M50 42 L 48 50 L 53 55 L 49 63" stroke="var(--color-text-secondary)" />
-  </svg>
-);
+const PARTICLE_COUNT = 85;
 
-// 2. Hatchling Peeking Out
-const HatchlingSvg = () => (
-  <svg viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="var(--color-accent-primary)" strokeWidth="2.5" strokeLinecap="round">
-    {/* Nest */}
-    <path d="M20 75 C 30 85, 70 85, 80 75" stroke="var(--color-text-secondary)" strokeWidth="2" />
-    
-    {/* Broken Lower Egg Shell */}
-    <path d="M30 65 C 30 78, 70 78, 70 65 L 65 58 L 57 62 L 50 56 L 43 62 L 35 57 Z" />
-    
-    {/* Bird Head Peeking Out */}
-    <motion.g 
-      animate={{ y: [0, -6, 0] }}
-      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-    >
-      {/* Head */}
-      <circle cx="50" cy="45" r="14" />
-      {/* Beak */}
-      <path d="M64 43 L 73 45 L 64 48 Z" fill="var(--color-accent-secondary)" stroke="var(--color-accent-secondary)" />
-      {/* Eye */}
-      <circle cx="56" cy="41" r="1.5" fill="var(--color-accent-primary)" />
-    </motion.g>
-  </svg>
-);
+const generatePointsForStage = (stage, count, radius) => {
+  const points = [];
+  const half = Math.floor(count / 2);
 
-// 3. Soaring Bird
-const SoaringBirdSvg = () => (
-  <svg viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="var(--color-accent-primary)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-    {/* Flying Bird Body */}
-    <motion.g
-      animate={{ y: [0, -8, 0] }}
-      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-    >
-      <path d="M35 50 C 45 48, 55 48, 65 50 C 58 53, 42 53, 35 50 Z" />
-      {/* Wing Flap Animation */}
-      <motion.path 
-        d="M50 49 C 45 30, 25 15, 10 25 C 25 35, 45 42, 50 49 Z" 
-        animate={{ d: [
-          "M50 49 C 45 30, 25 15, 10 25 C 25 35, 45 42, 50 49 Z",
-          "M50 49 C 45 45, 25 55, 15 65 C 28 55, 46 51, 50 49 Z",
-          "M50 49 C 45 30, 25 15, 10 25 C 25 35, 45 42, 50 49 Z"
-        ] }}
-        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      <motion.path 
-        d="M50 49 C 55 30, 75 15, 90 25 C 75 35, 55 42, 50 49 Z" 
-        animate={{ d: [
-          "M50 49 C 55 30, 75 15, 90 25 C 75 35, 55 42, 50 49 Z",
-          "M50 49 C 55 45, 75 55, 85 65 C 72 55, 54 51, 50 49 Z",
-          "M50 49 C 55 30, 75 15, 90 25 C 75 35, 55 42, 50 49 Z"
-        ] }}
-        transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-      />
-      {/* Beak */}
-      <path d="M65 50 L 71 49 L 64 52" />
-    </motion.g>
-  </svg>
-);
+  switch (stage) {
+    case 0: // 1. Nest Egg
+      for (let i = 0; i < count; i++) {
+        const theta = (i / count) * Math.PI * 2;
+        // Egg shape formula: wider at bottom, narrower at top
+        const r = radius * (1 - 0.22 * Math.sin(theta));
+        const x = Math.cos(theta) * r;
+        const y = Math.sin(theta) * r * 1.25 + 10;
+        points.push({ x, y });
+      }
+      break;
 
-// 4. Origami Paper Plane
-const PaperPlaneSvg = () => (
-  <svg viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="var(--color-accent-primary)" strokeWidth="2.2" strokeLinejoin="round" strokeLinecap="round">
-    <motion.g
-      animate={{ y: [0, -5, 5, 0], rotate: [0, 2, -2, 0] }}
-      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-    >
-      <path d="M15 45 L 85 20 L 50 80 L 42 54 Z" />
-      <path d="M85 20 L 42 54 L 15 45 Z" fill="rgba(0, 93, 166, 0.05)" />
-      <path d="M42 54 L 50 80 L 58 65" />
-    </motion.g>
-  </svg>
-);
+    case 1: // 2. Hatchling peeking
+      const splitIndex = Math.floor(count * 0.6);
+      // Lower egg shell
+      for (let i = 0; i < splitIndex; i++) {
+        const theta = (i / splitIndex) * Math.PI + Math.PI * 0.15;
+        const x = Math.cos(theta) * radius * 0.9;
+        const y = Math.sin(theta) * radius * 0.95 + 25;
+        points.push({ x, y });
+      }
+      // Head peeking out
+      const headIndex = count - splitIndex;
+      for (let i = 0; i < headIndex; i++) {
+        const theta = (i / headIndex) * Math.PI * 2;
+        const x = Math.cos(theta) * (radius * 0.32);
+        const y = Math.sin(theta) * (radius * 0.32) - 15;
+        points.push({ x, y });
+      }
+      break;
 
-// 5. Wright Flyer (1903 Biplane)
-const WrightFlyerSvg = () => (
-  <svg viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="var(--color-accent-primary)" strokeWidth="2" strokeLinecap="round">
-    <motion.g
-      animate={{ y: [0, -3, 3, 0] }}
-      transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut" }}
-    >
-      {/* Double Wings */}
-      <path d="M10 32 L 90 32" />
-      <path d="M10 48 L 90 48" />
-      
-      {/* Struts */}
-      {Array.from({ length: 8 }).map((_, idx) => {
-        const x = 18 + idx * 9.1;
-        return <line key={idx} x1={x} y1="32" x2={x} y2="48" />;
-      })}
-      
-      {/* Early Rudder and Elevator frame */}
-      <path d="M42 48 L 50 72 L 58 48" />
-      <path d="M46 72 L 54 72" />
-      <path d="M35 32 L 50 15 L 65 32" />
-      
-      {/* Spinning Propeller lines */}
-      <motion.g 
-        transform="translate(50, 48)"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 0.8, repeat: Infinity, ease: "linear" }}
-      >
-        <line x1="-12" y1="0" x2="12" y2="0" stroke="var(--color-text-secondary)" strokeWidth="1" />
-      </motion.g>
-    </motion.g>
-  </svg>
-);
+    case 2: // 3. Flying Bird
+      // Left and Right Wing segments
+      for (let i = 0; i < half; i++) {
+        const t = i / (half - 1);
+        const x = -t * radius * 1.15;
+        const y = -Math.sin(t * Math.PI) * radius * 0.45;
+        points.push({ x, y });
+      }
+      for (let i = 0; i < (count - half); i++) {
+        const t = i / (count - half - 1);
+        const x = t * radius * 1.15;
+        const y = -Math.sin(t * Math.PI) * radius * 0.45;
+        points.push({ x, y });
+      }
+      break;
 
-// 6. Propeller Fighter Monoplane
-const PropellerFighterSvg = () => (
-  <svg viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="var(--color-accent-primary)" strokeWidth="2.2" strokeLinecap="round">
-    <motion.g
-      animate={{ y: [0, -4, 4, 0] }}
-      transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-    >
-      {/* Fuselage */}
-      <path d="M15 50 C 15 45, 80 45, 85 50 C 80 55, 15 55, 15 50 Z" />
-      {/* Wings */}
-      <path d="M50 48 L 52 15 L 42 15 L 46 48" fill="rgba(0, 93, 166, 0.05)" />
-      <path d="M50 52 L 52 85 L 42 85 L 46 52" fill="rgba(0, 93, 166, 0.05)" />
-      {/* Tail Fin */}
-      <path d="M22 50 L 12 35 L 18 35 L 25 50" />
-      
-      {/* Spinning Nose Propeller */}
-      <motion.g 
-        transform="translate(85, 50)"
-        animate={{ rotate: 360 }}
-        transition={{ duration: 0.4, repeat: Infinity, ease: "linear" }}
-      >
-        <line x1="0" y1="-18" x2="0" y2="18" stroke="var(--color-text-secondary)" strokeWidth="1.5" />
-      </motion.g>
-    </motion.g>
-  </svg>
-);
+    case 3: // 4. Paper Glider
+      const edge = Math.floor(count / 4);
+      // Wing fold outline triangles
+      for (let i = 0; i < edge; i++) {
+        const t = i / edge;
+        points.push({ x: -t * radius * 0.9, y: -radius * 0.7 + t * 1.6 * radius });
+      }
+      for (let i = 0; i < edge; i++) {
+        const t = i / edge;
+        points.push({ x: -radius * 0.9 + t * radius * 0.9, y: radius * 0.9 - t * radius * 0.5 });
+      }
+      for (let i = 0; i < edge; i++) {
+        const t = i / edge;
+        points.push({ x: t * radius * 0.9, y: radius * 0.4 + t * radius * 0.5 });
+      }
+      for (let i = 0; i < (count - 3 * edge); i++) {
+        const t = i / (count - 3 * edge);
+        points.push({ x: radius * 0.9 - t * radius * 0.9, y: radius * 0.9 - t * 1.6 * radius });
+      }
+      break;
 
-// 7. Commercial Jetliner
-const CommercialJetSvg = () => (
-  <svg viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="var(--color-accent-primary)" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-    <motion.g
-      animate={{ y: [0, -3, 3, 0] }}
-      transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-    >
-      {/* Main Jet Body */}
-      <path d="M10 50 C 10 46, 75 44, 90 50 C 75 56, 10 54, 10 50 Z" />
-      {/* Swept Wings */}
-      <path d="M48 48 L 22 20 L 32 20 L 56 48" fill="rgba(0, 93, 166, 0.05)" />
-      <path d="M48 52 L 22 80 L 32 80 L 56 52" fill="rgba(0, 93, 166, 0.05)" />
-      
-      {/* Underwing Jet Engines */}
-      <rect x="36" y="28" width="12" height="6" rx="2" fill="rgba(0, 93, 166, 0.2)" />
-      <rect x="36" y="66" width="12" height="6" rx="2" fill="rgba(0, 93, 166, 0.2)" />
-      
-      {/* Tail Fin */}
-      <path d="M20 48 L 10 25 L 18 25 L 26 48" />
-    </motion.g>
-  </svg>
-);
+    case 4: // 5. Wright Flyer
+      // Upper wing
+      for (let i = 0; i < half; i++) {
+        const t = (i / (half - 1)) * 2 - 1;
+        points.push({ x: t * radius * 1.25, y: -radius * 0.35 });
+      }
+      // Lower wing
+      for (let i = 0; i < (count - half); i++) {
+        const t = (i / (count - half - 1)) * 2 - 1;
+        points.push({ x: t * radius * 1.25, y: radius * 0.35 });
+      }
+      break;
 
-// 8. Supersonic Jet (Concorde)
-const SupersonicJetSvg = () => (
-  <svg viewBox="0 0 100 100" width="100%" height="100%" fill="none" stroke="var(--color-accent-primary)" strokeWidth="2.2" strokeLinecap="round">
-    <motion.g
-      animate={{ y: [0, -5, 5, 0], x: [0, 3, -3, 0] }}
-      transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
-    >
-      {/* Delta Wing Base */}
-      <path d="M15 50 L 50 18 L 46 50 L 50 82 Z" fill="rgba(0, 93, 166, 0.08)" />
-      
-      {/* Long Needle Nose Fuselage */}
-      <path d="M5 50 C 15 48, 88 47, 95 50 C 88 53, 15 52, 5 50 Z" />
-      
-      {/* Delta Fin */}
-      <path d="M22 50 L 14 30 L 26 50" />
-    </motion.g>
-  </svg>
-);
+    case 5: // 6. Propeller Fighter
+      const wingPts = Math.floor(count * 0.5);
+      // Wing line
+      for (let i = 0; i < wingPts; i++) {
+        const t = (i / (wingPts - 1)) * 2 - 1;
+        points.push({ x: t * radius * 1.25, y: 15 });
+      }
+      // Fuselage cross
+      const fusPts = count - wingPts;
+      for (let i = 0; i < fusPts; i++) {
+        const t = (i / (fusPts - 1)) * 2 - 1;
+        points.push({ x: 0, y: t * radius * 0.95 });
+      }
+      break;
 
-// ─── Evolving Scenery Background SVGs ────────────────────────────────────────
+    case 6: // 7. Commercial Jet
+      // Swept wing profiles
+      for (let i = 0; i < half; i++) {
+        const t = i / (half - 1);
+        points.push({ x: -t * radius * 1.2, y: -radius * 0.45 + t * radius * 1.2 });
+      }
+      for (let i = 0; i < (count - half); i++) {
+        const t = i / (count - half - 1);
+        points.push({ x: t * radius * 1.2, y: -radius * 0.45 + t * radius * 1.2 });
+      }
+      break;
 
-const SceneryForestSvg = () => (
-  <svg viewBox="0 0 400 150" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M-10 130 C 50 120, 150 140, 250 125 C 320 115, 380 135, 410 130 L 410 160 L -10 160 Z" fill="rgba(0, 93, 166, 0.04)" />
-    
-    {/* Outline Pine Trees */}
-    <g stroke="var(--color-border)" strokeWidth="1.5">
-      {/* Tree 1 */}
-      <path d="M40 130 L 40 100 M40 105 L 25 115 M40 95 L 28 103 M40 85 L 30 90 M40 105 L 55 115 M40 95 L 52 103 M40 85 L 50 90" />
-      {/* Tree 2 */}
-      <path d="M110 135 L 110 90 M110 98 L 92 108 M110 88 L 95 96 M110 108 L 128 98" />
-      {/* Tree 3 */}
-      <path d="M320 128 L 320 95 M320 102 L 305 110 M320 95 L 335 102" />
-    </g>
-  </svg>
-);
+    case 7: // 8. Supersonic Concorde
+      const deltaEdge = Math.floor(count / 3);
+      // Left delta
+      for (let i = 0; i < deltaEdge; i++) {
+        const t = i / deltaEdge;
+        points.push({ x: -t * radius * 0.85, y: radius * 0.65 - t * radius * 0.35 });
+      }
+      // Center needle nose
+      for (let i = 0; i < deltaEdge; i++) {
+        const t = i / deltaEdge;
+        points.push({ x: 0, y: -radius * 0.95 + t * radius * 1.9 });
+      }
+      // Right delta
+      for (let i = 0; i < (count - 2 * deltaEdge); i++) {
+        const t = i / (count - 2 * deltaEdge);
+        points.push({ x: t * radius * 0.85, y: radius * 0.65 - t * radius * 0.35 });
+      }
+      break;
 
-const SceneryHillsSvg = () => (
-  <svg viewBox="0 0 400 150" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg">
-    {/* Layered Rolling Hills */}
-    <path d="M-20 140 C 60 120, 120 100, 220 130 C 300 150, 350 125, 420 135 L 420 160 L -20 160 Z" fill="rgba(0, 93, 166, 0.05)" />
-    <path d="M-20 120 C 80 80, 200 140, 310 110 C 360 95, 390 120, 420 115 L 420 160 L -20 160 Z" stroke="var(--color-border)" strokeWidth="1.2" />
-    
-    {/* Wind Turbine Line Art */}
-    <g stroke="var(--color-border)" strokeWidth="1.2" transform="translate(280, 75)">
-      <line x1="0" y1="0" x2="0" y2="40" />
-      <motion.g animate={{ rotate: 360 }} transition={{ duration: 6, repeat: Infinity, ease: "linear" }}>
-        <line x1="0" y1="0" x2="0" y2="-18" />
-        <line x1="0" y1="0" x2="15" y2="10" />
-        <line x1="0" y1="0" x2="-15" y2="10" />
-      </motion.g>
-    </g>
-  </svg>
-);
+    default:
+      break;
+  }
 
-const SceneryCitySvg = () => (
-  <svg viewBox="0 0 400 150" width="100%" height="100%" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="var(--color-border)" strokeWidth="1.5">
-    {/* Silhouettes of Skyscrapers */}
-    <rect x="25" y="60" width="35" height="90" rx="2" fill="rgba(0, 93, 166, 0.02)" />
-    <rect x="80" y="30" width="45" height="120" rx="3" fill="rgba(0, 93, 166, 0.04)" />
-    <rect x="145" y="75" width="30" height="75" rx="2" fill="rgba(0, 93, 166, 0.02)" />
-    <rect x="200" y="45" width="40" height="105" rx="3" fill="rgba(0, 93, 166, 0.03)" />
-    <rect x="260" y="85" width="25" height="65" rx="2" fill="rgba(0, 93, 166, 0.01)" />
-    <rect x="310" y="20" width="50" height="130" rx="4" fill="rgba(0, 93, 166, 0.05)" />
-    
-    {/* Antenna masts on buildings */}
-    <line x1="102" y1="30" x2="102" y2="10" />
-    <line x1="335" y1="20" x2="335" y2="-2" />
-  </svg>
-);
+  return points;
+};
 
-// ─── Evolution Core Panel Component ──────────────────────────────────────────
+// ─── Main Evolution Panel Component ──────────────────────────────────────────
 
 const AboutEvolution2D = () => {
   const [stage, setStage] = useState(0);
+  const canvasRef = useRef(null);
+  const particlesRef = useRef([]);
+  const requestRef = useRef();
 
+  const stageLabels = [
+    "Origin: The Hatching Egg",
+    "Curiosity: The Hatchling Peeks",
+    "Nature: Soaring Wings",
+    "Origami: Origami Glider",
+    "Pioneering: The Wright Flyer (1903)",
+    "Propulsion: The Propeller Fighter",
+    "Commercial: The Modern Jetliner",
+    "Future: Supersonic Concorde"
+  ];
+
+  // Auto evolution loops every 4.5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setStage((prev) => (prev + 1) % 8);
@@ -352,95 +252,183 @@ const AboutEvolution2D = () => {
     return () => clearInterval(interval);
   }, []);
 
-  const stageData = [
-    {
-      label: "Hatching: Flight Begins",
-      svg: <EggSvg />,
-      bg: <SceneryForestSvg />
-    },
-    {
-      label: "Hatchling: Early Curiosity",
-      svg: <HatchlingSvg />,
-      bg: <SceneryForestSvg />
-    },
-    {
-      label: "Origin: Soaring Wings",
-      svg: <SoaringBirdSvg />,
-      bg: <SceneryForestSvg />
-    },
-    {
-      label: "Origami: Human Imagination",
-      svg: <PaperPlaneSvg />,
-      bg: <SceneryHillsSvg />
-    },
-    {
-      label: "Pioneering: Wright Flyer (1903)",
-      svg: <WrightFlyerSvg />,
-      bg: <SceneryHillsSvg />
-    },
-    {
-      label: "Evolution: Propeller Era",
-      svg: <PropellerFighterSvg />,
-      bg: <SceneryHillsSvg />
-    },
-    {
-      label: "Commercial: The Modern Airliner",
-      svg: <CommercialJetSvg />,
-      bg: <SceneryCitySvg />
-    },
-    {
-      label: "Supersonic: Entering the Future",
-      svg: <SupersonicJetSvg />,
-      bg: <SceneryCitySvg />
+  // Initialize particle coordinate pools once
+  useEffect(() => {
+    const particles = [];
+    const initialTargets = generatePointsForStage(0, PARTICLE_COUNT, 80);
+    
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      particles.push({
+        x: initialTargets[i].x,
+        y: initialTargets[i].y,
+        tx: initialTargets[i].x,
+        ty: initialTargets[i].y,
+        vx: 0,
+        vy: 0
+      });
     }
-  ];
+    particlesRef.current = particles;
+  }, []);
+
+  // Update target coordinates on stage changes
+  useEffect(() => {
+    if (particlesRef.current.length === 0) return;
+    const targets = generatePointsForStage(stage, PARTICLE_COUNT, 80);
+    for (let i = 0; i < PARTICLE_COUNT; i++) {
+      particlesRef.current[i].tx = targets[i].x;
+      particlesRef.current[i].ty = targets[i].y;
+    }
+  }, [stage]);
+
+  // Main Canvas Render Loop
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    if (!canvas) return;
+    const ctx = canvas.getContext('2d');
+    if (!ctx) return;
+
+    let width = (canvas.width = canvas.parentElement.clientWidth);
+    let height = (canvas.height = canvas.parentElement.clientHeight);
+
+    const resizeHandler = () => {
+      width = canvas.width = canvas.parentElement.clientWidth;
+      height = canvas.height = canvas.parentElement.clientHeight;
+    };
+    window.addEventListener('resize', resizeHandler);
+
+    const drawLoop = () => {
+      ctx.clearRect(0, 0, width, height);
+
+      const centerX = width / 2;
+      const centerY = height / 2;
+
+      // Draw Evolving Background Line Art Scenery based on the stage
+      ctx.save();
+      ctx.strokeStyle = 'rgba(0, 93, 166, 0.08)';
+      ctx.lineWidth = 1.5;
+      
+      const groundY = height - 50;
+      
+      // Draw horizon reference line
+      ctx.beginPath();
+      ctx.moveTo(30, groundY);
+      ctx.lineTo(width - 30, groundY);
+      ctx.stroke();
+
+      if (stage < 3) {
+        // Natural Forest silhouette lines
+        ctx.beginPath();
+        // Left tree
+        ctx.moveTo(60, groundY);
+        ctx.lineTo(60, groundY - 45);
+        ctx.lineTo(45, groundY - 30);
+        ctx.moveTo(60, groundY - 45);
+        ctx.lineTo(75, groundY - 30);
+        // Right tree
+        ctx.moveTo(width - 80, groundY);
+        ctx.lineTo(width - 80, groundY - 55);
+        ctx.lineTo(width - 95, groundY - 40);
+        ctx.moveTo(width - 80, groundY - 55);
+        ctx.lineTo(width - 65, groundY - 40);
+        ctx.stroke();
+      } else if (stage >= 3 && stage < 6) {
+        // Early Industrial / Farm hills
+        ctx.beginPath();
+        ctx.arc(100, groundY + 120, 150, Math.PI * 1.2, Math.PI * 1.8);
+        ctx.arc(width - 100, groundY + 120, 140, Math.PI * 1.2, Math.PI * 1.8);
+        ctx.stroke();
+      } else {
+        // Modern Sky Scrapers
+        ctx.beginPath();
+        ctx.rect(50, groundY - 70, 30, 70);
+        ctx.rect(100, groundY - 110, 40, 110);
+        ctx.rect(width - 130, groundY - 95, 35, 95);
+        ctx.rect(width - 75, groundY - 60, 25, 60);
+        ctx.stroke();
+      }
+      ctx.restore();
+
+      // Render Morphing Particle Constellation
+      ctx.save();
+      ctx.translate(centerX, centerY - 15);
+      
+      // Update particle physics (lerping towards targets)
+      const p = particlesRef.current;
+      for (let i = 0; i < p.length; i++) {
+        // Spring physics lerp
+        const dx = p[i].tx - p[i].x;
+        const dy = p[i].ty - p[i].y;
+        
+        p[i].vx += dx * 0.08;
+        p[i].vy += dy * 0.08;
+        
+        p[i].vx *= 0.72; // damping friction
+        p[i].vy *= 0.72;
+        
+        p[i].x += p[i].vx;
+        p[i].y += p[i].vy;
+      }
+
+      // Draw Constellation Lines (connecting adjacent particles for structured wireframe)
+      ctx.strokeStyle = 'rgba(0, 93, 166, 0.45)';
+      ctx.lineWidth = 1.3;
+      ctx.shadowBlur = 6;
+      ctx.shadowColor = '#00b2ff';
+      
+      ctx.beginPath();
+      if (p.length > 0) {
+        ctx.moveTo(p[0].x, p[0].y);
+        for (let i = 1; i < p.length; i++) {
+          // If we transition between head and shell on hatchling, do not bridge the gap
+          if (stage === 1 && i === Math.floor(p.length * 0.6)) {
+            ctx.moveTo(p[i].x, p[i].y);
+          } else {
+            ctx.lineTo(p[i].x, p[i].y);
+          }
+        }
+      }
+      ctx.stroke();
+
+      // Draw Glow Dots (Vertex points)
+      ctx.fillStyle = '#00b2ff';
+      for (let i = 0; i < p.length; i++) {
+        ctx.beginPath();
+        ctx.arc(p[i].x, p[i].y, 2.2, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+
+      requestRef.current = requestAnimationFrame(drawLoop);
+    };
+
+    requestRef.current = requestAnimationFrame(drawLoop);
+    return () => {
+      cancelAnimationFrame(requestRef.current);
+      window.removeEventListener('resize', resizeHandler);
+    };
+  }, [stage]);
 
   return (
-    <GraphicPanel>
-      <CanvasArea>
-        {/* Progressive Background Scenery */}
-        <AnimatePresence mode="wait">
-          <BackgroundScenery
-            key={`bg-${stage}`}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.65 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            {stageData[stage].bg}
-          </BackgroundScenery>
-        </AnimatePresence>
+    <PanelWrapper>
+      <CanvasContainer>
+        <EvolvingCanvas ref={canvasRef} />
+      </CanvasContainer>
 
-        {/* Evolving Flight Vector Model */}
+      <LabelArea>
         <AnimatePresence mode="wait">
-          <ModelWrapper
-            key={`model-${stage}`}
-            initial={{ scale: 0.8, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.8, opacity: 0 }}
-            transition={{ type: "spring", stiffness: 200, damping: 18 }}
-          >
-            {stageData[stage].svg}
-          </ModelWrapper>
-        </AnimatePresence>
-      </CanvasArea>
-
-      <FooterControls>
-        <AnimatePresence mode="wait">
-          <StageLabel
-            key={`label-${stage}`}
+          <StageTitle
+            key={`title-${stage}`}
             initial={{ y: 5, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -5, opacity: 0 }}
             transition={{ duration: 0.25 }}
           >
-            {stageData[stage].label}
-          </StageLabel>
+            {stageLabels[stage]}
+          </StageTitle>
         </AnimatePresence>
 
-        {/* Pagination Dots */}
         <NavigationDots>
-          {stageData.map((_, idx) => (
+          {stageLabels.map((_, idx) => (
             <Dot
               key={idx}
               $active={stage === idx}
@@ -449,8 +437,8 @@ const AboutEvolution2D = () => {
             />
           ))}
         </NavigationDots>
-      </FooterControls>
-    </GraphicPanel>
+      </LabelArea>
+    </PanelWrapper>
   );
 };
 
