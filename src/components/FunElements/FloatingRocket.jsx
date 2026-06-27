@@ -259,7 +259,7 @@ const FloatingRocket = ({ isMobileOnly = false, isDesktopOnly = false }) => {
       >
         <Rocket
           animate={{ 
-            rotate: hasLaunched ? -70 : -90, // Face top-left at rest, pitch up during climb
+            rotate: hasLaunched ? -30 : -45, // -45 aligns with top-left vector, -30 pitches up slightly during climb
           }}
           transition={{ duration: 0.3 }}
         >
