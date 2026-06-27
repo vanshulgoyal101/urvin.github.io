@@ -164,30 +164,11 @@ const Blog = () => {
           </motion.div>
         </SectionHeader>
 
-        {isLoading ? (
-          <BlogGrid>
-            {[...Array(3)].map((_, index) => (
-              <BlogSkeletonCard key={`skeleton-${index}`} />
-            ))}
-          </BlogGrid>
-        ) : sortedBlogPosts && sortedBlogPosts.length > 0 ? (
-          <BlogGrid>
-            {sortedBlogPosts.map((blog, index) => (
-              <BlogCard
-                key={blog.id}
-                blog={blog}
-                index={index}
-                variants={BLOG_ANIMATION_VARIANTS.item}
-              />
-            ))}
-          </BlogGrid>
-        ) : (
-          <EmptyState>
-            <FaPen />
-            <h3>{BLOG_CONTENT.emptyStateTitle}</h3>
-            <p>{BLOG_CONTENT.emptyStateMessage}</p>
-          </EmptyState>
-        )}
+        <EmptyState>
+          <FaPen />
+          <h3>Aviation Insights & Leadership Thoughts</h3>
+          <p>Coming Soon. A collection of operational analyses, platform integration strategies, and leadership articles will be published here shortly.</p>
+        </EmptyState>
 
         <QuoteSection
           variants={BLOG_ANIMATION_VARIANTS.item}
