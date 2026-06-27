@@ -316,7 +316,7 @@ const Projects = () => {
         >
           <SectionTitle>Featured Projects</SectionTitle>
           <SectionSubtitle>
-            From space exploration to software development — projects that define my journey
+            Key initiatives in airport automation, operational analytics, and system scaling
           </SectionSubtitle>
         </SectionHeader>
 
